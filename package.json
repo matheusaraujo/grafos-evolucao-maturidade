@@ -19,9 +19,13 @@
     "deploy": "firebase deploy",
     "test:coverage": "yarn run test -- --coverage",
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
-    "lint": "eslint src",
-    "pre-commit": "yarn lint",
-    "pre-push": "yarn test"
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
