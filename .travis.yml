@@ -18,10 +18,10 @@ after_success:
 - yarn global add react-scripts
 - yarn build
 - firebase deploy --project grafos-evolucao-maturidade --token $FIREBASE_TOKEN
-addons:
-  sonarcloud:
-    organization: matheusaraujo
-    token:
-      secure: $SONAR_TOKEN
+#addons:
+#  sonarcloud:
+#    organization: matheusaraujo
+#    token:
+#      secure: $SONAR_TOKEN
 cache:
   yarn: true

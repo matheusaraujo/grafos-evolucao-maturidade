@@ -4,7 +4,10 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a turpis aliquet, aliquet quam et, finibus orci. Maecenas placerat lacus eget blandit mattis. In quis dictum nunc. Nam egestas ipsum eget mollis hendrerit. Pellentesque et nunc velit. Integer venenatis mauris libero, id elementum tortor ultrices eget. Pellentesque pharetra viverra auctor. Curabitur iaculis vehicula mi, dapibus facilisis diam laoreet ac. Aenean lacinia purus vitae libero feugiat, quis viverra diam auctor. Quisque ac dapibus eros. Cras euismod mollis ligula, non porta est. Sed est elit, venenatis quis tristique ac, euismod quis diam. Etiam a velit sit amet dui laoreet lacinia. In hac habitasse platea dictumst.
 
 ## Infra
-Código hospedado no GitHub, integração contínua rodando no Travis CI
+- Repositório no **GitHub**
+- Hospedado no **Firebase**
+- Integração contínua rodando no **Travis CI**
+- Análise de código no **SonarCloud**
 
 ## Continuous Integration
 
