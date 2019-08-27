@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Grafos de Evolução da Maturidade
 
-## Available Scripts
+## Sobre
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a turpis aliquet, aliquet quam et, finibus orci. Maecenas placerat lacus eget blandit mattis. In quis dictum nunc. Nam egestas ipsum eget mollis hendrerit. Pellentesque et nunc velit. Integer venenatis mauris libero, id elementum tortor ultrices eget. Pellentesque pharetra viverra auctor. Curabitur iaculis vehicula mi, dapibus facilisis diam laoreet ac. Aenean lacinia purus vitae libero feugiat, quis viverra diam auctor. Quisque ac dapibus eros. Cras euismod mollis ligula, non porta est. Sed est elit, venenatis quis tristique ac, euismod quis diam. Etiam a velit sit amet dui laoreet lacinia. In hac habitasse platea dictumst.
 
-In the project directory, you can run:
+## Continuous Integration
 
-### `npm start`
+[Travis CI](https://travis-ci.com/matheusaraujo/grafos-evolucao-maturidade)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Build Status](https://travis-ci.com/matheusaraujo/grafos-evolucao-maturidade.svg?branch=master)](https://travis-ci.com/matheusaraujo/grafos-evolucao-maturidade)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Sonar
 
-### `npm test`
+[sonarcloud.io](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Quality Gate
 
-### `npm run build`
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=alert_status)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Reliability
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=bugs)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Security
 
-### `npm run eject`
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=security_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Maintainability
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=sqale_index)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=code_smells)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Coverage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=coverage)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-## Learn More
+### Duplications
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Lines of Code
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=ncloc)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
