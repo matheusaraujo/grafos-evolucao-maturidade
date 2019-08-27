@@ -12,7 +12,9 @@
     "build": "react-scripts build",
     "test": "yarn install && react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "test:coverage": "yarn run test -- --coverage",
+    "sonar": "yarn && yarn run test:coverage && sonar-scanner"
   },
   "eslintConfig": {
     "extends": "react-app"

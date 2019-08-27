@@ -1,13 +1,8 @@
 language: node_js
-#dist: trusty
+
 sudo: required
 node_js:
 - 'stable'
-#script:
-#- sonar-scanner
-#before_install:
-#- curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
-#- export PATH=$HOME/.yarn/bin:$PATH
 
 install:
 - npm install -g firebase-tools
@@ -16,7 +11,7 @@ script:
 - yarn build
 
 after_success:
-- sonar-scanner
+- yarn sonar
 
 deploy:
   provider: firebase
@@ -31,6 +26,3 @@ addons:
     organization: matheusaraujo
     token:
       secure: $SONAR_TOKEN
-
-# cache:
-#  yarn: true
