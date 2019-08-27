@@ -13,7 +13,10 @@ script:
 after_success:
 - sonar-scanner
 deploy:
-- firebase deploy --project grafos-evolucao-maturidade --token $FIREBASE_TOKEN
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  project: "grafos-evolucao-maturidade"
 
 addons:
   sonarcloud:
