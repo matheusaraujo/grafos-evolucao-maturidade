@@ -9,38 +9,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a turpis alique
 
 [![Build Status](https://travis-ci.com/matheusaraujo/grafos-evolucao-maturidade.svg?branch=master)](https://travis-ci.com/matheusaraujo/grafos-evolucao-maturidade)
 
-## Sonar
+## Code Quality
 
 [sonarcloud.io](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-### Quality Gate
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=alert_status)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
-
-### Reliability
 
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=bugs)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-### Security
-
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=security_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
-
-### Maintainability
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=sqale_index)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=code_smells)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-### Coverage
-
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=coverage)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
 
-### Duplications
-
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
-
-### Lines of Code
 
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=matheusaraujo_grafos-evolucao-maturidade&metric=ncloc)](https://sonarcloud.io/dashboard?id=matheusaraujo_grafos-evolucao-maturidade)
