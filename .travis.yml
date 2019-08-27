@@ -10,6 +10,7 @@ node_js:
 #- export PATH=$HOME/.yarn/bin:$PATH
 install:
 - npm install -g firebase-tools
+- npm install -g react-scripts
 after_success:
 - yarn build
 - firebase deploy --project grafos-evolucao-maturidade --token $FIREBASE_TOKEN
