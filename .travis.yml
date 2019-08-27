@@ -8,7 +8,6 @@ install:
 - npm install -g firebase-tools
 
 script:
-- yarn install
 - yarn build
 
 after_success:
