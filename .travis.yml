@@ -1,13 +1,13 @@
 language: node_js
-dist: trusty
+#dist: trusty
 sudo: required
 node_js:
 - 'stable'
 #script:
 #- sonar-scanner
-before_install:
-- curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH=$HOME/.yarn/bin:$PATH
+#before_install:
+#- curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+#- export PATH=$HOME/.yarn/bin:$PATH
 install:
 - npm install -g firebase-tools
 after_success:
