@@ -1,4 +1,5 @@
 language: node_js
+dist: trusty
 node_js:
   - "7"
 script:
@@ -8,3 +9,13 @@ install:
 after_success:
   - yarn build
   - firebase deploy --project grafos-evolucao-maturidade --token $FIREBASE_TOKEN
+
+addons:
+  sonarcloud:
+    organization: "matheusaraujo"
+    token:
+      secure: "crhH+6YXQKLnsHT3RPSCY8iYjCsUqC143fnl4upn64zfMpUAl4SwTfgJfP1nWtzu34Oerwnjyxqhs4fvp3PBLnEhXQCh8qY+wo1irBd+hQDlsILHUbndFhIfHCZWJcYbQPujsHZewUnRujUV/gKieMl3x4FMyA7weBw2ReyVu+Lq8ECOaDSS9eH/czob1ukx7YKo4L2tKzA7ExIYvbwrVTaxQ+Je6DUpTn+MQoPgtx65gqqBRSKp0grlZWOmEqLfAi9NakZwlHgSYqPbq1EET3dPCUEtCwcEGky3QMAC8AMQvn8HO0Cs9D+QaQRryXJ5+Yk+qbphKIk7CF9geHZqc0iPFgnuGyhRUkDF9oURM0zsjRDzWOMwHLjtrIhWBrx7MG4Fo3sqnQQrBbuEJ5fHE9WW1nP3J7hnJhxt0tSag4z5jBBvXe92U2ao3RpFfRosWz4qku1njDSpVOMNAO5YViLw5nMDoHLKoYRydSz+T3ezl31hMKJ/DevCCt4aorNPOlXLZCCbyW6TqoHRyRQN4pSYiuu4bJVmeJhTPO76/ql7yjol60RUdpSVMlZL8zxwaJZHODw1nlGr4azXDsd9aT4/pdVNU5dHT2E7kf5VYcLw/RHiAP9fgmesycJA5KKZpDZl3XgE798qDI0ZY/zKJiULcADKbQV59q8ERiiff2g=" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
