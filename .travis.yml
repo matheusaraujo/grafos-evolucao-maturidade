@@ -13,4 +13,4 @@ addons:
   sonarcloud:
     organization: matheusaraujo
     token:
-      secure: "$SONAR_TOKEN"
+      secure: $SONAR_TOKEN
