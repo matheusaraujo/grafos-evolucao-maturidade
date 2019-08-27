@@ -20,8 +20,8 @@
     "test:coverage": "yarn run test -- --coverage",
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
     "lint": "eslint src",
-    "precommit": "yarn lint",
-    "prepush": "yarn test"
+    "pre-commit": "yarn lint",
+    "pre-push": "yarn test"
   },
   "eslintConfig": {
     "extends": "react-app"
