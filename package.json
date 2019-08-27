@@ -10,7 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "yarn install && react-scripts test",
+    "test": "yarn install && react-scripts test --coverage",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy"
   },
