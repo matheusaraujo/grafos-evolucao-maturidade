@@ -1,5 +1,6 @@
 import React from 'react';
-import Graph from 'react-graph-vis';
+import JsonEditor from './features/jsonEditor/views/jsonEditor';
+import GraphViewer from './features/graphViewer/views/graphViewer';
 import './App.css';
 
 function App() {
@@ -19,13 +20,15 @@ function App() {
     ],
   };
 
-  const options = {};
-
   return (
-    <Graph
-      graph={graph}
-      options={options}
-    />
+    <div className="container">
+      <div>
+        <JsonEditor message={graph} />
+      </div>
+      <div>
+        <GraphViewer graph={graph} />
+      </div>
+    </div>
   );
 }
 
