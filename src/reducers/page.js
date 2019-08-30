@@ -4,9 +4,7 @@ const page = (state = { graph: undefined }, action) => {
       return {
         graph: undefined,
       };
-    case 'APPLY':
-      console.log('2');
-      console.log(action);
+    case 'APPLY':      
       return {
         ...state,
         graph: action.graph,
