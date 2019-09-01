@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitialPage should match snapshot 1`] = `
+<div>
+  <div>
+    Página inicial
+  </div>
+  <button
+    className="btn-basic-graph"
+    onClick={[Function]}
+    type="button"
+  >
+    Modelo básico
+  </button>
+  <button
+    className="btn-system-engineer"
+    onClick={[Function]}
+    type="button"
+  >
+    Engenharia de Sistemas
+  </button>
+</div>
+`;

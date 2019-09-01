@@ -7,7 +7,6 @@ import systemEngineerGraph from '../../examples/systemEngineerGraph';
 import * as labels from '../../commons/labels';
 
 const InitialPage = ({ language, loadPage, updateGraph }) => {
-
   const handleBasicGraph = () => {
     updateGraph(basicGraph);
     loadPage();
@@ -21,10 +20,10 @@ const InitialPage = ({ language, loadPage, updateGraph }) => {
   return (
     <div>
       <div>{labels.initialPage[language]}</div>
-      <button type="button" onClick={handleBasicGraph}>
+      <button type="button" className="btn-basic-graph" onClick={handleBasicGraph}>
         {labels.basicModel[language]}
       </button>
-      <button type="button" onClick={handleSystemEngineer}>
+      <button type="button" className="btn-system-engineer" onClick={handleSystemEngineer}>
         {labels.systemEngineer[language]}
       </button>
     </div>
