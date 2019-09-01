@@ -1,18 +1,20 @@
 import page from './page';
 
 describe('page reducer', () => {
-  test('should handle initial state', () => {
-    expect(page(undefined, {}))
-      .toEqual({ graph: undefined });
+  test('should handle TOGGLE_CODE', () => {
+    expect(page({ showCode: true }, { type: 'TOGGLE_CODE' }))
+      .toEqual({ showCode: false });
+    expect(page({ showCode: false }, { type: 'TOGGLE_CODE' }))
+      .toEqual({ showCode: true });
   });
 
-  test('should handle INIT', () => {
-    expect(page({ graph: {} }, { type: 'INIT' }))
-      .toEqual({ graph: undefined });
+  test('should handle LOAD_PAGE', () => {
+    expect(page({}, { type: 'LOAD_PAGE' }))
+      .toEqual({ loaded: true });
   });
 
-  test('should handle APPLY', () => {
-    expect(page(undefined, { type: 'APPLY', graph: { nodes: [], edges: [] } }))
-      .toEqual({ graph: { nodes: [], edges: [] } });
+  test('should handle default', () => {
+    expect(page({ a: 'a' }, { type: 'default' }))
+      .toEqual({ a: 'a' });
   });
 });

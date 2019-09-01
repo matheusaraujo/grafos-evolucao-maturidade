@@ -1,18 +1,17 @@
 import * as actions from './index';
 
-describe('page actions', () => {
-  test('init should create INIT action', () => {
-    expect(actions.init())
+describe('actions', () => {
+  test('toggleCode should create TOGGLE_CODE action', () => {
+    expect(actions.toggleCode())
       .toEqual({
-        type: 'INIT',
+        type: 'TOGGLE_CODE',
       });
   });
 
-  test('apply should create APPLY action', () => {
-    expect(actions.apply({ nodes: [], edges: [] }))
+  test('loadPage should create LOAD_PAGE action', () => {
+    expect(actions.loadPage())
       .toEqual({
-        type: 'APPLY',
-        graph: { nodes: [], edges: [] },
+        type: 'LOAD_PAGE',
       });
   });
 });
