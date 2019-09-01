@@ -14,4 +14,9 @@ describe('actions', () => {
         type: 'LOAD_PAGE',
       });
   });
+
+  test('updateGraph should create UPDADE_GRAPH action', () => {
+    expect(actions.updateGraph({ edges: [], nodes: [] }))
+      .toEqual({ type: 'UPDATE_GRAPH', graph: { edges: [], nodes: [] } });
+  });
 });

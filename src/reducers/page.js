@@ -1,9 +1,10 @@
 const initialState = {
+  language: 'pt',
   showCode: true,
   loaded: false,
 };
 
-const page = (state = initialState, action) => {
+const page = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
     case 'LOAD_PAGE':
       return {

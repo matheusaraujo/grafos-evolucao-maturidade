@@ -1,3 +1,8 @@
-const dfs = () => ({ type: 'dfs' });
+const Engine = () => ({
+  dfs: () => {
+    const x = 'dfs';
+    return x;
+  },
+});
 
-export default dfs;
+export default Engine;

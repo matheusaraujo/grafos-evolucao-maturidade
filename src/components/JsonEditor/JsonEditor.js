@@ -5,9 +5,10 @@ import AceEditor from 'react-ace';
 import 'brace/mode/json';
 import 'brace/theme/github';
 import { graphType } from '../../commons/types';
+import * as labels from '../../commons/labels';
 
 const JsonEditor = ({
-  showCode, graph, toggleCode, updateGraph,
+  language, showCode, graph, toggleCode, updateGraph,
 }) => {
   let innerGraph = { ...graph };
   const onChange = (value) => { innerGraph = value; };
@@ -32,20 +33,23 @@ const JsonEditor = ({
         onChange={onChange}
       />
       <button className="btn--primary" type="button" onClick={onClick}>
-        Atualizar
+        {labels.update[language]}
       </button>
     </div>
   );
 
   return (
     <div>
-      <button type="button" onClick={toggleCode}>Código</button>
+      <button type="button" onClick={toggleCode}>
+        {labels.code[language]}
+      </button>
       {showCode ? editor : ''}
     </div>
   );
 };
 
 JsonEditor.propTypes = {
+  language: PropTypes.string.isRequired,
   showCode: PropTypes.bool.isRequired,
   graph: graphType.isRequired,
   toggleCode: PropTypes.func.isRequired,

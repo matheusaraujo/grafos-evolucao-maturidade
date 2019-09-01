@@ -3,6 +3,7 @@ import JsonEditor from './JsonEditor';
 import { toggleCode, updateGraph } from '../../actions';
 
 const mapStateToProps = (state) => ({
+  language: state.page.language,
   showCode: state.page.showCode,
   graph: state.graph,
 });

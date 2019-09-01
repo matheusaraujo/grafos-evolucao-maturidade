@@ -3,7 +3,7 @@ const initialState = {
   edges: [],
 };
 
-const graph = (state = initialState, action) => {
+const graph = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
     case 'UPDATE_GRAPH':
       return {

@@ -1,34 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import basicDataSample from '../../examples/basicGraph';
-import systemEngineer from '../../examples/systemEngineerGraph';
+import basicGraph from '../../examples/basicGraph';
+import systemEngineerGraph from '../../examples/systemEngineerGraph';
 
-const InitialPage = ({ loadPage, updateGraph }) => {
+import * as labels from '../../commons/labels';
+
+const InitialPage = ({ language, loadPage, updateGraph }) => {
+
   const handleBasicGraph = () => {
-    updateGraph(basicDataSample);
+    updateGraph(basicGraph);
     loadPage();
   };
 
   const handleSystemEngineer = () => {
-    updateGraph(systemEngineer);
+    updateGraph(systemEngineerGraph);
     loadPage();
   };
 
   return (
     <div>
-      <div>Página Inicial!</div>
+      <div>{labels.initialPage[language]}</div>
       <button type="button" onClick={handleBasicGraph}>
-        Modelo básico
+        {labels.basicModel[language]}
       </button>
       <button type="button" onClick={handleSystemEngineer}>
-        Engenharia de Sistemas
+        {labels.systemEngineer[language]}
       </button>
     </div>
   );
 };
 
 InitialPage.propTypes = {
+  language: PropTypes.string.isRequired,
   loadPage: PropTypes.func.isRequired,
   updateGraph: PropTypes.func.isRequired,
 };

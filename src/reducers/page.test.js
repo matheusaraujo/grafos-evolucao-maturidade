@@ -14,7 +14,11 @@ describe('page reducer', () => {
   });
 
   test('should handle default', () => {
-    expect(page({ a: 'a' }, { type: 'default' }))
-      .toEqual({ a: 'a' });
+    expect(page(undefined, undefined))
+      .toEqual({
+        language: 'pt',
+        showCode: true,
+        loaded: false,
+      });
   });
 });

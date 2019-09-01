@@ -1,4 +1,4 @@
-const systemEngineerSampleData = {
+const systemEngineerGraph = {
   nodes: [
     {
       id: 0,
@@ -605,4 +605,4 @@ const systemEngineerSampleData = {
   ],
 };
 
-export default systemEngineerSampleData;
+export default systemEngineerGraph;
