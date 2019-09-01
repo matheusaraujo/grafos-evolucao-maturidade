@@ -32,7 +32,7 @@ const JsonEditor = ({
         }}
         onChange={onChange}
       />
-      <button className="btn--primary" type="button" onClick={onClick}>
+      <button className="btn-update-graph" type="button" onClick={onClick}>
         {labels.update[language]}
       </button>
     </div>

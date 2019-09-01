@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "yarn && react-scripts build",
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy",
     "test:coverage": "yarn run test -- --coverage",

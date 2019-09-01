@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonEditor should match snapshot 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Código
+  </button>
+  <div>
+    <ReactAce
+      cursorStart={1}
+      editorProps={
+        Object {
+          "$blockScrolling": true,
+          "$tabSize": 2,
+        }
+      }
+      enableBasicAutocompletion={false}
+      enableLiveAutocompletion={false}
+      enableSnippets={false}
+      focus={false}
+      fontSize={12}
+      height="500px"
+      highlightActiveLine={true}
+      maxLines={null}
+      minLines={null}
+      mode="json"
+      name="ACE_EDITOR"
+      navigateToFileEnd={true}
+      onChange={[Function]}
+      onLoad={null}
+      onPaste={null}
+      onScroll={null}
+      placeholder={null}
+      readOnly={false}
+      scrollMargin={
+        Array [
+          0,
+          0,
+          0,
+          0,
+        ]
+      }
+      setOptions={Object {}}
+      showGutter={true}
+      showPrintMargin={true}
+      style={Object {}}
+      tabSize={4}
+      theme="github"
+      value="{
+ \\"nodes\\": [],
+ \\"edges\\": []
+}"
+      width="500px"
+      wrapEnabled={false}
+    />
+    <button
+      className="btn-update-graph"
+      onClick={[Function]}
+      type="button"
+    >
+      Atualizar
+    </button>
+  </div>
+</div>
+`;
