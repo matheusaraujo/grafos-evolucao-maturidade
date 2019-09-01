@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Page from './Page';
+import App from './App';
 
 const mapStateToProps = (state) => ({
   loaded: state.page.loaded,
@@ -9,4 +9,4 @@ const mapStateToProps = (state) => ({
 export default connect(
   mapStateToProps,
   null,
-)(Page);
+)(App);

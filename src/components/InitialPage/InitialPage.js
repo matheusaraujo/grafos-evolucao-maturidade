@@ -17,15 +17,48 @@ const InitialPage = ({ language, loadPage, updateGraph }) => {
     loadPage();
   };
 
+  const title = (
+    <header className="bd-header">
+      <h1 className="title">
+        {labels.maturityEvolutionGraphsTitle[language]}
+      </h1>
+      <h2 className="subtitle">
+        {labels.maturityEvolutionGraphsSubtitle[language]}
+      </h2>
+      <p>&nbsp;</p>
+    </header>
+  );
+
+  const button = (label, subtitle, buttonClass, click) => (
+    <div className="box">
+      <article className="media">
+        <div className="media-left">
+          <button type="button" className={`${buttonClass} button is-primary`} onClick={click}>
+            {label}
+          </button>
+        </div>
+        <div className="media-content">
+          {subtitle}
+        </div>
+      </article>
+    </div>
+  );
+
+  const buttonBasicGraph = button(labels.basicModel[language],
+    labels.basicModelSubtitle[language],
+    'btn-basic-graph',
+    handleBasicGraph);
+
+  const buttonSystemEngineer = button(labels.systemEngineer[language],
+    labels.systemEngineerSubtitle[language],
+    'btn-system-engineer',
+    handleSystemEngineer);
+
   return (
     <div>
-      <div>{labels.initialPage[language]}</div>
-      <button type="button" className="btn-basic-graph" onClick={handleBasicGraph}>
-        {labels.basicModel[language]}
-      </button>
-      <button type="button" className="btn-system-engineer" onClick={handleSystemEngineer}>
-        {labels.systemEngineer[language]}
-      </button>
+      {title}
+      {buttonBasicGraph}
+      {buttonSystemEngineer}
     </div>
   );
 };
