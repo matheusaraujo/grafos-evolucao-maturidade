@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
-import Page from './Page';
+import GraphViewer from './GraphViewer';
 
 const mapStateToProps = (state) => ({
-  loaded: state.page.loaded,
   graph: state.graph,
 });
 
 export default connect(
   mapStateToProps,
   null,
-)(Page);
+)(GraphViewer);

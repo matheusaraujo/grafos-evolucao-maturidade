@@ -4,43 +4,52 @@ import AceEditor from 'react-ace';
 
 import 'brace/mode/json';
 import 'brace/theme/github';
+import { graphType } from '../../commons/types';
 
-const JsonEditor = ({ graph, apply }) => {
+const JsonEditor = ({
+  showCode, graph, toggleCode, updateGraph,
+}) => {
   let innerGraph = { ...graph };
-  const onChange = (v) => {
-    innerGraph = v;
-  };
-
-  const onApply = () => {
+  const onChange = (value) => { innerGraph = value; };
+  const onClick = () => {
     if (typeof innerGraph === 'string') {
       innerGraph = JSON.parse(innerGraph);
     }
-    apply(innerGraph);
+    updateGraph(innerGraph);
   };
 
-  return (
+  const editor = (
     <div>
       <AceEditor
         value={JSON.stringify(graph, null, ' ')}
         mode="json"
         theme="github"
-        name="UNIQUE_ID_OF_DIV"
+        name="ACE_EDITOR"
         editorProps={{
           $blockScrolling: true,
           $tabSize: 2,
         }}
         onChange={onChange}
       />
-      <button className="btn--primary" type="button" onClick={onApply}>
+      <button className="btn--primary" type="button" onClick={onClick}>
         Atualizar
       </button>
+    </div>
+  );
+
+  return (
+    <div>
+      <button type="button" onClick={toggleCode}>Código</button>
+      {showCode ? editor : ''}
     </div>
   );
 };
 
 JsonEditor.propTypes = {
-  graph: PropTypes.object.isRequired,
-  apply: PropTypes.func.isRequired,
+  showCode: PropTypes.bool.isRequired,
+  graph: graphType.isRequired,
+  toggleCode: PropTypes.func.isRequired,
+  updateGraph: PropTypes.func.isRequired,
 };
 
 export default JsonEditor;

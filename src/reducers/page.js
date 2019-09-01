@@ -1,13 +1,19 @@
-const page = (state = { graph: undefined }, action) => {
+const initialState = {
+  showCode: true,
+  loaded: false,
+};
+
+const page = (state = initialState, action) => {
   switch (action.type) {
-    case 'INIT':
-      return {
-        graph: undefined,
-      };
-    case 'APPLY':      
+    case 'LOAD_PAGE':
       return {
         ...state,
-        graph: action.graph,
+        loaded: true,
+      };
+    case 'TOGGLE_CODE':
+      return {
+        ...state,
+        showCode: !state.showCode,
       };
     default:
       return state;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Graph from 'react-graph-vis';
-import PropTypes from 'prop-types';
+import { graphType } from '../../commons/types';
 
 const GraphViewer = ({ graph }) => {
   const options = {};
@@ -8,7 +8,7 @@ const GraphViewer = ({ graph }) => {
 };
 
 GraphViewer.propTypes = {
-  graph: PropTypes.object.isRequired,
+  graph: graphType.isRequired,
 };
 
 export default GraphViewer;

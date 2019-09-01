@@ -1,53 +1,25 @@
 import React from 'react';
-import JsonEditor from '../components/JsonEditor';
-import GraphViewer from '../components/GraphViewer';
-
-import basicSampleData from '../samples/basicDataSample';
-import systemEngineerSampleData from '../samples/systemEngineerSampleData';
-
+import PropTypes from 'prop-types';
+import JsonEditor from '../components/JsonEditor/index';
+import GraphViewer from '../components/GraphViewer/index';
+import InitialPage from '../components/InitialPage/index';
 import './Page.css';
 
-class Page extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { graph: null };
+const Page = ({ loaded }) => {
+  if (!loaded) {
+    return (<InitialPage />);
   }
 
-  applyBasic = () => {
-    this.setState({ graph: basicSampleData.graph });
-  }
+  return (
+    <div>
+      <JsonEditor />
+      <GraphViewer />
+    </div>
+  );
+};
 
-  applySystemEngineer = () => {
-    this.setState({ graph: systemEngineerSampleData.graph });
-  }
-
-  applyFromEditor = (graph) => {
-    this.setState({ graph });
-  }
-
-  render() {
-    const { graph } = this.state;
-
-    if (!graph) {
-      return (
-        <div className="container">
-          <strong>Aplicação não iniciada</strong>
-          <p>Selecione um modelo para iniciar.</p>
-          <button type="button" className="btn--primary" onClick={this.applyBasic}>Basic</button> &nbsp;
-          <button type="button" className="btn--primary" onClick={this.applySystemEngineer}>System Engineer</button>
-        </div>
-      );
-    }
-
-    return (
-      <div>
-        <div className="container11">
-          <JsonEditor graph={graph} apply={this.applyFromEditor} />
-          <GraphViewer graph={graph} />
-        </div>
-      </div>
-    );
-  }
-}
+Page.propTypes = {
+  loaded: PropTypes.bool.isRequired,
+};
 
 export default Page;
