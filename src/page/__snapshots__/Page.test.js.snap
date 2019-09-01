@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should match snapshot - loaded 1`] = `
+<div>
+  <Connect(JsonEditor) />
+  <Connect(GraphViewer) />
+</div>
+`;
+
+exports[`Page should match snapshot - unloaded 1`] = `<Connect(InitialPage) />`;
