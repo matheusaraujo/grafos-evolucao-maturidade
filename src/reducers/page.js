@@ -1,5 +1,5 @@
 const initialState = {
-  language: 'pt',
+  lang: 'pt',
   showCode: true,
   loaded: false,
 };

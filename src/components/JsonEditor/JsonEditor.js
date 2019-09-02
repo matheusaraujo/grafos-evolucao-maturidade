@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import AceEditor from 'react-ace';
 
 import 'brace/mode/json';
-import 'brace/theme/github';
+import 'brace/theme/textmate';
 import { graphType } from '../../commons/types';
-import * as labels from '../../commons/labels';
 
 const JsonEditor = ({
-  language, showCode, graph, toggleCode, updateGraph,
+  graph, updateGraph,
 }) => {
   let innerGraph = { ...graph };
   const onChange = (value) => { innerGraph = value; };
@@ -19,40 +18,34 @@ const JsonEditor = ({
     updateGraph(innerGraph);
   };
 
+  const buttonUpdate = (
+    <button className="btn-update-graph button is-small" style={{ float: 'right' }} type="button" onClick={onClick}>
+      Atualizar
+    </button>
+  );
+
   const editor = (
-    <div>
-      <AceEditor
-        value={JSON.stringify(graph, null, ' ')}
-        mode="json"
-        theme="github"
-        name="ACE_EDITOR"
-        editorProps={{
-          $blockScrolling: true,
-          $tabSize: 2,
-        }}
-        onChange={onChange}
-      />
-      <button className="btn-update-graph" type="button" onClick={onClick}>
-        {labels.update[language]}
-      </button>
-    </div>
+    <AceEditor
+      value={JSON.stringify(graph, null, ' ')}
+      mode="json"
+      theme="textmate"
+      name="ACE_EDITOR"
+      width="100%"
+      tabSize={2}
+      onChange={onChange}
+    />
   );
 
   return (
     <div>
-      <button type="button" onClick={toggleCode}>
-        {labels.code[language]}
-      </button>
-      {showCode ? editor : ''}
+      {buttonUpdate}
+      {editor}
     </div>
   );
 };
 
 JsonEditor.propTypes = {
-  language: PropTypes.string.isRequired,
-  showCode: PropTypes.bool.isRequired,
   graph: graphType.isRequired,
-  toggleCode: PropTypes.func.isRequired,
   updateGraph: PropTypes.func.isRequired,
 };
 

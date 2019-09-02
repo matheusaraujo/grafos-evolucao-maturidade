@@ -6,7 +6,7 @@ import systemEngineerGraph from '../../examples/systemEngineerGraph';
 
 import * as labels from '../../commons/labels';
 
-const InitialPage = ({ language, loadPage, updateGraph }) => {
+const InitialPage = ({ lang, loadPage, updateGraph }) => {
   const handleBasicGraph = () => {
     updateGraph(basicGraph);
     loadPage();
@@ -20,10 +20,10 @@ const InitialPage = ({ language, loadPage, updateGraph }) => {
   const title = (
     <header className="bd-header">
       <h1 className="title">
-        {labels.maturityEvolutionGraphsTitle[language]}
+        {labels.maturityEvolutionGraphsTitle[lang]}
       </h1>
       <h2 className="subtitle">
-        {labels.maturityEvolutionGraphsSubtitle[language]}
+        {labels.maturityEvolutionGraphsSubtitle[lang]}
       </h2>
       <p>&nbsp;</p>
     </header>
@@ -44,27 +44,31 @@ const InitialPage = ({ language, loadPage, updateGraph }) => {
     </div>
   );
 
-  const buttonBasicGraph = button(labels.basicModel[language],
-    labels.basicModelSubtitle[language],
+  const buttonBasicGraph = button(labels.basicModel[lang],
+    labels.basicModelSubtitle[lang],
     'btn-basic-graph',
     handleBasicGraph);
 
-  const buttonSystemEngineer = button(labels.systemEngineer[language],
-    labels.systemEngineerSubtitle[language],
+  const buttonSystemEngineer = button(labels.systemEngineer[lang],
+    labels.systemEngineerSubtitle[lang],
     'btn-system-engineer',
     handleSystemEngineer);
 
   return (
-    <div>
-      {title}
-      {buttonBasicGraph}
-      {buttonSystemEngineer}
-    </div>
+    <section className="section">
+      <div className="container">
+        <div className="notification">
+          {title}
+          {buttonBasicGraph}
+          {buttonSystemEngineer}
+        </div>
+      </div>
+    </section>
   );
 };
 
 InitialPage.propTypes = {
-  language: PropTypes.string.isRequired,
+  lang: PropTypes.string.isRequired,
   loadPage: PropTypes.func.isRequired,
   updateGraph: PropTypes.func.isRequired,
 };

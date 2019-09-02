@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import App from './App';
+import GraphPage from './GraphPage';
 
 const mapStateToProps = (state) => ({
-  loaded: state.page.loaded,
+  lang: state.page.lang,
 });
 
 export default connect(
   mapStateToProps,
   null,
-)(App);
+)(GraphPage);

@@ -9,14 +9,14 @@ describe('JsonEditor', () => {
   Enzyme.configure({ adapter: new Adapter() });
 
   test('should match snapshot', () => {
-    const language = 'pt';
+    const lang = 'pt';
     const showCode = true;
     const graph = { nodes: [], edges: [] };
     const toggleCode = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <JsonEditor
-        language={language}
+        lang={lang}
         showCode={showCode}
         toggleCode={toggleCode}
         updateGraph={updateGraph}
@@ -27,14 +27,14 @@ describe('JsonEditor', () => {
   });
 
   test('should trigger updateGraph', () => {
-    const language = 'pt';
+    const lang = 'pt';
     const showCode = true;
     const graph = { nodes: [], edges: [] };
     const toggleCode = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <JsonEditor
-        language={language}
+        lang={lang}
         showCode={showCode}
         toggleCode={toggleCode}
         updateGraph={updateGraph}

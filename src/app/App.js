@@ -1,33 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import JsonEditor from '../components/JsonEditor/index';
-import GraphViewer from '../components/GraphViewer/index';
+import GraphPage from '../components/GraphPage/index';
 import InitialPage from '../components/InitialPage/index';
 import './App.sass';
 
 const App = ({ loaded }) => {
   if (!loaded) {
-    return (
-      <section className="section">
-        <div className="container">
-          <div className="notification">
-            <InitialPage />
-          </div>
-        </div>
-      </section>
-    );
+    return (<InitialPage />);
   }
-
-  return (
-    <div className="columns">
-      <div className="column is-one-quarter">
-        <JsonEditor />
-      </div>
-      <div className="column is-three-quarters">
-        <GraphViewer />
-      </div>
-    </div>
-  );
+  return (<GraphPage />);
 };
 
 App.propTypes = {

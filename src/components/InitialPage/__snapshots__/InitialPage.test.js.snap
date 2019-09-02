@@ -1,71 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InitialPage should match snapshot 1`] = `
-<div>
-  <header
-    className="bd-header"
-  >
-    <h1
-      className="title"
-    >
-      Grafos de Evolução da Maturidade
-    </h1>
-    <h2
-      className="subtitle"
-    >
-      Uma proposta de representação da evolução do conhecimento por meio de grafos.
-    </h2>
-    <p>
-       
-    </p>
-  </header>
+<section
+  className="section"
+>
   <div
-    className="box"
+    className="container"
   >
-    <article
-      className="media"
+    <div
+      className="notification"
     >
-      <div
-        className="media-left"
+      <header
+        className="bd-header"
       >
-        <button
-          className="btn-basic-graph button is-primary"
-          onClick={[Function]}
-          type="button"
+        <h1
+          className="title"
         >
-          Modelo básico
-        </button>
-      </div>
-      <div
-        className="media-content"
-      >
-        Um pequeno grafo apenas como exemplo.
-      </div>
-    </article>
-  </div>
-  <div
-    className="box"
-  >
-    <article
-      className="media"
-    >
-      <div
-        className="media-left"
-      >
-        <button
-          className="btn-system-engineer button is-primary"
-          onClick={[Function]}
-          type="button"
+          Grafos de Evolução da Maturidade
+        </h1>
+        <h2
+          className="subtitle"
         >
-          Engenharia de Sistemas
-        </button>
+          Uma proposta de representação da evolução do conhecimento por meio de grafos.
+        </h2>
+        <p>
+           
+        </p>
+      </header>
+      <div
+        className="box"
+      >
+        <article
+          className="media"
+        >
+          <div
+            className="media-left"
+          >
+            <button
+              className="btn-basic-graph button is-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              Modelo básico
+            </button>
+          </div>
+          <div
+            className="media-content"
+          >
+            Um pequeno grafo apenas como exemplo.
+          </div>
+        </article>
       </div>
       <div
-        className="media-content"
+        className="box"
       >
-        Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG.
+        <article
+          className="media"
+        >
+          <div
+            className="media-left"
+          >
+            <button
+              className="btn-system-engineer button is-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              Engenharia de Sistemas
+            </button>
+          </div>
+          <div
+            className="media-content"
+          >
+            Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG.
+          </div>
+        </article>
       </div>
-    </article>
+    </div>
   </div>
-</div>
+</section>
 `;

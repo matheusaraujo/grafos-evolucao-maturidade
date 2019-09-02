@@ -37,3 +37,13 @@ export const update = {
   pt: 'Atualizar',
   en: 'Update',
 };
+
+export const graph = {
+  pt: 'Grafo',
+  en: 'Graph',
+};
+
+export const options = {
+  pt: 'Opções',
+  en: 'Options',
+};

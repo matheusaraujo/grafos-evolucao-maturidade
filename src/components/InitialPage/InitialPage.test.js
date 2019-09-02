@@ -12,12 +12,12 @@ describe('InitialPage', () => {
   Enzyme.configure({ adapter: new Adapter() });
 
   test('should match snapshot', () => {
-    const language = 'pt';
+    const lang = 'pt';
     const loadPage = () => { };
     const updateGraph = () => { };
     const component = shallow(
       <InitialPage
-        language={language}
+        lang={lang}
         loadPage={loadPage}
         updateGraph={updateGraph}
       />,
@@ -26,12 +26,12 @@ describe('InitialPage', () => {
   });
 
   test('should trigger basicGraph', () => {
-    const language = 'pt';
+    const lang = 'pt';
     const loadPage = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <InitialPage
-        language={language}
+        lang={lang}
         loadPage={loadPage}
         updateGraph={updateGraph}
       />,
@@ -43,12 +43,12 @@ describe('InitialPage', () => {
   });
 
   test('should trigger systemEngineer', () => {
-    const language = 'pt';
+    const lang = 'pt';
     const loadPage = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <InitialPage
-        language={language}
+        lang={lang}
         loadPage={loadPage}
         updateGraph={updateGraph}
       />,

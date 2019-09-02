@@ -1,19 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GraphViewer should match snapshot 1`] = `
-<Graph
-  graph={
-    Object {
-      "edges": Array [],
-      "nodes": Array [],
+<div
+  className="box"
+>
+  <Graph
+    graph={
+      Object {
+        "edges": Array [],
+        "nodes": Array [],
+      }
     }
-  }
-  options={Object {}}
-  style={
-    Object {
-      "height": "100%",
-      "width": "100%",
+    options={
+      Object {
+        "height": "500px",
+      }
     }
-  }
-/>
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</div>
 `;

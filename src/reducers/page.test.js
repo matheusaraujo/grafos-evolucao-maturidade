@@ -16,7 +16,7 @@ describe('page reducer', () => {
   test('should handle default', () => {
     expect(page(undefined, undefined))
       .toEqual({
-        language: 'pt',
+        lang: 'pt',
         showCode: true,
         loaded: false,
       });

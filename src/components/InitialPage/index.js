@@ -3,7 +3,7 @@ import InitialPage from './InitialPage';
 import { updateGraph, loadPage } from '../../actions';
 
 const mapStateToProps = (state) => ({
-  language: state.page.language,
+  lang: state.page.lang,
 });
 
 const mapDispatchToProps = (dispatch) => ({
