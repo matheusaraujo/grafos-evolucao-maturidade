@@ -1,7 +1,7 @@
 const initialState = {
   lang: 'pt',
   showCode: true,
-  loaded: true,
+  loaded: false,
 };
 
 const page = (state = initialState, action = { type: 'default' }) => {

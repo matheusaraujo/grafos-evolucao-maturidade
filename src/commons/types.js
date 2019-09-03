@@ -1,5 +1,5 @@
 import {
-  shape, number, string, arrayOf,
+  shape, number, string, bool, arrayOf,
 } from 'prop-types';
 
 export const graphType = shape({
@@ -15,5 +15,11 @@ export const graphType = shape({
 });
 
 export const optionsType = shape({
-  layout: string,
+  layout: shape({
+    hierarchical: shape({
+      enabled: bool.isRequired,
+      direction: string.isRequired,
+    }),
+  }),
+  height: string.isRequired,
 });

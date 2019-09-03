@@ -3,6 +3,7 @@ import GraphViewer from './GraphViewer';
 
 const mapStateToProps = (state) => ({
   graph: state.graph,
+  options: state.options,
 });
 
 export default connect(

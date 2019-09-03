@@ -1,11 +1,11 @@
-import basicGraph from '../examples/basicGraph';
+// import basicGraph from '../examples/basicGraph';
 
-/* const initialState = {
+const initialState = {
   nodes: [],
   edges: [],
-}; */
+};
 
-const initialState = basicGraph;
+// const initialState = basicGraph;
 
 const graph = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {

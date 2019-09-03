@@ -9,18 +9,26 @@ import 'brace/theme/textmate';
 
 import * as labels from '../../commons/labels';
 
-import { graphType } from '../../commons/types';
+import { graphType, optionsType } from '../../commons/types';
 
-const GraphEditor = ({ lang, graph, updateGraph }) => {
+const GraphEditor = ({
+  lang, graph, options, updateGraph, updateOptions,
+}) => {
   const [selectedTab, selectTab] = useState('graph');
 
   let innerGraph = { ...graph };
-  const onChange = (value) => { innerGraph = value; };
+  let innerOptions = { ...options };
+  const onChangeGraph = (value) => { innerGraph = value; };
+  const onChangeOptions = (value) => { innerOptions = value; };
   const onClick = () => {
     if (typeof innerGraph === 'string') {
       innerGraph = JSON.parse(innerGraph);
     }
+    if (typeof innerOptions === 'string') {
+      innerOptions = JSON.parse(innerOptions);
+    }
     updateGraph(innerGraph);
+    updateOptions(innerOptions);
   };
 
   const buttonUpdate = (
@@ -37,19 +45,25 @@ const GraphEditor = ({ lang, graph, updateGraph }) => {
       name="GRAPH_EDITOR"
       width="100%"
       tabSize={2}
-      onChange={onChange}
+      onChange={onChangeGraph}
+      editorProps={{
+        $blockScrolling: Infinity,
+      }}
     />
   );
 
   const aceOptionsEditor = (
     <AceEditor
-      value={JSON.stringify({ a: 'a' }, null, ' ')}
+      value={JSON.stringify(options, null, ' ')}
       mode="json"
       theme="textmate"
       name="OPTIONS_EDITOR"
       width="100%"
       tabSize={2}
-      onChange={onChange}
+      onChange={onChangeOptions}
+      editorProps={{
+        $blockScrolling: Infinity,
+      }}
     />
   );
 
@@ -83,7 +97,9 @@ const GraphEditor = ({ lang, graph, updateGraph }) => {
 GraphEditor.propTypes = {
   lang: PropTypes.string.isRequired,
   graph: graphType.isRequired,
+  options: optionsType.isRequired,
   updateGraph: PropTypes.func.isRequired,
+  updateOptions: PropTypes.func.isRequired,
 };
 
 export default GraphEditor;
