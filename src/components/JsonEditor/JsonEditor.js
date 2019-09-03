@@ -19,7 +19,7 @@ const JsonEditor = ({
   };
 
   const buttonUpdate = (
-    <button className="btn-update-graph button is-small" style={{ float: 'right' }} type="button" onClick={onClick}>
+    <button className="btn-update-graph button is-small is-primary" style={{ float: 'right' }} type="button" onClick={onClick}>
       Atualizar
     </button>
   );
@@ -37,8 +37,7 @@ const JsonEditor = ({
   );
 
   return (
-    <div>
-      {buttonUpdate}
+    <div>      
       {editor}
     </div>
   );
