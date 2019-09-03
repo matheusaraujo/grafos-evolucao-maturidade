@@ -6,7 +6,7 @@ export const updateGraph = (graph) => ({
 export const updateOptions = (options) => ({
   type: 'UPDATE_OPTIONS',
   options,
-})
+});
 
 export const toggleCode = () => ({
   type: 'TOGGLE_CODE',

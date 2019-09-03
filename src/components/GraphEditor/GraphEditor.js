@@ -33,7 +33,7 @@ const GraphEditor = ({
 
   const buttonUpdate = (
     <button className="btn-update-graph button is-small is-primary" type="button" onClick={onClick}>
-      Atualizar
+      {labels.update[lang]}
     </button>
   );
 
