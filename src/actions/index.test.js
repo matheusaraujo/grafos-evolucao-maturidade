@@ -24,4 +24,11 @@ describe('actions', () => {
         type: 'LOAD_PAGE',
       });
   });
+
+  test('unloadPage should create UNLOAD_PAGE action', () => {
+    expect(actions.unloadPage())
+      .toEqual({
+        type: 'UNLOAD_PAGE',
+      });
+  });
 });

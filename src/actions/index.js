@@ -15,3 +15,7 @@ export const toggleCode = () => ({
 export const loadPage = () => ({
   type: 'LOAD_PAGE',
 });
+
+export const unloadPage = () => ({
+  type: 'UNLOAD_PAGE',
+});

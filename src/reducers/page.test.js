@@ -13,6 +13,11 @@ describe('page reducer', () => {
       .toEqual({ loaded: true });
   });
 
+  test('should handle UNLOAD_PAGE', () => {
+    expect(page({}, { type: 'UNLOAD_PAGE' }))
+      .toEqual({ loaded: false });
+  });
+
   test('should handle default', () => {
     expect(page(undefined, undefined))
       .toEqual({

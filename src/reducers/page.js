@@ -11,6 +11,11 @@ const page = (state = initialState, action = { type: 'default' }) => {
         ...state,
         loaded: true,
       };
+    case 'UNLOAD_PAGE':
+      return {
+        ...state,
+        loaded: false,
+      };
     case 'TOGGLE_CODE':
       return {
         ...state,
