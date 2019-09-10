@@ -1,13 +1,13 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import AceEditor from 'react-ace';
-import 'brace/mode/json';
-import 'brace/theme/textmate';
+import GraphAceEditor from './Graph/GraphAceEditor';
+import OptionsAceEditor from './Options/OptionsAceEditor';
 
 import * as labels from '../../commons/labels';
+import { isValidJson, toAceEditor, fromAceEditor } from '../../commons/json';
 
 import { graphType, optionsType } from '../../commons/types';
 
@@ -16,55 +16,44 @@ const GraphEditor = ({
 }) => {
   const [selectedTab, selectTab] = useState('graph');
 
-  let innerGraph = { ...graph };
-  let innerOptions = { ...options };
-  const onChangeGraph = (value) => { innerGraph = value; };
-  const onChangeOptions = (value) => { innerOptions = value; };
+  const [isGraphValid, validateGraph] = useState(true);
+  const [stateGraph, updateStateGraph] = useState(toAceEditor(graph));
+  const graphAceEditor = (
+    <GraphAceEditor
+      graph={stateGraph}
+      onChange={(value) => {
+        updateStateGraph(value);
+        validateGraph(isValidJson(value));
+      }}
+    />
+  );
+
+  const [isOptionsValid, validateOptions] = useState(true);
+  const [stateOptions, updateStateOptions] = useState(JSON.stringify(options, null, ' '));
+  const aceEditorOptions = (
+    <OptionsAceEditor
+      options={stateOptions}
+      onChange={(value) => {
+        updateStateOptions(value);
+        validateOptions(isValidJson(value));
+      }}
+    />
+  );
+
   const onClick = () => {
-    if (typeof innerGraph === 'string') {
-      innerGraph = JSON.parse(innerGraph);
-    }
-    if (typeof innerOptions === 'string') {
-      innerOptions = JSON.parse(innerOptions);
-    }
-    updateGraph(innerGraph);
-    updateOptions(innerOptions);
+    updateGraph(fromAceEditor(stateGraph));
+    updateOptions(fromAceEditor(stateOptions));
   };
 
   const buttonUpdate = (
-    <button className="btn-update-graph button is-small is-primary" type="button" onClick={onClick}>
+    <button
+      className="btn-update-graph button is-small is-primary"
+      type="button"
+      onClick={onClick}
+      disabled={!(isGraphValid && isOptionsValid)}
+    >
       {labels.update[lang]}
     </button>
-  );
-
-  const aceGraphEditor = (
-    <AceEditor
-      value={JSON.stringify(graph, null, ' ')}
-      mode="json"
-      theme="textmate"
-      name="GRAPH_EDITOR"
-      width="100%"
-      tabSize={2}
-      onChange={onChangeGraph}
-      editorProps={{
-        $blockScrolling: Infinity,
-      }}
-    />
-  );
-
-  const aceOptionsEditor = (
-    <AceEditor
-      value={JSON.stringify(options, null, ' ')}
-      mode="json"
-      theme="textmate"
-      name="OPTIONS_EDITOR"
-      width="100%"
-      tabSize={2}
-      onChange={onChangeOptions}
-      editorProps={{
-        $blockScrolling: Infinity,
-      }}
-    />
   );
 
   return (
@@ -87,8 +76,8 @@ const GraphEditor = ({
         </div>
       </div>
       <div>
-        {selectedTab === 'graph' && aceGraphEditor}
-        {selectedTab === 'options' && aceOptionsEditor}
+        {selectedTab === 'graph' && graphAceEditor}
+        {selectedTab === 'options' && aceEditorOptions}
       </div>
     </div>
   );

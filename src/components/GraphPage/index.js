@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  unloadPage: (graph) => { dispatch(unloadPage()); },  
+  unloadPage: () => { dispatch(unloadPage()); },
 });
 
 export default connect(
