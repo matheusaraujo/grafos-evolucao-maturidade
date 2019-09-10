@@ -9,13 +9,13 @@ describe('page reducer', () => {
   });
 
   test('should handle LOAD_PAGE', () => {
-    expect(page({}, { type: 'LOAD_PAGE' }))
-      .toEqual({ loaded: true });
+    expect(page(undefined, { type: 'LOAD_PAGE' }))
+      .toMatchObject({ loaded: true });
   });
 
   test('should handle UNLOAD_PAGE', () => {
-    expect(page({}, { type: 'UNLOAD_PAGE' }))
-      .toEqual({ loaded: false });
+    expect(page(undefined, { type: 'UNLOAD_PAGE' }))
+      .toMatchObject({ loaded: false });
   });
 
   test('should handle default', () => {

@@ -31,4 +31,26 @@ describe('actions', () => {
         type: 'UNLOAD_PAGE',
       });
   });
+
+  test('showDetails should create SHOW_DETAILS action', () => {
+    expect(actions.showDetails())
+      .toEqual({
+        type: 'SHOW_DETAILS',
+      });
+  });
+
+  test('hideDetails should create HIDE_DETAILS action', () => {
+    expect(actions.hideDetails())
+      .toEqual({
+        type: 'HIDE_DETAILS',
+      });
+  });
+
+  test('setDetails should create SET_DETAILS action', () => {
+    expect(actions.setDetails('blah'))
+      .toEqual({
+        type: 'SET_DETAILS',
+        content: 'blah',
+      });
+  });
 });

@@ -19,3 +19,16 @@ export const loadPage = () => ({
 export const unloadPage = () => ({
   type: 'UNLOAD_PAGE',
 });
+
+export const showDetails = () => ({
+  type: 'SHOW_DETAILS',
+});
+
+export const hideDetails = () => ({
+  type: 'HIDE_DETAILS',
+});
+
+export const setDetails = (content) => ({
+  type: 'SET_DETAILS',
+  content,
+});

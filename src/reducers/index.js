@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import page from './page';
+import details from './details';
 import graph from './graph';
 import options from './options';
+import page from './page';
 
 export default combineReducers({
-  page,
+  details,
   graph,
   options,
+  page,
 });
