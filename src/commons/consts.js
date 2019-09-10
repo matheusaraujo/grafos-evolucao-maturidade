@@ -6,6 +6,11 @@ export const defaultOptions = {
     },
   },
   height: '500px',
+  interaction: {
+    hover: true,
+    hoverConnectedEdges: true,
+    selectConnectedEdges: false,
+  },
 };
 
 export const defaultLang = 'pt';

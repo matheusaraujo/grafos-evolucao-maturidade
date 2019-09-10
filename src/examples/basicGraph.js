@@ -21,11 +21,13 @@ const basicGraph = {
       id: 0,
       from: 0,
       to: 1,
+      title: 'From 0 to 1',
     },
     {
       id: 1,
       from: 1,
       to: 2,
+      title: 'From 1 to 2',
     },
   ],
 };

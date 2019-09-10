@@ -7,6 +7,11 @@ const initialState = {
     },
   },
   height: '500px',
+  interaction: {
+    hover: true,
+    hoverConnectedEdges: true,
+    selectConnectedEdges: false,
+  },
 };
 
 const options = (state = initialState, action = { type: 'default' }) => {

@@ -12,6 +12,7 @@ export const graphType = shape({
     id: number.isRequired,
     from: number.isRequired,
     to: number.isRequired,
+    title: string,
   })),
 });
 
@@ -22,5 +23,5 @@ export const optionsType = shape({
       direction: string.isRequired,
     }),
   }),
-  height: string.isRequired,  
+  height: string.isRequired,
 });
