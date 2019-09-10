@@ -6,6 +6,7 @@ export const graphType = shape({
   nodes: arrayOf(shape({
     id: number.isRequired,
     label: string.isRequired,
+    title: string,
   })).isRequired,
   edges: arrayOf(shape({
     id: number.isRequired,
@@ -21,5 +22,5 @@ export const optionsType = shape({
       direction: string.isRequired,
     }),
   }),
-  height: string.isRequired,
+  height: string.isRequired,  
 });

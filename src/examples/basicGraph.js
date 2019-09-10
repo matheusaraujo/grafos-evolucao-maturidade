@@ -3,14 +3,17 @@ const basicGraph = {
     {
       id: 0,
       label: 'Zero',
+      title: 'Zero 0',
     },
     {
       id: 1,
       label: 'One',
+      title: 'One 1',
     },
     {
       id: 2,
       label: 'Two',
+      title: 'Two 2',
     },
   ],
   edges: [
