@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import GraphAceEditor from './Graph/GraphAceEditor';
-import OptionsAceEditor from './Options/OptionsAceEditor';
+import OptionsAceEditor from './Options/AceEditorOptions';
 
 import * as labels from '../../commons/labels';
 import { isValidJson, toAceEditor, fromAceEditor } from '../../commons/json';

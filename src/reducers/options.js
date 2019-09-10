@@ -6,7 +6,7 @@ const initialState = {
       direction: 'LR',
     },
   },
-  height: '500px',
+  height: '555px',
   interaction: {
     hover: true,
     hoverConnectedEdges: true,

@@ -1,5 +1,5 @@
 export const isValidJson = (s) => {
-  if (!(typeof s === 'string')) return false;
+  if (typeof s !== 'string') return false;
   try {
     JSON.parse(s);
     return true;

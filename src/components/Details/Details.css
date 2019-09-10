@@ -15,7 +15,30 @@
   min-height: 20px;
   min-width: 20px;
   outline: 0;
- position: relative;
+  position: relative;
   vertical-align: top;
   width: 20px;
+  margin-left: auto;
+}
+
+.delete::before {
+    height: 2px;
+    width: 50%;
+}
+
+.delete::after {
+    height: 50%;
+    width: 2px;
+}
+
+.delete::before,
+.delete::after {
+  background-color: white;
+  content: '';
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
 }

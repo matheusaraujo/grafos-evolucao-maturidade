@@ -3,7 +3,7 @@ const initialState = {
   content: '',
 };
 
-const page = (state = initialState, action = { type: 'default' }) => {
+const details = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
     case 'SHOW_DETAILS':
       return {
@@ -25,4 +25,4 @@ const page = (state = initialState, action = { type: 'default' }) => {
   }
 };
 
-export default page;
+export default details;
