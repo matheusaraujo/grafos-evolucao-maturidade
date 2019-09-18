@@ -20,15 +20,17 @@ export const unloadPage = () => ({
   type: 'UNLOAD_PAGE',
 });
 
-export const showDetails = () => ({
-  type: 'SHOW_DETAILS',
+export const showModal = () => ({
+  type: 'SHOW_MODAL',
 });
 
-export const hideDetails = () => ({
-  type: 'HIDE_DETAILS',
+export const hideModal = () => ({
+  type: 'HIDE_MODAL',
 });
 
-export const setDetails = (content) => ({
-  type: 'SET_DETAILS',
+export const fillModal = (title, subtitle, content) => ({
+  type: 'FILL_MODAL',
+  title,
+  subtitle,
   content,
 });

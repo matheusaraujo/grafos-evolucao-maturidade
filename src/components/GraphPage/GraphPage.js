@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import GraphEditor from '../GraphEditor/index';
 import GraphViewer from '../GraphViewer/index';
-import Details from '../Details/index';
+import Modal from '../Modal/index';
 
 import * as labels from '../../commons/labels';
 
@@ -30,7 +30,7 @@ const GraphPage = ({ lang, unloadPage }) => (
         <GraphViewer />
       </div>
     </div>
-    <Details />
+    <Modal />
   </div>
 );
 

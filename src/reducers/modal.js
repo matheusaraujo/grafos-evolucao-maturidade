@@ -1,23 +1,27 @@
 const initialState = {
-  show: false,
-  content: '',
+  visible: false,
+  title: undefined,
+  subtitle: undefined,
+  content: undefined,
 };
 
 const details = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
-    case 'SHOW_DETAILS':
+    case 'SHOW_MODAL':
       return {
         ...state,
-        show: true,
+        visible: true,
       };
-    case 'HIDE_DETAILS':
+    case 'HIDE_MODAL':
       return {
         ...state,
-        show: false,
+        visible: false,
       };
-    case 'SET_DETAILS':
+    case 'FILL_MODAL':
       return {
         ...state,
+        title: action.title,
+        subtitle: action.subtitle,
         content: action.content,
       };
     default:

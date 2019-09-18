@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GraphViewer from './GraphViewer';
-import { showDetails, setDetails } from '../../actions/index';
+import { fillModal, showModal } from '../../actions/index';
 
 const mapStateToProps = (state) => ({
   graph: state.graph,
@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  showDetails: () => { dispatch(showDetails()); },
-  setDetails: (content) => { dispatch(setDetails(content)); },
+  fillModal: (title, subtitle, content) => { dispatch(fillModal(title, subtitle, content)); },
+  showModal: () => { dispatch(showModal()); },
 });
 
 export default connect(

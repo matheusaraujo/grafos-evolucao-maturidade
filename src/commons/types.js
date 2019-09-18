@@ -2,18 +2,23 @@ import {
   shape, number, string, bool, arrayOf,
 } from 'prop-types';
 
+export const edgeType = shape({
+  id: number.isRequired,
+  from: number.isRequired,
+  to: number.isRequired,
+  title: string,
+  detail: string,
+});
+
+export const nodeType = shape({
+  id: number.isRequired,
+  label: string.isRequired,
+  title: string,
+});
+
 export const graphType = shape({
-  nodes: arrayOf(shape({
-    id: number.isRequired,
-    label: string.isRequired,
-    title: string,
-  })).isRequired,
-  edges: arrayOf(shape({
-    id: number.isRequired,
-    from: number.isRequired,
-    to: number.isRequired,
-    title: string,
-  })),
+  nodes: arrayOf(nodeType).isRequired,
+  edges: arrayOf(edgeType).isRequired,
 });
 
 export const optionsType = shape({

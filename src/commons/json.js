@@ -11,5 +11,3 @@ export const isValidJson = (s) => {
 export const toAceEditor = (o) => JSON.stringify(o, null, ' ');
 
 export const fromAceEditor = (s) => JSON.parse(s);
-
-export default isValidJson;

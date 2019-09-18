@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
@@ -7,23 +6,20 @@ import './network.css';
 import './styles.css';
 
 const GraphViewer = ({
-  graph, options, showDetails, setDetails,
+  graph, options, showModal, fillModal,
 }) => {
   const events = {
     selectNode(e) {
-      console.log(e);
       if (e.nodes.length === 1) {
         const id = e.nodes[0];
         const node = graph.nodes.find((n) => n.id === id);
-        console.log(node);
-        setDetails(node.details);
-        showDetails();
+        fillModal(node.label, node.title, node.details);
+        showModal();
       }
     },
     selectEdge(e) {
-      console.log(e);
-      setDetails(e.toString());
-      showDetails();
+      fillModal(e.toString());
+      showModal();
     },
   };
 
@@ -46,8 +42,8 @@ const GraphViewer = ({
 GraphViewer.propTypes = {
   graph: graphType.isRequired,
   options: optionsType.isRequired,
-  showDetails: PropTypes.func.isRequired,
-  setDetails: PropTypes.func.isRequired,
+  fillModal: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired,
 };
 
 export default GraphViewer;

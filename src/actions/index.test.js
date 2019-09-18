@@ -32,25 +32,26 @@ describe('actions', () => {
       });
   });
 
-  test('showDetails should create SHOW_DETAILS action', () => {
-    expect(actions.showDetails())
+  test('showModal should create SHOW_MODAL action', () => {
+    expect(actions.showModal())
       .toEqual({
-        type: 'SHOW_DETAILS',
+        type: 'SHOW_MODAL',
       });
   });
 
-  test('hideDetails should create HIDE_DETAILS action', () => {
-    expect(actions.hideDetails())
+  test('hideModal should create HIDE_MODAL action', () => {
+    expect(actions.hideModal())
       .toEqual({
-        type: 'HIDE_DETAILS',
+        type: 'HIDE_MODAL',
       });
   });
 
-  test('setDetails should create SET_DETAILS action', () => {
-    expect(actions.setDetails('blah'))
+  test('fillModal should create FILL_MODAL action', () => {
+    expect(actions.setDetails('blah', 'foo'))
       .toEqual({
         type: 'SET_DETAILS',
-        content: 'blah',
+        title: 'blah',
+        content: 'foo',
       });
   });
 });
