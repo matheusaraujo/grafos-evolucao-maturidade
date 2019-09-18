@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 import './Modal.scss';
 
 const Modal = ({
   visible, title, subtitle, content, hideModal,
 }) => {
-  if (!visible) return null;  
+  if (!visible) return null;
   return (
     <div className="modal is-active">
       <div className="modal-background" />
@@ -21,7 +22,7 @@ const Modal = ({
           />
         </header>
         <section className="modal-card-body">
-          {content}
+          <ReactMarkdown source={content} />
         </section>
         <footer className="modal-card-foot" />
       </div>

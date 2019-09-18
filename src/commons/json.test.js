@@ -1,10 +1,5 @@
 import { isValidJson, toAceEditor, fromAceEditor } from './json';
 
-const jsonParsed = `
-{
-  "a": "a"
-}`;
-
 describe('json utils', () => {
   test('isValidJson should return true', () => {
     expect(isValidJson('{"a":"a"}'))
@@ -24,6 +19,6 @@ describe('json utils', () => {
   });
   test('toAceEditor should be fromAceEditor pair', () => {
     expect(toAceEditor({ a: 'a' }))
-      .toBe(fromAceEditor("{\"a\":\"a\"}"));
+      .toBe(fromAceEditor('{"a":"a"}'));
   });
 });
