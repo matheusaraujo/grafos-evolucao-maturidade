@@ -15,14 +15,16 @@ describe('modal reducer', () => {
     expect(modal(undefined, {
       type: 'FILL_MODAL', title: 't1', subtitle: 's2', content: 'blah',
     }))
-      .toMatchObject({ title: 't1', subtitle: 's1', content: 'blah' });
+      .toMatchObject({ title: 't1', subtitle: 's2', content: 'blah' });
   });
 
   test('should handle default', () => {
     expect(modal(undefined, undefined))
       .toEqual({
-        show: false,
-        content: '',
+        visible: false,
+        title: undefined,
+        subtitle: undefined,
+        content: undefined,
       });
   });
 });

@@ -1,4 +1,4 @@
-import { isValidJson, toAceEditor, fromAceEditor } from './json';
+import { isValidJson } from './json';
 
 describe('json utils', () => {
   test('isValidJson should return true', () => {
@@ -16,9 +16,5 @@ describe('json utils', () => {
   test('isValidJson should return false, no string', () => {
     expect(isValidJson(1))
       .toBeFalsy();
-  });
-  test('toAceEditor should be fromAceEditor pair', () => {
-    expect(toAceEditor({ a: 'a' }))
-      .toBe(fromAceEditor('{"a":"a"}'));
   });
 });

@@ -47,10 +47,11 @@ describe('actions', () => {
   });
 
   test('fillModal should create FILL_MODAL action', () => {
-    expect(actions.setDetails('blah', 'foo'))
+    expect(actions.fillModal('blah', undefined, 'foo'))
       .toEqual({
-        type: 'SET_DETAILS',
+        type: 'FILL_MODAL',
         title: 'blah',
+        subtitle: undefined,
         content: 'foo',
       });
   });
