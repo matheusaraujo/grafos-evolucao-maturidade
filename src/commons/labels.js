@@ -57,3 +57,8 @@ export const options = {
   pt: 'Opções',
   en: 'Options',
 };
+
+export const back = {
+  pt: 'Voltar',
+  en: 'Back',
+};

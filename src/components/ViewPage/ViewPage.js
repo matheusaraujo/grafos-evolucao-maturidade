@@ -8,7 +8,7 @@ import Modal from '../Modal/index';
 
 import * as labels from '../../commons/labels';
 
-const GraphPage = ({ lang, unloadPage }) => (
+const ViewPage = ({ lang, unloadPage }) => (
   <div className="container is-fluid">
     &nbsp;
     <h1 className="title">
@@ -19,7 +19,7 @@ const GraphPage = ({ lang, unloadPage }) => (
         style={{ float: 'right' }}
         onClick={unloadPage}
       >
-      Voltar
+        {labels.back[lang]}
       </button>
     </h1>
     <div className="columns">
@@ -35,9 +35,9 @@ const GraphPage = ({ lang, unloadPage }) => (
 );
 
 
-GraphPage.propTypes = {
+ViewPage.propTypes = {
   lang: PropTypes.string.isRequired,
   unloadPage: PropTypes.func.isRequired,
 };
 
-export default GraphPage;
+export default ViewPage;

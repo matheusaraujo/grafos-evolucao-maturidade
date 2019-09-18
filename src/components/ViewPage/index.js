@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import GraphPage from './GraphPage';
+import ViewPage from './ViewPage';
 import { unloadPage } from '../../actions/index';
 
 const mapStateToProps = (state) => ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(GraphPage);
+)(ViewPage);

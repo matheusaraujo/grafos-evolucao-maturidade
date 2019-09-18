@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GraphPage from '../components/GraphPage/index';
+import ViewPage from '../components/ViewPage/index';
 import InitialPage from '../components/InitialPage/index';
 import './App.sass';
 
@@ -8,7 +8,7 @@ const App = ({ loaded }) => {
   if (!loaded) {
     return (<InitialPage />);
   }
-  return (<GraphPage />);
+  return (<ViewPage />);
 };
 
 App.propTypes = {
