@@ -1,13 +1,6 @@
 import page from './page';
 
 describe('page reducer', () => {
-  test('should handle TOGGLE_CODE', () => {
-    expect(page({ showCode: true }, { type: 'TOGGLE_CODE' }))
-      .toEqual({ showCode: false });
-    expect(page({ showCode: false }, { type: 'TOGGLE_CODE' }))
-      .toEqual({ showCode: true });
-  });
-
   test('should handle LOAD_PAGE', () => {
     expect(page(undefined, { type: 'LOAD_PAGE' }))
       .toMatchObject({ loaded: true });
@@ -22,7 +15,6 @@ describe('page reducer', () => {
     expect(page(undefined, undefined))
       .toEqual({
         lang: 'pt',
-        showCode: true,
         loaded: false,
       });
   });

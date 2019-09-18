@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GraphEditor from './GraphEditor';
-import { updateGraph, updateOptions } from '../../actions';
+import { updateGraph, updateOptions, beginNodeEdition } from '../../actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,
@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   updateGraph: (graph) => { dispatch(updateGraph(graph)); },
   updateOptions: (options) => { dispatch(updateOptions(options)); },
+  beginNodeEdition: () => { dispatch(beginNodeEdition()); },
 });
 
 export default connect(

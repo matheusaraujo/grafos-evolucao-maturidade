@@ -34,3 +34,11 @@ export const fillModal = (title, subtitle, content) => ({
   subtitle,
   content,
 });
+
+export const beginNodeEdition = () => ({
+  type: 'BEGIN_NODE_EDITION',
+});
+
+export const endNodeEdition = () => ({
+  type: 'END_NODE_EDITION',
+});

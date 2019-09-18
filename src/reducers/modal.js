@@ -5,7 +5,7 @@ const initialState = {
   content: undefined,
 };
 
-const details = (state = initialState, action = { type: 'default' }) => {
+const modal = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
     case 'SHOW_MODAL':
       return {
@@ -29,4 +29,4 @@ const details = (state = initialState, action = { type: 'default' }) => {
   }
 };
 
-export default details;
+export default modal;

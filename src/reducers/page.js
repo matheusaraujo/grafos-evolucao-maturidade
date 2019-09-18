@@ -1,7 +1,7 @@
 const initialState = {
   lang: 'pt',
-  showCode: true,
   loaded: false,
+  nodeEdition: false,
 };
 
 const page = (state = initialState, action = { type: 'default' }) => {
@@ -16,10 +16,15 @@ const page = (state = initialState, action = { type: 'default' }) => {
         ...state,
         loaded: false,
       };
-    case 'TOGGLE_CODE':
+    case 'BEGIN_NODE_EDITION':
       return {
         ...state,
-        showCode: !state.showCode,
+        nodeEdition: true,
+      };
+    case 'END_NODE_EDITION':
+      return {
+        ...state,
+        nodeEdition: false,
       };
     default:
       return state;

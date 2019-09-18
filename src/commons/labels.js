@@ -38,6 +38,16 @@ export const update = {
   en: 'Update',
 };
 
+export const node = {
+  pt: 'Vértices',
+  en: 'Nodes',
+};
+
+export const edge = {
+  pt: 'Arestas',
+  en: 'Edges',
+};
+
 export const graph = {
   pt: 'Grafo',
   en: 'Graph',

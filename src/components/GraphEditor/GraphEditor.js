@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import GraphAceEditor from './Graph/GraphAceEditor';
 import OptionsAceEditor from './Options/AceEditorOptions';
+import NodeEditor from './NodeEditor/index';
 
 import * as labels from '../../commons/labels';
 import { isValidJson, toAceEditor, fromAceEditor } from '../../commons/json';
@@ -13,6 +14,7 @@ import { graphType, optionsType } from '../../commons/types';
 
 const GraphEditor = ({
   lang, graph, options, updateGraph, updateOptions,
+  beginNodeEdition,
 }) => {
   const [selectedTab, selectTab] = useState('graph');
 
@@ -40,7 +42,7 @@ const GraphEditor = ({
     />
   );
 
-  const onClick = () => {
+  const onUpdate = () => {
     updateGraph(fromAceEditor(stateGraph));
     updateOptions(fromAceEditor(stateOptions));
   };
@@ -49,10 +51,40 @@ const GraphEditor = ({
     <button
       className="btn-update-graph button is-small is-primary"
       type="button"
-      onClick={onClick}
+      onClick={onUpdate}
       disabled={!(isGraphValid && isOptionsValid)}
     >
       {labels.update[lang]}
+    </button>
+  );
+
+  const buttonEditNode = (
+    <button
+      className="btn-edit-node button is-small"
+      type="button"
+      onClick={beginNodeEdition}
+    >
+      {labels.node[lang]}
+    </button>
+  );
+
+  const buttonEditEdge = (
+    <button
+      className="btn-edit-edge button is-small"
+      type="button"
+      disabled
+    >
+      {labels.edge[lang]}
+    </button>
+  );
+
+  const buttonEditOptions = (
+    <button
+      className="btn-edit-edge button is-small"
+      type="button"
+      disabled
+    >
+      {labels.options[lang]}
     </button>
   );
 
@@ -75,10 +107,16 @@ const GraphEditor = ({
           {buttonUpdate}
         </div>
       </div>
+      <div className="buttons has-addons is-centered">
+        {buttonEditNode}
+        {buttonEditEdge}
+        {buttonEditOptions}
+      </div>
       <div>
         {selectedTab === 'graph' && graphAceEditor}
         {selectedTab === 'options' && aceEditorOptions}
-      </div>
+      </div>      
+      <NodeEditor />
     </div>
   );
 };
@@ -89,6 +127,7 @@ GraphEditor.propTypes = {
   options: optionsType.isRequired,
   updateGraph: PropTypes.func.isRequired,
   updateOptions: PropTypes.func.isRequired,
+  beginNodeEdition: PropTypes.func.isRequired,
 };
 
 export default GraphEditor;

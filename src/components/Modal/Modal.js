@@ -26,20 +26,21 @@ const Modal = ({
         </section>
         <footer className="modal-card-foot" />
       </div>
-
     </div>
   );
 };
 
 Modal.defaultProps = {
+  title: undefined,
   subtitle: undefined,
+  content: undefined,
 };
 
 Modal.propTypes = {
   visible: PropTypes.bool.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   subtitle: PropTypes.string,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.string,
   hideModal: PropTypes.func.isRequired,
 };
 
