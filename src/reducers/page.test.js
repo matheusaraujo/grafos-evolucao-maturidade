@@ -16,6 +16,7 @@ describe('page reducer', () => {
       .toEqual({
         lang: 'pt',
         loaded: false,
+        nodeEdition: false,
       });
   });
 });

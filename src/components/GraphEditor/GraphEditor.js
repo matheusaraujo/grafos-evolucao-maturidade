@@ -115,7 +115,7 @@ const GraphEditor = ({
       <div>
         {selectedTab === 'graph' && graphAceEditor}
         {selectedTab === 'options' && aceEditorOptions}
-      </div>      
+      </div>
       <NodeEditor />
     </div>
   );
