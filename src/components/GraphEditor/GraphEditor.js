@@ -3,16 +3,15 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import * as labels from '../../commons/labels';
 import NodesEditor from './Nodes/index';
+import NodeGroupsEditor from './NodeGroups/index';
 import EdgesEditor from './Edges/index';
 import OptionsEditor from './Options/index';
 
 const GraphEditor = ({
   lang, pageMode,
-  editNodes, editNodesGroups, editEdges, editOptions,
+  editNodes, editNodeGroups, editEdges, editOptions,
 }) => (
   <div className="box">
     <div className="tabs is-small">
@@ -20,8 +19,8 @@ const GraphEditor = ({
         <li className={pageMode === 'editing_nodes' ? 'is-active' : ''}>
           <a onClick={editNodes}>{labels.nodes[lang]}</a>
         </li>
-        <li className={pageMode === 'editing_nodes_groups' ? 'is-active' : ''}>
-          <a onClick={editNodesGroups}>{labels.nodesGroups[lang]}</a>
+        <li className={pageMode === 'editing_node_groups' ? 'is-active' : ''}>
+          <a onClick={editNodeGroups}>{labels.nodeGroups[lang]}</a>
         </li>
         <li className={pageMode === 'editing_edges' ? 'is-active' : ''}>
           <a onClick={editEdges}>{labels.edges[lang]}</a>
@@ -33,12 +32,7 @@ const GraphEditor = ({
     </div>
     <div>
       {pageMode === 'editing_nodes' && <NodesEditor />}
-      {pageMode === 'editing_nodes_groups' && (
-        <div style={{ textAlign: 'center', paddingTop: '8px' }}>
-          <FontAwesomeIcon icon={faWrench} size="5x" />
-          <em>Em construção</em>
-        </div>
-      )}
+      {pageMode === 'editing_node_groups' && <NodeGroupsEditor />}
       {pageMode === 'editing_edges' && <EdgesEditor />}
       {pageMode === 'editing_options' && <OptionsEditor />}
     </div>
@@ -49,7 +43,7 @@ GraphEditor.propTypes = {
   lang: PropTypes.string.isRequired,
   pageMode: PropTypes.string.isRequired,
   editNodes: PropTypes.func.isRequired,
-  editNodesGroups: PropTypes.func.isRequired,
+  editNodeGroups: PropTypes.func.isRequired,
   editEdges: PropTypes.func.isRequired,
   editOptions: PropTypes.func.isRequired,
 };

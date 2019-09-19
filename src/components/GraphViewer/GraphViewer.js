@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
-import { graphType, optionsType } from '../../commons/types';
-import './network.css';
-import './styles.css';
+import { graphType, nodeGroupType, optionsType } from '../../commons/types';
+import './network.scss';
+import './styles.scss';
 
 const GraphViewer = ({
-  graph, options, showModal, fillModal,
+  graph, nodeGroups, options,
+  showModal, fillModal,
 }) => {
   const events = {
     selectNode(n) {
@@ -31,12 +32,20 @@ const GraphViewer = ({
     },
   };
 
+  const getColor = (groupId) => {
+    if (!groupId) return undefined;
+    const g = nodeGroups.find((ng) => ng.id === groupId);
+    if (!g) return undefined;
+    return g.color;
+  };
+
   const mappedGraph = {
     nodes: graph.nodes.map((n) => ({
       id: n.id,
       label: n.label,
       title: n.title,
       shape: 'circle',
+      color: getColor(n.groupId),
     })),
     edges: graph.edges.map((e) => ({
       id: e.id,
@@ -55,6 +64,7 @@ const GraphViewer = ({
 
 GraphViewer.propTypes = {
   graph: graphType.isRequired,
+  nodeGroups: PropTypes.arrayOf(nodeGroupType).isRequired,
   options: optionsType.isRequired,
   fillModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,

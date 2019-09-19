@@ -4,22 +4,24 @@ import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import sinon from 'sinon';
 import InitialPage from './InitialPage';
-
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
+import { defaultNodeGroups } from '../../commons/consts';
 
 describe('InitialPage', () => {
   Enzyme.configure({ adapter: new Adapter() });
 
   test('should match snapshot', () => {
     const lang = 'pt';
-    const viewGraph = () => { };
+    const updateNodeGroups = () => { };
     const updateGraph = () => { };
+    const viewGraph = () => { };
     const component = shallow(
       <InitialPage
         lang={lang}
-        viewGraph={viewGraph}
+        updateNodeGroups={updateNodeGroups}
         updateGraph={updateGraph}
+        viewGraph={viewGraph}
       />,
     );
     expect(toJson(component)).toMatchSnapshot();
@@ -27,35 +29,43 @@ describe('InitialPage', () => {
 
   test('should trigger basicGraph', () => {
     const lang = 'pt';
-    const viewGraph = sinon.spy();
+    const updateNodeGroups = sinon.spy();
     const updateGraph = sinon.spy();
+    const viewGraph = sinon.spy();
     const component = shallow(
       <InitialPage
         lang={lang}
-        viewGraph={viewGraph}
+        updateNodeGroups={updateNodeGroups}
         updateGraph={updateGraph}
+        viewGraph={viewGraph}
       />,
     );
     component.find('.btn-basic-graph').simulate('click');
     expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
     expect(updateGraph.args[0][0]).toBe(basicGraph);
+    expect(updateNodeGroups.callCount).toBe(1);
+    expect(updateNodeGroups.args[0][0]).toBe(defaultNodeGroups);
   });
 
   test('should trigger systemEngineer', () => {
     const lang = 'pt';
-    const viewGraph = sinon.spy();
+    const updateNodeGroups = sinon.spy();
     const updateGraph = sinon.spy();
+    const viewGraph = sinon.spy();
     const component = shallow(
       <InitialPage
         lang={lang}
-        viewGraph={viewGraph}
+        updateNodeGroups={updateNodeGroups}
         updateGraph={updateGraph}
+        viewGraph={viewGraph}
       />,
     );
     component.find('.btn-system-engineer').simulate('click');
     expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
     expect(updateGraph.args[0][0]).toBe(systemEngineerGraph);
+    expect(updateNodeGroups.callCount).toBe(1);
+    expect(updateNodeGroups.args[0][0]).toBe(defaultNodeGroups);
   });
 });

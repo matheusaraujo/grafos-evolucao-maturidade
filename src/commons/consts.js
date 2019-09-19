@@ -13,4 +13,17 @@ export const defaultOptions = {
   },
 };
 
+export const defaultNodeGroups = [
+  {
+    id: 1,
+    label: 'Group Gray',
+    color: '#757763',
+  },
+  {
+    id: 2,
+    label: 'Group Pink',
+    color: '#fa7c91',
+  },
+];
+
 export const defaultLang = 'pt';

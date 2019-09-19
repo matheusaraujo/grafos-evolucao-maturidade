@@ -7,6 +7,7 @@ export const nodeType = shape({
   label: string.isRequired,
   title: string,
   detail: string,
+  groupId: number,
   level: number,
 });
 
@@ -31,4 +32,10 @@ export const optionsType = shape({
     }),
   }),
   height: string.isRequired,
+});
+
+export const nodeGroupType = shape({
+  id: number.isRequired,
+  label: string.isRequired,
+  color: string,
 });

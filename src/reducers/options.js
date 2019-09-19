@@ -14,15 +14,13 @@ const initialState = {
 };
 
 const options = (state = initialState, action = { type: 'default' }) => {
-  switch (action.type) {
-    case 'UPDATE_OPTIONS':
-      return {
-        ...state,
-        ...action.options,
-      };
-    default:
-      return state;
+  if (action.type === 'UPDATE_OPTIONS') {
+    return {
+      ...state,
+      ...action.options,
+    };
   }
+  return state;
 };
 
 export default options;

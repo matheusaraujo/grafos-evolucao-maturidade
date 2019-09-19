@@ -3,6 +3,11 @@ export const updateOptions = (options) => ({
   options,
 });
 
+export const updateNodeGroups = (nodeGroups) => ({
+  type: 'UPDATE_NODE_GROUPS',
+  nodeGroups,
+});
+
 export const showModal = () => ({
   type: 'SHOW_MODAL',
 });

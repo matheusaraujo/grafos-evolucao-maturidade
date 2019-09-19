@@ -6,35 +6,43 @@ import * as labels from '../../../commons/labels';
 import './NodesCrud.scss';
 
 const NodesCrud = ({ lang, nodes, update }) => {
-  const [tmpId, setTmpId] = useState(0);
-  const [tmpLabel, setTmpLabel] = useState('');
-  const [tmpTitle, setTmpTitle] = useState('');
-  const [tmpDetails, setTmpDetails] = useState('');
+  const [_id, setId] = useState(0);
+  const [_label, setLabel] = useState('');
+  const [_title, setTitle] = useState('');
+  const [_details, setDetails] = useState('');
+  const [_groupId, setGroupId] = useState(0);
+  const [_level, setLevel] = useState(0);
 
   const [operation, setOperation] = useState('list');
   const list = () => setOperation('list');
   const addNode = () => {
-    setTmpId(nodes.length ? nodes[nodes.length - 1].id + 1 : 0);
-    setTmpLabel('');
-    setTmpTitle('');
-    setTmpDetails('');
+    setId(nodes.length ? nodes[nodes.length - 1].id + 1 : 1);
+    setLabel('');
+    setTitle('');
+    setDetails('');
+    setGroupId(0);
+    setLevel(0);
     setOperation('new');
   };
   const editNode = (id) => {
     const node = nodes.find((n) => n.id === id);
-    setTmpId(node.id);
-    setTmpLabel(node.label);
-    setTmpTitle(node.title);
-    setTmpDetails(node.details);
+    setId(node.id);
+    setLabel(node.label);
+    setTitle(node.title || '');
+    setDetails(node.details || '');
+    setGroupId(node.groupId || 0);
+    setLevel(node.level || 0);
     setOperation('edit');
   };
 
   const saveTmpNode = () => {
     const node = {
-      id: tmpId,
-      label: tmpLabel,
-      title: tmpTitle,
-      details: tmpDetails,
+      id: _id,
+      label: _label,
+      title: _title,
+      details: _details,
+      groupId: _groupId,
+      level: _level,
     };
     const i = nodes.find((n) => n.id === node.id);
     if (i) update(nodes.map((n) => (n.id === node.id ? node : n)));
@@ -73,54 +81,88 @@ const NodesCrud = ({ lang, nodes, update }) => {
   if (operation === 'new' || operation === 'edit') {
     return (
       <div className="content nodes-content">
-        <div className="field">
-          <label className="label">id</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="nodeId"
-              placeholder="id"
-              disabled
-              value={tmpId}
-            />
+        <div className="columns is-paddingless is-marginless">
+          <div className="field column is-half">
+            <label className="label">{labels.id[lang]}</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="nodeId"
+                placeholder={labels.id[lang]}
+                disabled
+                value={_id}
+              />
+            </div>
+          </div>
+          <div className="field column is-half">
+            <label className="label">{labels.label[lang]}</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="nodeId"
+                placeholder={labels.label[lang]}
+                value={_label}
+                onChange={(ev) => { setLabel(ev.target.value); }}
+              />
+            </div>
           </div>
         </div>
-        <div className="field">
-          <label className="label">label</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="nodeId"
-              placeholder="label"
-              value={tmpLabel}
-              onChange={(ev) => { setTmpLabel(ev.target.value); }}
-            />
+        <div className="columns is-paddingless is-marginless">
+          <div className="field column">
+            <label className="label">{labels.title[lang]}</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="nodeId"
+                placeholder={labels.title[lang]}
+                value={_title}
+                onChange={(ev) => { setTitle(ev.target.value); }}
+              />
+            </div>
           </div>
         </div>
-        <div className="field">
-          <label className="label">title</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="nodeId"
-              placeholder="title"
-              value={tmpTitle}
-              onChange={(ev) => { setTmpTitle(ev.target.value); }}
-            />
+        <div className="columns is-paddingless is-marginless">
+          <div className="field column">
+            <label className="label">{labels.details[lang]}</label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                placeholder={labels.details[lang]}
+                value={_details}
+                onChange={(ev) => { setDetails(ev.target.value); }}
+              />
+            </div>
           </div>
         </div>
-        <div className="field">
-          <label className="label">details</label>
-          <div className="control">
-            <textarea
-              className="textarea"
-              placeholder="details"
-              value={tmpDetails}
-              onChange={(ev) => { setTmpDetails(ev.target.value); }}
-            />
+        <div className="columns is-paddingless is-marginless">
+          <div className="field column is-half">
+            <label className="label">{labels.groupId[lang]}</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                id="nodeId"
+                placeholder={labels.groupId[lang]}
+                value={_groupId}
+                onChange={(ev) => { setGroupId(Number(ev.target.value)); }}
+              />
+            </div>
+          </div>
+          <div className="field column is-half">
+            <label className="label">{labels.level[lang]}</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                id="nodeId"
+                placeholder={labels.level[lang]}
+                value={_level}
+                onChange={(ev) => { setLevel(Number(ev.target.value)); }}
+              />
+            </div>
           </div>
         </div>
         <button

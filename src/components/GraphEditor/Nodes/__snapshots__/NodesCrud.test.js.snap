@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NodesCrud should match snapshot 1`] = `
+<div
+  className="content nodes-content"
+>
+  <ul />
+  <button
+    className="button is-small is-text"
+    onClick={[Function]}
+    type="button"
+  >
+    Adicionar
+  </button>
+</div>
+`;

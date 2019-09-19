@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphEditor should match snapshot 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="tabs is-small"
+  >
+    <ul>
+      <li
+        className="is-active"
+      >
+        <a
+          onClick={[Function]}
+        >
+          Vértices
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          onClick={[Function]}
+        >
+          Grupos de Vértices
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          onClick={[Function]}
+        >
+          Arestas
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          onClick={[Function]}
+        >
+          Opções
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <Connect(NodesEditor) />
+  </div>
+</div>
+`;

@@ -10,8 +10,8 @@ export const editNodes = () => ({
   type: 'EDIT_NODES',
 });
 
-export const editNodesGroups = () => ({
-  type: 'EDIT_NODES_GROUPS',
+export const editNodeGroups = () => ({
+  type: 'EDIT_NODE_GROUPS',
 });
 
 export const editEdges = () => ({

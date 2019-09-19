@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
-
+import { defaultNodeGroups } from '../../commons/consts';
 import * as labels from '../../commons/labels';
 
-const InitialPage = ({ lang, viewGraph, updateGraph }) => {
-  const handleBasicGraph = () => {
-    updateGraph(basicGraph);
-    viewGraph();
-  };
-
-  const handleSystemEngineer = () => {
-    updateGraph(systemEngineerGraph);
+const InitialPage = ({
+  lang, updateNodeGroups, updateGraph, viewGraph,
+}) => {
+  const click = (graph) => {
+    updateNodeGroups(defaultNodeGroups);
+    updateGraph(graph);
     viewGraph();
   };
 
@@ -29,11 +26,17 @@ const InitialPage = ({ lang, viewGraph, updateGraph }) => {
     </header>
   );
 
-  const button = (label, subtitle, buttonClass, click) => (
+  const button = (label, subtitle, buttonClass, graph) => (
     <div className="box">
       <article className="media">
         <div className="media-left">
-          <button type="button" className={`${buttonClass} button is-primary`} onClick={click}>
+          <button
+            type="button"
+            className={`${buttonClass} button is-primary`}
+            onClick={() => {
+              click(graph);
+            }}
+          >
             {label}
           </button>
         </div>
@@ -47,12 +50,12 @@ const InitialPage = ({ lang, viewGraph, updateGraph }) => {
   const buttonBasicGraph = button(labels.basicModel[lang],
     labels.basicModelSubtitle[lang],
     'btn-basic-graph',
-    handleBasicGraph);
+    basicGraph);
 
   const buttonSystemEngineer = button(labels.systemEngineer[lang],
     labels.systemEngineerSubtitle[lang],
     'btn-system-engineer',
-    handleSystemEngineer);
+    systemEngineerGraph);
 
   return (
     <section className="section">
@@ -69,8 +72,9 @@ const InitialPage = ({ lang, viewGraph, updateGraph }) => {
 
 InitialPage.propTypes = {
   lang: PropTypes.string.isRequired,
-  viewGraph: PropTypes.func.isRequired,
+  updateNodeGroups: PropTypes.func.isRequired,
   updateGraph: PropTypes.func.isRequired,
+  viewGraph: PropTypes.func.isRequired,
 };
 
 export default InitialPage;

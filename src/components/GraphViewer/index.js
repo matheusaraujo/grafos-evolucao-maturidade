@@ -4,6 +4,7 @@ import { fillModal, showModal } from '../../actions/index';
 
 const mapStateToProps = (state) => ({
   graph: state.graph,
+  nodeGroups: state.nodeGroups,
   options: state.options,
 });
 

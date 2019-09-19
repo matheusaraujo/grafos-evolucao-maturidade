@@ -43,9 +43,9 @@ export const nodes = {
   en: 'Nodes',
 };
 
-export const nodesGroups = {
+export const nodeGroups = {
   pt: 'Grupos de Vértices',
-  en: 'Nodes Groups',
+  en: 'Node Groups',
 };
 
 export const edges = {
@@ -106,4 +106,14 @@ export const title = {
 export const details = {
   pt: 'details',
   en: 'details',
+};
+
+export const groupId = {
+  pt: 'groupId',
+  en: 'groupId',
+};
+
+export const level = {
+  pt: 'level',
+  en: 'level',
 };

@@ -3,7 +3,6 @@ import OptionsEditor from './OptionsEditor';
 import { updateOptions } from '../../../actions/index';
 
 const mapStateToProps = (state) => ({
-  pageMode: state.page.mode,
   lang: state.page.lang,
   options: state.options,
 });

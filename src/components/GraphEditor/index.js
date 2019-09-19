@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import GraphEditor from './GraphEditor';
 import {
-  editNodes, editNodesGroups, editEdges, editOptions,
+  editNodes, editNodeGroups, editEdges, editOptions,
 } from '../../actions/page';
 
 const mapStateToProps = (state) => ({
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   editNodes: () => { dispatch(editNodes()); },
-  editNodesGroups: () => { dispatch(editNodesGroups()); },
+  editNodeGroups: () => { dispatch(editNodeGroups()); },
   editEdges: () => { dispatch(editEdges()); },
   editOptions: () => { dispatch(editOptions()); },
 });

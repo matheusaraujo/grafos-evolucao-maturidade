@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsAce should match snapshot 1`] = `
+<div>
+  <button
+    className="button is-small is-text"
+    disabled={false}
+    onClick={[Function]}
+    style={
+      Object {
+        "float": "right",
+      }
+    }
+    type="button"
+  >
+    Atualizar
+  </button>
+  <ReactAce
+    cursorStart={1}
+    editorProps={
+      Object {
+        "$blockScrolling": Infinity,
+      }
+    }
+    enableBasicAutocompletion={false}
+    enableLiveAutocompletion={false}
+    enableSnippets={false}
+    focus={false}
+    fontSize={12}
+    height="500px"
+    highlightActiveLine={true}
+    maxLines={null}
+    minLines={null}
+    mode="json"
+    name="OPTIONS_EDITOR"
+    navigateToFileEnd={true}
+    onChange={[Function]}
+    onLoad={null}
+    onPaste={null}
+    onScroll={null}
+    placeholder={null}
+    readOnly={false}
+    scrollMargin={
+      Array [
+        0,
+        0,
+        0,
+        0,
+      ]
+    }
+    setOptions={Object {}}
+    showGutter={true}
+    showPrintMargin={true}
+    style={Object {}}
+    tabSize={2}
+    theme="textmate"
+    value="{
+ \\"height\\": \\"500px\\"
+}"
+    width="100%"
+    wrapEnabled={false}
+  />
+</div>
+`;

@@ -20,10 +20,10 @@ const page = (state = initialState, action = { type: 'default' }) => {
         ...state,
         mode: 'editing_nodes',
       };
-    case 'EDIT_NODES_GROUPS':
+    case 'EDIT_NODE_GROUPS':
       return {
         ...state,
-        mode: 'editing_nodes_groups',
+        mode: 'editing_node_groups',
       };
     case 'EDIT_EDGES':
       return {
