@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import NodeEditor from './NodeEditor';
-import { endNodeEdition } from '../../../actions/index';
+import { updateNodes } from '../../../actions/graph';
 
 const mapStateToProps = (state) => ({
-  nodeEdition: state.page.nodeEdition,
+  pageMode: state.page.mode,
+  lang: state.page.lang,
+  nodes: state.graph.nodes,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  endNodeEdition: () => { dispatch(endNodeEdition()); },
+  updateNodes: (nodes) => { dispatch(updateNodes(nodes)); },
 });
 
 export default connect(

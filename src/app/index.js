@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import App from './App';
 
 const mapStateToProps = (state) => ({
-  loaded: state.page.loaded,
+  pageMode: state.page.mode,
 });
 
 export default connect(

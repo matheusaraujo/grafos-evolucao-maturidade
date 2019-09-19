@@ -1,30 +1,39 @@
 const initialState = {
   lang: 'pt',
-  loaded: false,
-  nodeEdition: false,
+  mode: 'initial',
 };
 
 const page = (state = initialState, action = { type: 'default' }) => {
   switch (action.type) {
-    case 'LOAD_PAGE':
+    case 'INIT_APP':
       return {
         ...state,
-        loaded: true,
+        mode: 'initial',
       };
-    case 'UNLOAD_PAGE':
+    case 'VIEW_GRAPH':
       return {
         ...state,
-        loaded: false,
+        mode: 'viewing',
       };
-    case 'BEGIN_NODE_EDITION':
+    case 'EDIT_NODES':
       return {
         ...state,
-        nodeEdition: true,
+        mode: 'editing_nodes',
       };
-    case 'END_NODE_EDITION':
+    case 'EDIT_NODES_GROUPS':
       return {
         ...state,
-        nodeEdition: false,
+        mode: 'editing_nodes_groups',
+      };
+    case 'EDIT_EDGES':
+      return {
+        ...state,
+        mode: 'editing_edges',
+      };
+    case 'EDIT_OPTIONS':
+      return {
+        ...state,
+        mode: 'editing_options',
       };
     default:
       return state;

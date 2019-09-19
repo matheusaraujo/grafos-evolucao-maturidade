@@ -1,4 +1,3 @@
-
 const initialState = {
   layout: {
     hierarchical: {
@@ -6,7 +5,7 @@ const initialState = {
       direction: 'LR',
     },
   },
-  height: '555px',
+  height: '500px',
   interaction: {
     hover: true,
     hoverConnectedEdges: true,

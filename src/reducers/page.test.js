@@ -1,22 +1,11 @@
 import page from './page';
 
 describe('page reducer', () => {
-  test('should handle LOAD_PAGE', () => {
-    expect(page(undefined, { type: 'LOAD_PAGE' }))
-      .toMatchObject({ loaded: true });
-  });
-
-  test('should handle UNLOAD_PAGE', () => {
-    expect(page(undefined, { type: 'UNLOAD_PAGE' }))
-      .toMatchObject({ loaded: false });
-  });
-
   test('should handle default', () => {
     expect(page(undefined, undefined))
       .toEqual({
         lang: 'pt',
-        loaded: false,
-        nodeEdition: false,
+        mode: 'initial',
       });
   });
 });

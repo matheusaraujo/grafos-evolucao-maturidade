@@ -10,6 +10,11 @@ const graph = (state = initialState, action = { type: 'default' }) => {
         ...state,
         ...action.graph,
       };
+    case 'UPDATE_NODES':
+      return {
+        ...state,
+        nodes: action.nodes,
+      };
     default:
       return state;
   }

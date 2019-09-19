@@ -289,15 +289,13 @@ div.vis-tooltip {
   position: absolute;
   visibility: hidden;
   padding: 8px;
-  white-space: normal;
-  /* font-family: verdana;*/ 
+  white-space: normal;  
   font-size: 14px;
   color: #000;
   background-color: #fff;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
-  /* border: 1px solid #808074; */
+  border-radius: 3px;  
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   pointer-events: none;
   z-index: 5;
@@ -582,8 +580,7 @@ div.vis-network div.vis-close:hover {
 }
 div.vis-network div.vis-edit-mode div.vis-button,
 div.vis-network div.vis-manipulation div.vis-button {
-  float: left;
-  /* font-family: verdana; */
+  float: left;  
   font-size: 12px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -607,9 +604,7 @@ div.vis-network div.vis-manipulation div.vis-button:hover {
 div.vis-network div.vis-manipulation div.vis-button:active {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
-/* div.vis-network div.vis-manipulation div.vis-button.vis-back {
-	background-image: url(img/network/backIcon.png);
-} */
+
 div.vis-network div.vis-manipulation div.vis-button.vis-none:hover {
   box-shadow: 1px 1px 8px transparent;
   cursor: default;

@@ -1,17 +1,19 @@
 import { connect } from 'react-redux';
 import GraphEditor from './GraphEditor';
-import { updateGraph, updateOptions, beginNodeEdition } from '../../actions';
+import {
+  editNodes, editNodesGroups, editEdges, editOptions,
+} from '../../actions/page';
 
 const mapStateToProps = (state) => ({
+  pageMode: state.page.mode,
   lang: state.page.lang,
-  graph: state.graph,
-  options: state.options,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  updateGraph: (graph) => { dispatch(updateGraph(graph)); },
-  updateOptions: (options) => { dispatch(updateOptions(options)); },
-  beginNodeEdition: () => { dispatch(beginNodeEdition()); },
+  editNodes: () => { dispatch(editNodes()); },
+  editNodesGroups: () => { dispatch(editNodesGroups()); },
+  editEdges: () => { dispatch(editEdges()); },
+  editOptions: () => { dispatch(editOptions()); },
 });
 
 export default connect(

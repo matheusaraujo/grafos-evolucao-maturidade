@@ -28,6 +28,7 @@ const GraphViewer = ({
       id: n.id,
       label: n.label,
       title: n.title,
+      shape: 'circle',
     })),
     edges: graph.edges,
   };

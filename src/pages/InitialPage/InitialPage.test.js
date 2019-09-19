@@ -13,12 +13,12 @@ describe('InitialPage', () => {
 
   test('should match snapshot', () => {
     const lang = 'pt';
-    const loadPage = () => { };
+    const viewGraph = () => { };
     const updateGraph = () => { };
     const component = shallow(
       <InitialPage
         lang={lang}
-        loadPage={loadPage}
+        viewGraph={viewGraph}
         updateGraph={updateGraph}
       />,
     );
@@ -27,34 +27,34 @@ describe('InitialPage', () => {
 
   test('should trigger basicGraph', () => {
     const lang = 'pt';
-    const loadPage = sinon.spy();
+    const viewGraph = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <InitialPage
         lang={lang}
-        loadPage={loadPage}
+        viewGraph={viewGraph}
         updateGraph={updateGraph}
       />,
     );
     component.find('.btn-basic-graph').simulate('click');
-    expect(loadPage.callCount).toBe(1);
+    expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
     expect(updateGraph.args[0][0]).toBe(basicGraph);
   });
 
   test('should trigger systemEngineer', () => {
     const lang = 'pt';
-    const loadPage = sinon.spy();
+    const viewGraph = sinon.spy();
     const updateGraph = sinon.spy();
     const component = shallow(
       <InitialPage
         lang={lang}
-        loadPage={loadPage}
+        viewGraph={viewGraph}
         updateGraph={updateGraph}
       />,
     );
     component.find('.btn-system-engineer').simulate('click');
-    expect(loadPage.callCount).toBe(1);
+    expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
     expect(updateGraph.args[0][0]).toBe(systemEngineerGraph);
   });

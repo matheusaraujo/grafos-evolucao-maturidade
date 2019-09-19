@@ -38,12 +38,17 @@ export const update = {
   en: 'Update',
 };
 
-export const node = {
+export const nodes = {
   pt: 'Vértices',
   en: 'Nodes',
 };
 
-export const edge = {
+export const nodesGroups = {
+  pt: 'Grupos de Vértices',
+  en: 'Nodes Groups',
+};
+
+export const edges = {
   pt: 'Arestas',
   en: 'Edges',
 };
@@ -58,7 +63,47 @@ export const options = {
   en: 'Options',
 };
 
-export const back = {
-  pt: 'Voltar',
-  en: 'Back',
+export const restart = {
+  pt: 'Reiniciar',
+  en: 'Restart',
+};
+
+export const edit = {
+  pt: 'Editar',
+  en: 'Edit',
+};
+
+export const add = {
+  pt: 'Adicionar',
+  en: 'Add',
+};
+
+export const cancel = {
+  pt: 'Cancelar',
+  en: 'Cancel',
+};
+
+export const save = {
+  pt: 'Salvar',
+  en: 'Save',
+};
+
+export const id = {
+  pt: 'id',
+  en: 'id',
+};
+
+export const label = {
+  pt: 'label',
+  en: 'label',
+};
+
+export const title = {
+  pt: 'title',
+  en: 'title',
+};
+
+export const details = {
+  pt: 'details',
+  en: 'details',
 };

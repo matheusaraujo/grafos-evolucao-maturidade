@@ -6,15 +6,15 @@ import systemEngineerGraph from '../../examples/systemEngineerGraph';
 
 import * as labels from '../../commons/labels';
 
-const InitialPage = ({ lang, loadPage, updateGraph }) => {
+const InitialPage = ({ lang, viewGraph, updateGraph }) => {
   const handleBasicGraph = () => {
     updateGraph(basicGraph);
-    loadPage();
+    viewGraph();
   };
 
   const handleSystemEngineer = () => {
     updateGraph(systemEngineerGraph);
-    loadPage();
+    viewGraph();
   };
 
   const title = (
@@ -69,7 +69,7 @@ const InitialPage = ({ lang, loadPage, updateGraph }) => {
 
 InitialPage.propTypes = {
   lang: PropTypes.string.isRequired,
-  loadPage: PropTypes.func.isRequired,
+  viewGraph: PropTypes.func.isRequired,
   updateGraph: PropTypes.func.isRequired,
 };
 

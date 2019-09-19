@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ViewPage from '../components/ViewPage/index';
-import InitialPage from '../components/InitialPage/index';
+import InitialPage from '../pages/InitialPage/index';
+import MainPage from '../pages/MainPage/index';
 import './App.sass';
 
-const App = ({ loaded }) => {
-  if (!loaded) {
+const App = ({ pageMode }) => {
+  if (pageMode === 'initial') {
     return (<InitialPage />);
   }
-  return (<ViewPage />);
+  return (<MainPage />);
 };
 
 App.propTypes = {
-  loaded: PropTypes.bool.isRequired,
+  pageMode: PropTypes.string.isRequired,
 };
 
 export default App;

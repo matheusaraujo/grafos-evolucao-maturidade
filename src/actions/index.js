@@ -1,23 +1,6 @@
-export const updateGraph = (graph) => ({
-  type: 'UPDATE_GRAPH',
-  graph,
-});
-
 export const updateOptions = (options) => ({
   type: 'UPDATE_OPTIONS',
   options,
-});
-
-export const toggleCode = () => ({
-  type: 'TOGGLE_CODE',
-});
-
-export const loadPage = () => ({
-  type: 'LOAD_PAGE',
-});
-
-export const unloadPage = () => ({
-  type: 'UNLOAD_PAGE',
 });
 
 export const showModal = () => ({
@@ -33,12 +16,4 @@ export const fillModal = (title, subtitle, content) => ({
   title,
   subtitle,
   content,
-});
-
-export const beginNodeEdition = () => ({
-  type: 'BEGIN_NODE_EDITION',
-});
-
-export const endNodeEdition = () => ({
-  type: 'END_NODE_EDITION',
 });
