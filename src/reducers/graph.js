@@ -15,6 +15,11 @@ const graph = (state = initialState, action = { type: 'default' }) => {
         ...state,
         nodes: action.nodes,
       };
+    case 'UPDATE_EDGES':
+      return {
+        ...state,
+        edges: action.edges,
+      };
     default:
       return state;
   }

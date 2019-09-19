@@ -1,29 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { nodeType } from '../../../commons/types';
-import NodeAce from './NodeAce';
-import NodeCrud from './NodeCrud';
+import NodesAce from './NodesAce';
+import NodesCrud from './NodesCrud';
 
-const NodeEditor = ({ lang, nodes, updateNodes }) => {
+const NodesEditor = ({ lang, nodes, updateNodes }) => {
   const update = (data) => {
     updateNodes(data);
   };
   return (
     <div className="columns">
       <div className="column is-half">
-        <NodeCrud lang={lang} nodes={nodes} update={update} />
+        <NodesCrud lang={lang} nodes={nodes} update={update} />
       </div>
       <div className="column is-half">
-        <NodeAce nodes={nodes} onChange={update} />
+        <NodesAce lang={lang} nodes={nodes} update={update} />
       </div>
     </div>
   );
 };
 
-NodeEditor.propTypes = {
+NodesEditor.propTypes = {
   lang: PropTypes.string.isRequired,
   nodes: PropTypes.arrayOf(nodeType).isRequired,
   updateNodes: PropTypes.func.isRequired,
 };
 
-export default NodeEditor;
+export default NodesEditor;

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { nodeType } from '../../../commons/types';
 import * as labels from '../../../commons/labels';
+import './NodesCrud.scss';
 
-const NodeCrud = ({ lang, nodes, update }) => {
+const NodesCrud = ({ lang, nodes, update }) => {
   const [tmpId, setTmpId] = useState(0);
   const [tmpLabel, setTmpLabel] = useState('');
   const [tmpTitle, setTmpTitle] = useState('');
@@ -43,7 +44,7 @@ const NodeCrud = ({ lang, nodes, update }) => {
 
   if (operation === 'list') {
     return (
-      <div className="content">
+      <div className="content nodes-content">
         <ul>
           {nodes.map((n) => (
             <li key={n.id}>
@@ -71,7 +72,7 @@ const NodeCrud = ({ lang, nodes, update }) => {
 
   if (operation === 'new' || operation === 'edit') {
     return (
-      <div className="content">
+      <div className="content nodes-content">
         <div className="field">
           <label className="label">id</label>
           <div className="control">
@@ -143,10 +144,10 @@ const NodeCrud = ({ lang, nodes, update }) => {
   return (<div>Erro</div>);
 };
 
-NodeCrud.propTypes = {
+NodesCrud.propTypes = {
   lang: PropTypes.string.isRequired,
   nodes: PropTypes.arrayOf(nodeType).isRequired,
   update: PropTypes.func.isRequired,
 };
 
-export default NodeCrud;
+export default NodesCrud;

@@ -7,3 +7,8 @@ export const updateNodes = (nodes) => ({
   type: 'UPDATE_NODES',
   nodes,
 });
+
+export const updateEdges = (edges) => ({
+  type: 'UPDATE_EDGES',
+  edges,
+});

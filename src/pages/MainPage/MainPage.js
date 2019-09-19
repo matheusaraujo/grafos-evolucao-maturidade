@@ -60,7 +60,16 @@ const MainPage = ({
         </div>
       </h1>
       {pageMode === 'viewing' && <GraphViewer />}
-      {pageMode !== 'viewing' && <GraphEditor />}
+      {pageMode !== 'viewing' && (
+        <div className="columns">
+          <div className="column is-four-fifths">
+            <GraphEditor />
+          </div>
+          <div className="column is-one-fifths">
+            <GraphViewer />
+          </div>
+        </div>
+      )}
       <Modal />
       {buttonBack}
     </div>

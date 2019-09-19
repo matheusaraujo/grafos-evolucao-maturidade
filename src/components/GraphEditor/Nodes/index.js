@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import NodeEditor from './NodeEditor';
+import NodesEditor from './NodesEditor';
 import { updateNodes } from '../../../actions/graph';
 
 const mapStateToProps = (state) => ({
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(NodeEditor);
+)(NodesEditor);

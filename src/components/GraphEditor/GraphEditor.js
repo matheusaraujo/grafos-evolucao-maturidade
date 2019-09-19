@@ -4,7 +4,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as labels from '../../commons/labels';
-import NodeEditor from './Node/index';
+import NodesEditor from './Nodes/index';
+import EdgesEditor from './Edges/index';
 
 const GraphEditor = ({
   lang, pageMode,
@@ -28,7 +29,8 @@ const GraphEditor = ({
       </ul>
     </div>
     <div>
-      {pageMode === 'editing_nodes' && <NodeEditor />}
+      {pageMode === 'editing_nodes' && <NodesEditor />}
+      {pageMode === 'editing_edges' && <EdgesEditor />}
     </div>
   </div>
 );
