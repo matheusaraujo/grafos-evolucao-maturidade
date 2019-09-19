@@ -5,7 +5,7 @@ import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import { nodeGroupType } from '../../../commons/types';
 import NodeGroupsAce from './NodeGroupsAce';
 
-const OptionsEditor = ({ lang, nodeGroups, updateNodeGroups }) => {
+const NodeGroupsEditor = ({ lang, nodeGroups, updateNodeGroups }) => {
   const update = (data) => {
     updateNodeGroups(data);
   };
@@ -24,10 +24,10 @@ const OptionsEditor = ({ lang, nodeGroups, updateNodeGroups }) => {
   );
 };
 
-OptionsEditor.propTypes = {
+NodeGroupsEditor.propTypes = {
   lang: PropTypes.string.isRequired,
   nodeGroups: PropTypes.arrayOf(nodeGroupType).isRequired,
   updateNodeGroups: PropTypes.func.isRequired,
 };
 
-export default OptionsEditor;
+export default NodeGroupsEditor;

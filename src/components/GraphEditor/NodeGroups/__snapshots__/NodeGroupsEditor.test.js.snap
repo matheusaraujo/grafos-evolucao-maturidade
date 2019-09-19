@@ -53,7 +53,7 @@ exports[`NodeGroupsEditor should match snapshot 1`] = `
   <div
     className="column is-half"
   >
-    <OptionsAce
+    <NodeGroupsAce
       lang="pt"
       nodeGroups={Array []}
       update={[Function]}

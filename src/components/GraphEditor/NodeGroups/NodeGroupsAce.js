@@ -7,7 +7,7 @@ import 'brace/theme/textmate';
 import { isValidJson, fromAceEditor, toAceEditor } from '../../../commons/json';
 import * as labels from '../../../commons/labels';
 
-const OptionsAce = ({ lang, nodeGroups, update }) => {
+const NodeGroupsAce = ({ lang, nodeGroups, update }) => {
   const [tmpNodeGroups, setTmpNodeGroups] = useState(toAceEditor(nodeGroups));
   const [isValidNodeGroups, validateNodeGroups] = useState(true);
   return (
@@ -42,10 +42,10 @@ const OptionsAce = ({ lang, nodeGroups, update }) => {
   );
 };
 
-OptionsAce.propTypes = {
+NodeGroupsAce.propTypes = {
   lang: PropTypes.string.isRequired,
   nodeGroups: PropTypes.arrayOf(nodeGroupType).isRequired,
   update: PropTypes.func.isRequired,
 };
 
-export default OptionsAce;
+export default NodeGroupsAce;
