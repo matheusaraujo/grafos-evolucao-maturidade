@@ -14,7 +14,7 @@ const NodesAce = ({ lang, nodes, update }) => {
     <div>
       <button
         type="button"
-        className="button is-small is-text"
+        className="button is-primary"
         style={{ float: 'right' }}
         disabled={!isValidNodes}
         onClick={() => {
@@ -23,6 +23,7 @@ const NodesAce = ({ lang, nodes, update }) => {
       >
         {labels.update[lang]}
       </button>
+      &nbsp;
       <AceEditor
         value={tmpNodes}
         mode="json"

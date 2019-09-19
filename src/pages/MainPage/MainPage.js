@@ -1,17 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-
 import PropTypes from 'prop-types';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit } from '@fortawesome/free-solid-svg-icons';
-
 import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
-
 import * as labels from '../../commons/labels';
-
 import './MainPage.scss';
 
 const MainPage = ({
@@ -21,7 +16,7 @@ const MainPage = ({
   const buttonBack = (
     <button
       type="button"
-      className="button is-small is-text"
+      className="button is-danger"
       style={{ float: 'right' }}
       onClick={initApp}
     >

@@ -3,7 +3,7 @@
 exports[`NodeGroupsAce should match snapshot 1`] = `
 <div>
   <button
-    className="button is-small is-text"
+    className="button is-primary"
     disabled={false}
     onClick={[Function]}
     style={

@@ -14,7 +14,7 @@ const OptionsAce = ({ lang, options, update }) => {
     <div>
       <button
         type="button"
-        className="button is-small is-text"
+        className="button is-primary"
         style={{ float: 'right' }}
         disabled={!isValidOptions}
         onClick={() => {

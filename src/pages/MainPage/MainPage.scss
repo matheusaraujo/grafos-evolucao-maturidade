@@ -13,21 +13,24 @@
 .page-mode > .selected {
   display: flex;
   width: 50%;
-  height: 27px;
+  height: 32px;
   color: #0c1c2d;
   background-color: #fff;
   border-radius: 4px;
-  border: 1px solid #bac5d2;  
+  border: 1px solid #bac5d2;
+  outline: none;  
 }
 
 .page-mode > .unselected {
   display: flex;
   width: 50%;
-  height: 27px;
+  height: 32px;
   color: #fff;
   background-color: #bac5d2;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .page-mode > button > svg {

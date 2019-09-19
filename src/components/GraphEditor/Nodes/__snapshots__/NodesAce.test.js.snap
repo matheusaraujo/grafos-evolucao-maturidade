@@ -3,7 +3,7 @@
 exports[`NodesAce should match snapshot 1`] = `
 <div>
   <button
-    className="button is-small is-text"
+    className="button is-primary"
     disabled={false}
     onClick={[Function]}
     style={
@@ -15,6 +15,7 @@ exports[`NodesAce should match snapshot 1`] = `
   >
     Atualizar
   </button>
+   
   <ReactAce
     cursorStart={1}
     editorProps={

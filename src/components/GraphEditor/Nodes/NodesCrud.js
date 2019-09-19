@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { nodeType } from '../../../commons/types';
 import * as labels from '../../../commons/labels';
 import './NodesCrud.scss';
@@ -53,27 +55,36 @@ const NodesCrud = ({ lang, nodes, update }) => {
   if (operation === 'list') {
     return (
       <div className="content nodes-content">
-        <ul>
-          {nodes.map((n) => (
-            <li key={n.id}>
-              {n.id} - {n.label}
-              <button
-                type="button"
-                className="button is-small is-text"
-                onClick={() => editNode(n.id)}
-              >
-                {labels.edit[lang]}
-              </button>
-            </li>
-          ))}
-        </ul>
         <button
           type="button"
-          className="button is-small is-text"
+          className="button is-primary"
+          style={{ float: 'right' }}
           onClick={addNode}
         >
           {labels.add[lang]}
         </button>
+        &nbsp;
+        <table className="table is-striped is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <td>id</td>
+            <td colSpan="2">label</td>
+          </thead>
+          {nodes.map((n) => (
+            <tr key={n.id}>
+              <td>{n.id}</td>
+              <td>{n.label}</td>
+              <td>
+                <button
+                  type="button"
+                  className="button is-text"
+                  onClick={() => editNode(n.id)}
+                >
+                  <FontAwesomeIcon icon={faEdit} />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </table>
       </div>
     );
   }
@@ -167,17 +178,20 @@ const NodesCrud = ({ lang, nodes, update }) => {
         </div>
         <button
           type="button"
-          className="button is-small is-text"
-          onClick={list}
-        >
-          {labels.cancel[lang]}
-        </button>
-        <button
-          type="button"
-          className="button is-small is-text"
+          className="button is-primary"
           onClick={saveTmpNode}
+          style={{ float: 'right' }}
         >
           {labels.save[lang]}
+        </button>
+        <p style={{ float: 'right' }}>&nbsp;</p>
+        <button
+          type="button"
+          className="button"
+          onClick={list}
+          style={{ float: 'right' }}
+        >
+          {labels.cancel[lang]}
         </button>
       </div>
     );

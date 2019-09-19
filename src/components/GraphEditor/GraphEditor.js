@@ -14,7 +14,7 @@ const GraphEditor = ({
   editNodes, editNodeGroups, editEdges, editOptions,
 }) => (
   <div className="box">
-    <div className="tabs is-small">
+    <div className="tabs">
       <ul>
         <li className={pageMode === 'editing_nodes' ? 'is-active' : ''}>
           <a onClick={editNodes}>{labels.nodes[lang]}</a>

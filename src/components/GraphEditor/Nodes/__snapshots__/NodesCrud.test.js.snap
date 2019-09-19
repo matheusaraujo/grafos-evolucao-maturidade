@@ -4,13 +4,32 @@ exports[`NodesCrud should match snapshot 1`] = `
 <div
   className="content nodes-content"
 >
-  <ul />
   <button
-    className="button is-small is-text"
+    className="button is-primary"
     onClick={[Function]}
+    style={
+      Object {
+        "float": "right",
+      }
+    }
     type="button"
   >
     Adicionar
   </button>
+   
+  <table
+    className="table is-striped is-narrow is-hoverable is-fullwidth"
+  >
+    <thead>
+      <td>
+        id
+      </td>
+      <td
+        colSpan="2"
+      >
+        label
+      </td>
+    </thead>
+  </table>
 </div>
 `;
