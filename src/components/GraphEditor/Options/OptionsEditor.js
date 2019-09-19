@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import { edgeType } from '../../../commons/types';
-import EdgesAce from './EdgesAce';
+import { optionsType } from '../../../commons/types';
+import OptionsAce from './OptionsAce';
 
-const EdgesEditor = ({ lang, edges, updateEdges }) => {
+const OptionsEditor = ({ lang, options, updateOptions }) => {
   const update = (data) => {
-    updateEdges(data);
+    updateOptions(data);
   };
   return (
     <div className="columns">
@@ -18,16 +18,16 @@ const EdgesEditor = ({ lang, edges, updateEdges }) => {
         </div>
       </div>
       <div className="column is-half">
-        <EdgesAce lang={lang} edges={edges} update={update} />
+        <OptionsAce lang={lang} options={options} update={update} />
       </div>
     </div>
   );
 };
 
-EdgesEditor.propTypes = {
+OptionsEditor.propTypes = {
   lang: PropTypes.string.isRequired,
-  edges: PropTypes.arrayOf(edgeType).isRequired,
-  updateEdges: PropTypes.func.isRequired,
+  options: optionsType.isRequired,
+  updateOptions: PropTypes.func.isRequired,
 };
 
-export default EdgesEditor;
+export default OptionsEditor;

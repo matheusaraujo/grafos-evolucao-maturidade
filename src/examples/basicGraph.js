@@ -4,19 +4,19 @@ const basicGraph = {
       id: 0,
       label: 'Zero',
       title: 'Zero 0',
-      details: '**Zero** Details',
+      details: '**bold**',
     },
     {
       id: 1,
       label: 'One',
       title: 'One 1',
-      details: '_One_ Details',
+      details: '_italic_',
     },
     {
       id: 2,
       label: 'Two',
       title: 'Two 2',
-      details: 'Two  \n *Details*',
+      details: 'Two  \n lines',
     },
   ],
   edges: [
@@ -25,6 +25,7 @@ const basicGraph = {
       from: 0,
       to: 1,
       title: 'From 0 to 1',
+      details: 'Edge\'s details',
     },
     {
       id: 1,

@@ -1,38 +1,38 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AceEditor from 'react-ace';
-import { nodeType } from '../../../commons/types';
+import { optionsType } from '../../../commons/types';
 import 'brace/mode/json';
 import 'brace/theme/textmate';
 import { isValidJson, fromAceEditor, toAceEditor } from '../../../commons/json';
 import * as labels from '../../../commons/labels';
 
-const NodesAce = ({ lang, nodes, update }) => {
-  const [tmpNodes, setTmpNodes] = useState(toAceEditor(nodes));
-  const [isValidNodes, validateNodes] = useState(true);
+const OptionsAce = ({ lang, options, update }) => {
+  const [tmpOptions, setTmpOptions] = useState(toAceEditor(options));
+  const [isValidOptions, validateOptions] = useState(true);
   return (
     <div>
       <button
         type="button"
         className="button is-small is-text"
         style={{ float: 'right' }}
-        disabled={!isValidNodes}
+        disabled={!isValidOptions}
         onClick={() => {
-          update(fromAceEditor(tmpNodes));
+          update(fromAceEditor(tmpOptions));
         }}
       >
         {labels.update[lang]}
       </button>
       <AceEditor
-        value={tmpNodes}
+        value={tmpOptions}
         mode="json"
         theme="textmate"
-        name="NODES_EDITOR"
+        name="OPTIONS_EDITOR"
         width="100%"
         tabSize={2}
         onChange={(value) => {
-          setTmpNodes(value);
-          validateNodes(isValidJson(value));
+          setTmpOptions(value);
+          validateOptions(isValidJson(value));
         }}
         editorProps={{
           $blockScrolling: Infinity,
@@ -42,10 +42,10 @@ const NodesAce = ({ lang, nodes, update }) => {
   );
 };
 
-NodesAce.propTypes = {
+OptionsAce.propTypes = {
   lang: PropTypes.string.isRequired,
-  nodes: PropTypes.arrayOf(nodeType).isRequired,
+  options: optionsType.isRequired,
   update: PropTypes.func.isRequired,
 };
 
-export default NodesAce;
+export default OptionsAce;

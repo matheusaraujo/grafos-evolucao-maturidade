@@ -9,17 +9,25 @@ const GraphViewer = ({
   graph, options, showModal, fillModal,
 }) => {
   const events = {
-    selectNode(e) {
-      if (e.nodes.length === 1) {
-        const id = e.nodes[0];
-        const node = graph.nodes.find((n) => n.id === id);
-        fillModal(node.label, node.title, node.details);
-        showModal();
+    selectNode(n) {
+      if (n.nodes.length === 1) {
+        const id = n.nodes[0];
+        const node = graph.nodes.find((nd) => nd.id === id);
+        if (node.details) {
+          fillModal(node.label, node.title, node.details);
+          showModal();
+        }
       }
     },
     selectEdge(e) {
-      fillModal(e.toString());
-      showModal();
+      if (e.edges.length === 1) {
+        const id = e.edges[0];
+        const edge = graph.edges.find((ed) => ed.id === id);
+        if (edge.details) {
+          fillModal(edge.title, undefined, edge.details);
+          showModal();
+        }
+      }
     },
   };
 
@@ -30,7 +38,12 @@ const GraphViewer = ({
       title: n.title,
       shape: 'circle',
     })),
-    edges: graph.edges,
+    edges: graph.edges.map((e) => ({
+      id: e.id,
+      from: e.from,
+      to: e.to,
+      arrows: 'to',
+    })),
   };
 
   return (

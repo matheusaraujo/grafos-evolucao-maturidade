@@ -4,17 +4,19 @@ import AceEditor from 'react-ace';
 import { edgeType } from '../../../commons/types';
 import 'brace/mode/json';
 import 'brace/theme/textmate';
-import { fromAceEditor, toAceEditor } from '../../../commons/json';
+import { isValidJson, fromAceEditor, toAceEditor } from '../../../commons/json';
 import * as labels from '../../../commons/labels';
 
 const EdgesAce = ({ lang, edges, update }) => {
   const [tmpEdges, setTmpEdges] = useState(toAceEditor(edges));
+  const [isValidEdges, validateEdges] = useState(true);
   return (
     <div>
       <button
         type="button"
         className="button is-small is-text"
         style={{ float: 'right' }}
+        disabled={!isValidEdges}
         onClick={() => {
           update(fromAceEditor(tmpEdges));
         }}
@@ -25,10 +27,13 @@ const EdgesAce = ({ lang, edges, update }) => {
         value={tmpEdges}
         mode="json"
         theme="textmate"
-        name="NODES_EDITOR"
+        name="EDGES_EDITOR"
         width="100%"
         tabSize={2}
-        onChange={(value) => setTmpEdges(value)}
+        onChange={(value) => {
+          setTmpEdges(value);
+          validateEdges(isValidJson(value));
+        }}
         editorProps={{
           $blockScrolling: Infinity,
         }}

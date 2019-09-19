@@ -8,6 +8,7 @@ import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import * as labels from '../../commons/labels';
 import NodesEditor from './Nodes/index';
 import EdgesEditor from './Edges/index';
+import OptionsEditor from './Options/index';
 
 const GraphEditor = ({
   lang, pageMode,
@@ -39,6 +40,7 @@ const GraphEditor = ({
         </div>
       )}
       {pageMode === 'editing_edges' && <EdgesEditor />}
+      {pageMode === 'editing_options' && <OptionsEditor />}
     </div>
   </div>
 );
