@@ -12,7 +12,10 @@ const EdgesEditor = ({ lang, edges, updateEdges }) => {
   return (
     <div className="columns">
       <div className="column is-half">
-        <FontAwesomeIcon icon={faWrench} />
+        <div style={{ textAlign: 'center', paddingTop: '8px' }}>
+          <FontAwesomeIcon icon={faWrench} size="5x" />
+          <em>Em construção</em>
+        </div>
       </div>
       <div className="column is-half">
         <EdgesAce lang={lang} edges={edges} update={update} />

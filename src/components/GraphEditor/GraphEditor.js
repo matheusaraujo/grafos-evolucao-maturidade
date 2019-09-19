@@ -3,6 +3,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import * as labels from '../../commons/labels';
 import NodesEditor from './Nodes/index';
 import EdgesEditor from './Edges/index';
@@ -30,6 +32,12 @@ const GraphEditor = ({
     </div>
     <div>
       {pageMode === 'editing_nodes' && <NodesEditor />}
+      {pageMode === 'editing_nodes_groups' && (
+        <div style={{ textAlign: 'center', paddingTop: '8px' }}>
+          <FontAwesomeIcon icon={faWrench} size="5x" />
+          <em>Em construção</em>
+        </div>
+      )}
       {pageMode === 'editing_edges' && <EdgesEditor />}
     </div>
   </div>
