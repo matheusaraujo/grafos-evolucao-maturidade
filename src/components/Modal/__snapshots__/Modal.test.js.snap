@@ -30,18 +30,22 @@ exports[`Modal should match snapshot 1`] = `
     <section
       className="modal-card-body"
     >
-      <ReactMarkdown
-        astPlugins={Array []}
-        escapeHtml={true}
-        parserOptions={Object {}}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={Object {}}
-        skipHtml={false}
-        source="content"
-        sourcePos={false}
-        transformLinkUri={[Function]}
-      />
+      <div
+        className="mark-down-content"
+      >
+        <ReactMarkdown
+          astPlugins={Array []}
+          escapeHtml={true}
+          parserOptions={Object {}}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={Object {}}
+          skipHtml={false}
+          source="content"
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        />
+      </div>
     </section>
     <footer
       className="modal-card-foot"

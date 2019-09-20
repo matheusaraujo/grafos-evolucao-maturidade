@@ -21,15 +21,18 @@ exports[`NodesCrud should match snapshot 1`] = `
     className="table is-striped is-narrow is-hoverable is-fullwidth"
   >
     <thead>
-      <td>
-        id
-      </td>
-      <td
-        colSpan="2"
-      >
-        label
-      </td>
+      <tr>
+        <td>
+          id
+        </td>
+        <td
+          colSpan="2"
+        >
+          label
+        </td>
+      </tr>
     </thead>
+    <tbody />
   </table>
 </div>
 `;
