@@ -22,7 +22,9 @@ const Modal = ({
           />
         </header>
         <section className="modal-card-body">
-          <ReactMarkdown source={content} />
+          <div className="mark-down-content">
+            <ReactMarkdown source={content} />
+          </div>
         </section>
         <footer className="modal-card-foot" />
       </div>

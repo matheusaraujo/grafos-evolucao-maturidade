@@ -66,24 +66,28 @@ const NodesCrud = ({ lang, nodes, update }) => {
         &nbsp;
         <table className="table is-striped is-narrow is-hoverable is-fullwidth">
           <thead>
-            <td>id</td>
-            <td colSpan="2">label</td>
-          </thead>
-          {nodes.map((n) => (
-            <tr key={n.id}>
-              <td>{n.id}</td>
-              <td>{n.label}</td>
-              <td>
-                <button
-                  type="button"
-                  className="button is-text"
-                  onClick={() => editNode(n.id)}
-                >
-                  <FontAwesomeIcon icon={faEdit} />
-                </button>
-              </td>
+            <tr>
+              <td>id</td>
+              <td colSpan="2">label</td>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {nodes.map((n) => (
+              <tr key={n.id}>
+                <td>{n.id}</td>
+                <td>{n.label}</td>
+                <td>
+                  <button
+                    type="button"
+                    className="button is-text"
+                    onClick={() => editNode(n.id)}
+                  >
+                    <FontAwesomeIcon icon={faEdit} />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     );

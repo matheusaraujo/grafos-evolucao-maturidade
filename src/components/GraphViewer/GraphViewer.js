@@ -20,8 +20,10 @@ const GraphViewer = ({
           setTimeout(() => {
             fillModal(node.label, node.title, node.details);
             showModal();
-            network.selectEdges([]);
-            network.selectNodes([]);
+            if (network) {
+              network.selectEdges([]);
+              network.selectNodes([]);
+            }
           }, 0);
         }
       }
@@ -34,8 +36,10 @@ const GraphViewer = ({
           setTimeout(() => {
             fillModal(edge.title, undefined, edge.details);
             showModal();
-            network.selectEdges([]);
-            network.selectNodes([]);
+            if (network) {
+              network.selectEdges([]);
+              network.selectNodes([]);
+            }
           }, 0);
         }
       }
