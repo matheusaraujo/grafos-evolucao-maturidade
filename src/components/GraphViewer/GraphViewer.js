@@ -9,14 +9,20 @@ const GraphViewer = ({
   graph, nodeGroups, options,
   showModal, fillModal,
 }) => {
+  let network = null;
+
   const events = {
     selectNode(n) {
       if (n.nodes.length === 1) {
         const id = n.nodes[0];
         const node = graph.nodes.find((nd) => nd.id === id);
         if (node.details) {
-          fillModal(node.label, node.title, node.details);
-          showModal();
+          setTimeout(() => {
+            fillModal(node.label, node.title, node.details);
+            showModal();
+            network.selectEdges([]);
+            network.selectNodes([]);
+          }, 0);
         }
       }
     },
@@ -25,8 +31,12 @@ const GraphViewer = ({
         const id = e.edges[0];
         const edge = graph.edges.find((ed) => ed.id === id);
         if (edge.details) {
-          fillModal(edge.title, undefined, edge.details);
-          showModal();
+          setTimeout(() => {
+            fillModal(edge.title, undefined, edge.details);
+            showModal();
+            network.selectEdges([]);
+            network.selectNodes([]);
+          }, 0);
         }
       }
     },
@@ -57,7 +67,14 @@ const GraphViewer = ({
 
   return (
     <div className="box">
-      <Graph graph={mappedGraph} options={options} events={events} />
+      <Graph
+        graph={mappedGraph}
+        options={options}
+        events={events}
+        getNetwork={(_network) => {
+          network = _network;
+        }}
+      />
     </div>
   );
 };
