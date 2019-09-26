@@ -2,15 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
-import { defaultNodeGroups } from '../../commons/consts';
 import * as labels from '../../commons/labels';
 
 const InitialPage = ({
   lang, updateNodeGroups, updateGraph, viewGraph,
 }) => {
   const click = (graph) => {
-    updateNodeGroups(defaultNodeGroups);
-    updateGraph(graph);
+    updateNodeGroups(graph.groups);
+    updateGraph({ nodes: graph.nodes, edges: graph.edges });
     viewGraph();
   };
 

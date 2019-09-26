@@ -26,3 +26,7 @@ yarn-error.log*
 .idea
 .firebase/
 .firebaserc
+
+# conversion
+/conversion/node_modules
+/conversion/dist

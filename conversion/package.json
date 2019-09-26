@@ -1,0 +1,26 @@
+{
+  "name": "grafos-evolucao-maturidade-conversao-csv",
+  "version": "0.0.1",
+  "description": "conversao de csv para grafos de evolucao de maturidade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusaraujo/grafos-evolucao-maturidade.git"
+  },
+  "author": "Matheus Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheusaraujo/grafos-evolucao-maturidade/issues"
+  },
+  "homepage": "https://github.com/matheusaraujo/grafos-evolucao-maturidade#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^3.0.0"
+  }
+}

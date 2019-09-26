@@ -60,11 +60,13 @@ const GraphViewer = ({
       title: n.title,
       shape: 'circle',
       color: getColor(n.groupId),
+      level: n.level,
     })),
     edges: graph.edges.map((e) => ({
       id: e.id,
       from: e.from,
       to: e.to,
+      title: e.label,
       arrows: 'to',
     })),
   };

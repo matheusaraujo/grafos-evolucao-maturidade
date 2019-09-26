@@ -6,7 +6,6 @@ import sinon from 'sinon';
 import InitialPage from './InitialPage';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
-import { defaultNodeGroups } from '../../commons/consts';
 
 describe('InitialPage', () => {
   Enzyme.configure({ adapter: new Adapter() });
@@ -43,9 +42,12 @@ describe('InitialPage', () => {
     component.find('.btn-basic-graph').simulate('click');
     expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
-    expect(updateGraph.args[0][0]).toBe(basicGraph);
+    expect(updateGraph.args[0][0]).toStrictEqual({
+      nodes: basicGraph.nodes,
+      edges: basicGraph.edges,
+    });
     expect(updateNodeGroups.callCount).toBe(1);
-    expect(updateNodeGroups.args[0][0]).toBe(defaultNodeGroups);
+    expect(updateNodeGroups.args[0][0]).toBe(basicGraph.groups);
   });
 
   test('should trigger systemEngineer', () => {
@@ -64,8 +66,11 @@ describe('InitialPage', () => {
     component.find('.btn-system-engineer').simulate('click');
     expect(viewGraph.callCount).toBe(1);
     expect(updateGraph.callCount).toBe(1);
-    expect(updateGraph.args[0][0]).toBe(systemEngineerGraph);
+    expect(updateGraph.args[0][0]).toStrictEqual({
+      nodes: systemEngineerGraph.nodes,
+      edges: systemEngineerGraph.edges,
+    });
     expect(updateNodeGroups.callCount).toBe(1);
-    expect(updateNodeGroups.args[0][0]).toBe(defaultNodeGroups);
+    expect(updateNodeGroups.args[0][0]).toBe(systemEngineerGraph.groups);
   });
 });
