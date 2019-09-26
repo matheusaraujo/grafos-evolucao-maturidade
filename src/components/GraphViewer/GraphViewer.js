@@ -11,6 +11,21 @@ const GraphViewer = ({
 }) => {
   let network = null;
 
+  const makeNodeDetails = (node) => {
+    // TO-DO Remover constantes
+    const w = node.weight ? `**Carga Horária:** ${node.weight}  \n` : '';
+    const l = node.level ? `**Período:** ${node.level}  \n` : '';
+    const group = nodeGroups.find((g) => g.id === node.groupId);
+    let g = '';
+    let sg = '';
+    if (group) {
+      g = group.label ? `**Ciclo Geral**: ${group.label}  \n` : '';
+      const subGroup = group.subGroups.find((g1) => g1.id === node.subGroupId);
+      if (subGroup) sg = subGroup.label ? `**Ciclo Detalhado:** ${subGroup.label}  \n` : '';
+    }
+    return `${node.details}  \n---  \n${w + l + g + sg}`;
+  };
+
   const events = {
     selectNode(n) {
       if (n.nodes.length === 1) {
@@ -18,7 +33,7 @@ const GraphViewer = ({
         const node = graph.nodes.find((nd) => nd.id === id);
         if (node.details) {
           setTimeout(() => {
-            fillModal(node.label, node.title, node.details);
+            fillModal(node.label, node.title, makeNodeDetails(node));
             showModal();
             if (network) {
               network.selectEdges([]);

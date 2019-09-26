@@ -9,23 +9,23 @@ function getGroups(matrix) {
 
     const generalCycle = line[6].trim();
     const detailCycle = line[7].trim();
-    const group = groups.find((c) => c.label === generalCycle);
+    let group = groups.find((c) => c.label === generalCycle);
 
     if (!group) {
-      groups.push({
+      group = {
         id: groups.length + 1,
         label: generalCycle,
         subGroups: [],
         color: colors[groups.length % colors.length],
+      };
+      groups.push(group);
+    }
+    const subGroup = group.subGroups.find((sc) => sc.label === detailCycle);
+    if (!subGroup) {
+      group.subGroups.push({
+        id: group.subGroups.length + 1,
+        label: detailCycle,
       });
-    } else {
-      const subGroup = group.subGroups.find((sc) => sc.label === detailCycle);
-      if (!subGroup) {
-        group.subGroups.push({
-          id: group.subGroups.length + 1,
-          label: detailCycle,
-        });
-      }
     }
   });
 
