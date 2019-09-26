@@ -2142,6 +2142,24 @@ brace@^0.11.1:
   resolved "https://registry.yarnpkg.com/brace/-/brace-0.11.1.tgz#4896fcc9d544eef45f4bb7660db320d3b379fe58"
   integrity sha1-SJb8ydVE7vRfS7dmDbMg07N5/lg=
 
+braces@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/braces/-/braces-2.3.1.tgz#7086c913b4e5a08dbe37ac0ee6a2500c4ba691bb"
+  integrity sha512-SO5lYHA3vO6gz66erVvedSCkp7AKWdv6VcQ2N4ysXfPxdAlxAMMAdwegGGcv1Bqwm7naF1hNdk5d6AAIEHV2nQ==
+  dependencies:
+    arr-flatten "^1.1.0"
+    array-unique "^0.3.2"
+    define-property "^1.0.0"
+    extend-shallow "^2.0.1"
+    fill-range "^4.0.0"
+    isobject "^3.0.1"
+    kind-of "^6.0.2"
+    repeat-element "^1.1.2"
+    snapdragon "^0.8.1"
+    snapdragon-node "^2.0.1"
+    split-string "^3.0.2"
+    to-regex "^3.0.1"
+
 braces@^2.3.1, braces@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/braces/-/braces-2.3.2.tgz#5979fd3f14cd531565e5fa2df1abfff1dfaee729"
