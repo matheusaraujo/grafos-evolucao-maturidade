@@ -11,7 +11,7 @@ export const nodeType = shape({
   weight: number,
   groupId: number,
   subGroupId: number,
-  status: bool,
+  status: number,
 });
 
 export const edgeType = shape({

@@ -12,10 +12,10 @@ const GraphViewer = ({
   let network = null;
 
   const makeNodeDetails = (node) => {
-    // TO-DO Remover constantes
+    // TO-DO Remover constantes e mudar nomes das variáveis
     const w = node.weight ? `**Carga Horária:** ${node.weight}  \n` : '';
     const l = node.level ? `**Período:** ${node.level}  \n` : '';
-    const group = nodeGroups.find((g) => g.id === node.groupId);
+    const group = nodeGroups.find((ng) => ng.id === node.groupId);
     let g = '';
     let sg = '';
     if (group) {
@@ -35,10 +35,7 @@ const GraphViewer = ({
           setTimeout(() => {
             fillModal(node.label, node.title, makeNodeDetails(node));
             showModal();
-            if (network) {
-              network.selectEdges([]);
-              network.selectNodes([]);
-            }
+            if (network) network.unselectAll();
           }, 0);
         }
       }
@@ -51,21 +48,32 @@ const GraphViewer = ({
           setTimeout(() => {
             fillModal(edge.title, undefined, edge.details);
             showModal();
-            if (network) {
-              network.selectEdges([]);
-              network.selectNodes([]);
-            }
+            if (network) network.unselectAll();
           }, 0);
         }
       }
     },
   };
 
-  const getColor = (groupId) => {
-    if (!groupId) return undefined;
-    const g = nodeGroups.find((ng) => ng.id === groupId);
+  const getNodeColor = (node) => {
+    const opacity = node && node.status !== undefined && node.status === 0 ? '33' : 'ff';
+    if (!node.groupId) return undefined;
+    const g = nodeGroups.find((ng) => ng.id === node.groupId);
     if (!g) return undefined;
-    return g.color;
+    return g.color + opacity;
+  };
+
+  const getNodeBorder = (node) => {
+    if (node && node.status !== undefined && node.status === 0) return '#ffffff';
+    return '#00000055';
+  };
+
+  const getEdgeColor = (edge) => {
+    const nodeFrom = graph.nodes.find((n) => n.id === edge.from);
+    const nodeTo = graph.nodes.find((n) => n.id === edge.to);
+    if (nodeFrom && nodeFrom.status !== undefined && nodeFrom.status === 0) return '#00000033';
+    if (nodeTo && nodeTo.status !== undefined && nodeTo.status === 0) return '#00000033';
+    return '#000000ff';
   };
 
   const mappedGraph = {
@@ -74,7 +82,10 @@ const GraphViewer = ({
       label: n.label,
       title: n.title,
       shape: 'circle',
-      color: getColor(n.groupId),
+      color: {
+        background: getNodeColor(n),
+        border: getNodeBorder(n),
+      },
       level: n.level,
     })),
     edges: graph.edges.map((e) => ({
@@ -83,6 +94,9 @@ const GraphViewer = ({
       to: e.to,
       title: e.label,
       arrows: 'to',
+      color: {
+        color: getEdgeColor(e),
+      },
     })),
   };
 

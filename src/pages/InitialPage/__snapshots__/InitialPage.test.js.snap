@@ -75,6 +75,30 @@ exports[`InitialPage should match snapshot 1`] = `
           </div>
         </article>
       </div>
+      <div
+        className="box"
+      >
+        <article
+          className="media"
+        >
+          <div
+            className="media-left"
+          >
+            <button
+              className="btn-system-engineer-2 button is-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              Engenharia de Sistemas v2
+            </button>
+          </div>
+          <div
+            className="media-content"
+          >
+            Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG concluídas por um estudantes.
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
