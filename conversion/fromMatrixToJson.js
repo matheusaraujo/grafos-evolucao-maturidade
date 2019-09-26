@@ -1,9 +1,5 @@
-/*
-  mudanças de pré-requisitos:
-  MAT015 -> MAT040
-*/
-
-const colors = ['#514C9F', '#3B8CC6', '#46DF81', '#15992C', '#2CB6C3', '#D4DB26', '#00A3AF', '#00A3AF', '#F54F4F', '#123A73'];
+/* eslint-disable no-console */
+const colors = ['#AC92EB', '#4FC1E8', '#A0D568', '#FFCE54', '#ED5564'];
 
 function getGroups(matrix) {
   const groups = [];
@@ -71,10 +67,8 @@ function getEdges(matrix, nodes) {
     if (i === 0) return;
     const code = line[0].trim();
     let preCodes = line[2].trim();
-    //console.log(code + ':' + preCodes);
     if (preCodes !== 'NA') {
       preCodes = preCodes.split(',');
-      //console.log(preCodes);
       const toNode = nodes.find((n) => n.label === code);
       if (toNode && toNode.id && preCodes) {
         preCodes.forEach((p) => {

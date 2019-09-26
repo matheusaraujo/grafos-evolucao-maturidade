@@ -25,7 +25,7 @@ const systemEngineerGraph = {
           label: 'BC-Est',
         },
       ],
-      color: '#514C9F',
+      color: '#AC92EB',
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const systemEngineerGraph = {
           label: 'PES-Gestão Técnica',
         },
       ],
-      color: '#3B8CC6',
+      color: '#4FC1E8',
     },
     {
       id: 3,
@@ -63,7 +63,7 @@ const systemEngineerGraph = {
           label: 'BE-Cie Mat',
         },
       ],
-      color: '#46DF81',
+      color: '#A0D568',
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ const systemEngineerGraph = {
           label: 'PE-Sist Aut&Contr',
         },
       ],
-      color: '#15992C',
+      color: '#FFCE54',
     },
     {
       id: 5,
@@ -113,7 +113,7 @@ const systemEngineerGraph = {
           label: 'INT-TCC',
         },
       ],
-      color: '#2CB6C3',
+      color: '#ED5564',
     },
   ],
   nodes: [
