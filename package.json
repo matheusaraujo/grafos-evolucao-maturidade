@@ -26,9 +26,11 @@
     "start": "react-scripts start",
     "build": "yarn && react-scripts build",
     "test": "jest --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "firebase deploy",
     "test:coverage": "yarn run test -- --coverage",
+    "test:redux": "jest --env=jsdom src/actions/ src/reducers/ --coverage --collectCoverageFrom=\"src/(actions|reducers)/*.js\"",    
+    "test:components": "jest --env=jsdom src/components/ src/pages/ --coverage --collectCoverageFrom=\"src/(components|pages)/**/*.js\"",    
+    "eject": "react-scripts eject",
+    "deploy": "firebase deploy",    
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
     "lint": "eslint src"
   },
