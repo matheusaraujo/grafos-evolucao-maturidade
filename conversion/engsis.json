@@ -52,14 +52,18 @@
    "subGroups": [
     {
      "id": 1,
-     "label": "BE-Eletri/on Aplic"
+     "label": "BE-Cie Amb"
     },
     {
      "id": 2,
-     "label": "BE-Alg&Prog"
+     "label": "BE-Eletri/on Aplic"
     },
     {
      "id": 3,
+     "label": "BE-Alg&Prog"
+    },
+    {
+     "id": 4,
      "label": "BE-Cie Mat"
     }
    ],
@@ -102,14 +106,18 @@
    "subGroups": [
     {
      "id": 1,
-     "label": "INT-Ativ Integ"
+     "label": "INT-Emp&Gest"
     },
     {
      "id": 2,
-     "label": "INT-Estágio"
+     "label": "INT-Ativ Integ"
     },
     {
      "id": 3,
+     "label": "INT-Estágio"
+    },
+    {
+     "id": 4,
      "label": "INT-TCC"
     }
    ],
@@ -204,7 +212,8 @@
    "details": "A DEFINIR",
    "level": 2,
    "weight": 30,
-   "groupId": 3
+   "groupId": 3,
+   "subGroupId": 1
   },
   {
    "id": 10,
@@ -274,7 +283,7 @@
    "level": 3,
    "weight": 30,
    "groupId": 3,
-   "subGroupId": 1
+   "subGroupId": 2
   },
   {
    "id": 17,
@@ -324,7 +333,7 @@
    "level": 4,
    "weight": 60,
    "groupId": 3,
-   "subGroupId": 2
+   "subGroupId": 3
   },
   {
    "id": 22,
@@ -334,7 +343,7 @@
    "level": 4,
    "weight": 30,
    "groupId": 3,
-   "subGroupId": 1
+   "subGroupId": 2
   },
   {
    "id": 23,
@@ -354,7 +363,7 @@
    "level": 5,
    "weight": 30,
    "groupId": 3,
-   "subGroupId": 3
+   "subGroupId": 4
   },
   {
    "id": 25,
@@ -364,7 +373,7 @@
    "level": 5,
    "weight": 60,
    "groupId": 3,
-   "subGroupId": 2
+   "subGroupId": 3
   },
   {
    "id": 26,
@@ -374,7 +383,7 @@
    "level": 5,
    "weight": 30,
    "groupId": 3,
-   "subGroupId": 1
+   "subGroupId": 2
   },
   {
    "id": 27,
@@ -484,7 +493,7 @@
    "level": 7,
    "weight": 60,
    "groupId": 3,
-   "subGroupId": 2
+   "subGroupId": 3
   },
   {
    "id": 38,
@@ -493,7 +502,8 @@
    "details": "Empresas: administração e organização. Métodos de planejamento e controle. Administração financeira Administração de pessoal. Administração de suprimento. Contabilidade e balanço OBJETIVO: visão geral dos sistemas de produção em seus aspectos históricos (formas, evolução, tendência atuais) e sistemáticos (estruturas e componentes dos sistemas de produção, formas e modelos de organização do trabalho e do gerenciamento da produção), que permitam compreender como se organiza uma empresa (ou unidade fabril) e como melhorar a sua eficiência. ",
    "level": 7,
    "weight": 60,
-   "groupId": 5
+   "groupId": 5,
+   "subGroupId": 1
   },
   {
    "id": 39,
@@ -593,7 +603,7 @@
    "level": 10,
    "weight": 60,
    "groupId": 5,
-   "subGroupId": 1
+   "subGroupId": 2
   },
   {
    "id": 49,
@@ -603,7 +613,7 @@
    "level": 10,
    "weight": 90,
    "groupId": 5,
-   "subGroupId": 2
+   "subGroupId": 3
   },
   {
    "id": 50,
@@ -613,7 +623,7 @@
    "level": 11,
    "weight": 90,
    "groupId": 5,
-   "subGroupId": 3
+   "subGroupId": 4
   },
   {
    "id": 51,
@@ -623,7 +633,7 @@
    "level": 12,
    "weight": 165,
    "groupId": 5,
-   "subGroupId": 3
+   "subGroupId": 4
   }
  ],
  "edges": [

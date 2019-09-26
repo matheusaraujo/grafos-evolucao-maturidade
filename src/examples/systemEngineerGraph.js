@@ -52,14 +52,18 @@ const systemEngineerGraph = {
       subGroups: [
         {
           id: 1,
-          label: 'BE-Eletri/on Aplic',
+          label: 'BE-Cie Amb',
         },
         {
           id: 2,
-          label: 'BE-Alg&Prog',
+          label: 'BE-Eletri/on Aplic',
         },
         {
           id: 3,
+          label: 'BE-Alg&Prog',
+        },
+        {
+          id: 4,
           label: 'BE-Cie Mat',
         },
       ],
@@ -102,14 +106,18 @@ const systemEngineerGraph = {
       subGroups: [
         {
           id: 1,
-          label: 'INT-Ativ Integ',
+          label: 'INT-Emp&Gest',
         },
         {
           id: 2,
-          label: 'INT-Estágio',
+          label: 'INT-Ativ Integ',
         },
         {
           id: 3,
+          label: 'INT-Estágio',
+        },
+        {
+          id: 4,
           label: 'INT-TCC',
         },
       ],
@@ -205,6 +213,7 @@ const systemEngineerGraph = {
       level: 2,
       weight: 30,
       groupId: 3,
+      subGroupId: 1,
     },
     {
       id: 10,
@@ -274,7 +283,7 @@ const systemEngineerGraph = {
       level: 3,
       weight: 30,
       groupId: 3,
-      subGroupId: 1,
+      subGroupId: 2,
     },
     {
       id: 17,
@@ -324,7 +333,7 @@ const systemEngineerGraph = {
       level: 4,
       weight: 60,
       groupId: 3,
-      subGroupId: 2,
+      subGroupId: 3,
     },
     {
       id: 22,
@@ -334,7 +343,7 @@ const systemEngineerGraph = {
       level: 4,
       weight: 30,
       groupId: 3,
-      subGroupId: 1,
+      subGroupId: 2,
     },
     {
       id: 23,
@@ -354,7 +363,7 @@ const systemEngineerGraph = {
       level: 5,
       weight: 30,
       groupId: 3,
-      subGroupId: 3,
+      subGroupId: 4,
     },
     {
       id: 25,
@@ -364,7 +373,7 @@ const systemEngineerGraph = {
       level: 5,
       weight: 60,
       groupId: 3,
-      subGroupId: 2,
+      subGroupId: 3,
     },
     {
       id: 26,
@@ -374,7 +383,7 @@ const systemEngineerGraph = {
       level: 5,
       weight: 30,
       groupId: 3,
-      subGroupId: 1,
+      subGroupId: 2,
     },
     {
       id: 27,
@@ -484,7 +493,7 @@ const systemEngineerGraph = {
       level: 7,
       weight: 60,
       groupId: 3,
-      subGroupId: 2,
+      subGroupId: 3,
     },
     {
       id: 38,
@@ -494,6 +503,7 @@ const systemEngineerGraph = {
       level: 7,
       weight: 60,
       groupId: 5,
+      subGroupId: 1,
     },
     {
       id: 39,
@@ -593,7 +603,7 @@ const systemEngineerGraph = {
       level: 10,
       weight: 60,
       groupId: 5,
-      subGroupId: 1,
+      subGroupId: 2,
     },
     {
       id: 49,
@@ -603,7 +613,7 @@ const systemEngineerGraph = {
       level: 10,
       weight: 90,
       groupId: 5,
-      subGroupId: 2,
+      subGroupId: 3,
     },
     {
       id: 50,
@@ -613,7 +623,7 @@ const systemEngineerGraph = {
       level: 11,
       weight: 90,
       groupId: 5,
-      subGroupId: 3,
+      subGroupId: 4,
     },
     {
       id: 51,
@@ -623,7 +633,7 @@ const systemEngineerGraph = {
       level: 12,
       weight: 165,
       groupId: 5,
-      subGroupId: 3,
+      subGroupId: 4,
     },
   ],
   edges: [

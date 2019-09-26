@@ -7,8 +7,11 @@ export const nodeType = shape({
   label: string.isRequired,
   title: string,
   detail: string,
-  groupId: number,
   level: number,
+  weight: number,
+  groupId: number,
+  subGroupId: number,
+  status: bool,
 });
 
 export const edgeType = shape({
@@ -34,8 +37,14 @@ export const optionsType = shape({
   height: string.isRequired,
 });
 
+export const nodeSubGroupType = shape({
+  id: number.isRequired,
+  label: string.isRequired,
+});
+
 export const nodeGroupType = shape({
   id: number.isRequired,
   label: string.isRequired,
   color: string,
+  subGroups: arrayOf(nodeSubGroupType),
 });
