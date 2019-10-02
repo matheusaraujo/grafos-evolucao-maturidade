@@ -1,4 +1,4 @@
-const systemEngineerGraph = {
+const systemEngineerGraph2 = {
   groups: [
     {
       id: 1,
@@ -925,4 +925,4 @@ const systemEngineerGraph = {
   ],
 };
 
-export default systemEngineerGraph;
+export default systemEngineerGraph2;
