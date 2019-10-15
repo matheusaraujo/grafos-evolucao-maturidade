@@ -1,7 +1,7 @@
 import Nexts from './Nexts';
 
-describe('json utils', () => {
+describe('engine - Nexts', () => {
   test('Nexts should return empty', () => {
-    expect(Nexts()).toBe(null);
+    expect(Nexts()).toStrictEqual([]);
   });
 });

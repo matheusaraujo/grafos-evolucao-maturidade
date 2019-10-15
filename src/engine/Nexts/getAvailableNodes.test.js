@@ -1,11 +1,11 @@
-import { getPending, isAllPrecedentsDone } from './getAvailableItems';
+import { filterPending, isAllPrecedentsDone, getAvailableNodes } from './getAvailableNodes';
 
-describe('engine - Nexts - getAvailableItems', () => {
-  test('getPending should return empty', () => {
-    expect(getPending()).toStrictEqual([]);
+describe('engine - Nexts - getAvailableNodes', () => {
+  test('filterPending should return empty', () => {
+    expect(filterPending()).toStrictEqual([]);
   });
-  test('getPending should return one item', () => {
-    expect(getPending([{
+  test('filterPending should return one item', () => {
+    expect(filterPending([{
       id: 1,
       label: '1',
       status: 0,
@@ -21,8 +21,8 @@ describe('engine - Nexts - getAvailableItems', () => {
       status: 0,
     }]);
   });
-  test('getPending should return no item', () => {
-    expect(getPending([{
+  test('filterPending should return no item', () => {
+    expect(filterPending([{
       id: 1,
       label: '1',
       status: 1,
@@ -101,5 +101,61 @@ describe('engine - Nexts - getAvailableItems', () => {
       from: 1,
       to: 2,
     }])).toBeTruthy();
+  });
+  test('getAvaiableNodes', () => {
+    expect(getAvailableNodes([{
+      id: 1,
+      label: '1',
+      status: 1,
+    },
+    {
+      id: 2,
+      label: '2',
+      status: 1,
+    },
+    {
+      id: 3,
+      label: '3',
+      status: 0,
+    },
+    {
+      id: 4,
+      label: '4',
+      status: 0,
+    },
+    {
+      id: 5,
+      label: '5',
+      status: 0,
+    },
+    ], [{
+      id: 1,
+      from: 1,
+      to: 4,
+    },
+    {
+      id: 2,
+      from: 2,
+      to: 4,
+    },
+    {
+      id: 3,
+      from: 2,
+      to: 5,
+    },
+    {
+      id: 4,
+      from: 3,
+      to: 5,
+    }])).toStrictEqual([{
+      id: 3,
+      label: '3',
+      status: 0,
+    },
+    {
+      id: 4,
+      label: '4',
+      status: 0,
+    }]);
   });
 });
