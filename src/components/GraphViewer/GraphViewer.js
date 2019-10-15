@@ -20,7 +20,7 @@ const GraphViewer = ({
     let sg = '';
     if (group) {
       g = group.label ? `**Ciclo Geral**: ${group.label}  \n` : '';
-      const subGroup = group && group.subGroups
+      const subGroup = group.subGroups
         && group.subGroups.find((g1) => g1.id === node.subGroupId);
       if (subGroup) sg = subGroup.label ? `**Ciclo Detalhado:** ${subGroup.label}  \n` : '';
     }

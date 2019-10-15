@@ -1,9 +1,9 @@
+import { getAllCombinations } from './utils';
 import {
   filterPending,
   filterAllPrecedentsDone,
 } from './getAvailableNodes';
 import {
-  getAllCombinations,
   filterMinimumWeightCombination,
   filterMaximumWeightCombination,
   filterConflictingCombinations,

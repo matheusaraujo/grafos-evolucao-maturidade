@@ -1,4 +1,4 @@
-import getCombinationTotalWeight from './utils';
+import { getCombinationTotalWeight } from './utils';
 
 export const getMinimumUndoneLevel = (nodes) => {
   let minimumLevel = Number.MAX_SAFE_INTEGER;

@@ -27,7 +27,7 @@ export const graphMapper = (graph, nodeGroups) => ({
     shape: 'circle',
     color: {
       background: getNodeColor(n, nodeGroups),
-      border: getNodeBorder(graph, n),
+      border: getNodeBorder(n),
     },
     level: n.level,
   })),
