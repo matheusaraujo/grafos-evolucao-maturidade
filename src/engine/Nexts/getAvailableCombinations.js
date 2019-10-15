@@ -65,3 +65,13 @@ export const isConflictingCombination = (combination) => {
   }
   return false;
 };
+
+export const filterConflictingCombinations = (combinations) => {
+  const result = [];
+  for (let i = 0; i < combinations.length; i += 1) {
+    if (!isConflictingCombination(combinations[i])) {
+      result.push(combinations[i]);
+    }
+  }
+  return result;
+};
