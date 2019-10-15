@@ -1,4 +1,8 @@
-import { filterPending, isAllPrecedentsDone, getAvailableNodes } from './getAvailableNodes';
+import {
+  filterPending,
+  isAllPrecedentsDone,
+  filterAllPrecedentsDone,
+} from './getAvailableNodes';
 
 describe('engine - Nexts - getAvailableNodes', () => {
   test('filterPending should return empty', () => {
@@ -102,32 +106,35 @@ describe('engine - Nexts - getAvailableNodes', () => {
       to: 2,
     }])).toBeTruthy();
   });
-  test('getAvaiableNodes', () => {
-    expect(getAvailableNodes([{
+  test('filterAllPrecedentsDone', () => {
+    const node1 = {
       id: 1,
       label: '1',
       status: 1,
-    },
-    {
+    };
+    const node2 = {
       id: 2,
       label: '2',
       status: 1,
-    },
-    {
+    };
+    const node3 = {
       id: 3,
       label: '3',
       status: 0,
-    },
-    {
+    };
+    const node4 = {
       id: 4,
       label: '4',
       status: 0,
-    },
-    {
+    };
+    const node5 = {
       id: 5,
       label: '5',
       status: 0,
-    },
+    };
+
+    expect(filterAllPrecedentsDone([
+      node1, node2, node3, node4, node5,
     ], [{
       id: 1,
       from: 1,
@@ -147,15 +154,8 @@ describe('engine - Nexts - getAvailableNodes', () => {
       id: 4,
       from: 3,
       to: 5,
-    }])).toStrictEqual([{
-      id: 3,
-      label: '3',
-      status: 0,
-    },
-    {
-      id: 4,
-      label: '4',
-      status: 0,
-    }]);
+    }])).toStrictEqual([
+      node1, node2, node3, node4,
+    ]);
   });
 });

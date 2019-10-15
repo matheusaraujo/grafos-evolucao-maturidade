@@ -23,8 +23,7 @@ export const filterPending = (nodes) => {
   return nodes.filter((n) => n.status === 0);
 };
 
-export const getAvailableNodes = (nodes, edges) => {
-  const pendingNodes = filterPending(nodes);
-  const avaiableNodes = pendingNodes.filter((n) => isAllPrecedentsDone(n.id, nodes, edges));
+export const filterAllPrecedentsDone = (nodesToFilter, allNodes, edges) => {
+  const avaiableNodes = nodesToFilter.filter((n) => isAllPrecedentsDone(n.id, allNodes, edges));
   return avaiableNodes;
 };

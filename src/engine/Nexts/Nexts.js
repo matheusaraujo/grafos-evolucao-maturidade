@@ -1,4 +1,7 @@
-import { getAvailableNodes } from './getAvailableNodes';
+import {
+  filterPending,
+  filterAllPrecedentsDone,
+} from './getAvailableNodes';
 import {
   getAllCombinations,
   filterMinimumWeightCombination,
@@ -7,7 +10,8 @@ import {
 } from './getAvailableCombinations';
 
 const Nexts = (nodes, edges) => {
-  const availableNodes = getAvailableNodes(nodes, edges);
+  let availableNodes = filterPending(nodes);
+  availableNodes = filterAllPrecedentsDone(availableNodes, nodes, edges);
 
   let combinations = getAllCombinations(availableNodes);
   combinations = filterMinimumWeightCombination(combinations);
