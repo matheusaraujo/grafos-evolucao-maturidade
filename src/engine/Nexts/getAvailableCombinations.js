@@ -1,4 +1,6 @@
 /* eslint-disable no-bitwise */
+import getCombinationTotalWeight from './utils';
+
 export const getAllCombinations = (arr) => {
   const result = [];
   const arrLen = arr.length;
@@ -12,11 +14,6 @@ export const getAllCombinations = (arr) => {
     if (temp.length !== 0) result.push(temp);
   }
   return result;
-};
-
-export const getCombinationTotalWeight = (combination) => {
-  const sum = combination.reduce((a, b) => a + b.weight, 0);
-  return sum;
 };
 
 const isMinimumWeight = (combination, minWeight) => {

@@ -132,7 +132,6 @@ describe('engine - Nexts - getAvailableNodes', () => {
       label: '5',
       status: 0,
     };
-
     expect(filterAllPrecedentsDone([
       node1, node2, node3, node4, node5,
     ], [{

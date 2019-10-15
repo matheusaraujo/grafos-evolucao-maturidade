@@ -8,17 +8,19 @@ import {
   filterMaximumWeightCombination,
   filterConflictingCombinations,
 } from './getAvailableCombinations';
+import {
+  sortCombinations,
+} from './classifyCombinations';
 
-const Nexts = (nodes, edges) => {
+const Nexts = (nodes, edges, { minWeight, maxWeight }) => {
   let availableNodes = filterPending(nodes);
   availableNodes = filterAllPrecedentsDone(availableNodes, nodes, edges);
 
   let combinations = getAllCombinations(availableNodes);
-  combinations = filterMinimumWeightCombination(combinations);
-  combinations = filterMaximumWeightCombination(combinations);
+  combinations = filterMinimumWeightCombination(combinations, minWeight);
+  combinations = filterMaximumWeightCombination(combinations, maxWeight);
   combinations = filterConflictingCombinations(combinations);
-
-  return combinations;
+  return sortCombinations(combinations, nodes);
 };
 
 export default Nexts;
