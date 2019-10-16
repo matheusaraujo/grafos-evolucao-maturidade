@@ -31,6 +31,7 @@
     "test:services": "jest --env=jsdom src/services/ --coverage --collectCoverageFrom=\"src/services/**/*.js\"",    
     "test:components": "jest --env=jsdom src/components/ src/pages/ --coverage --collectCoverageFrom=\"src/(components|pages)/**/*.js\"",
     "test:engine": "jest --env=jsdom src/engine/ --coverage --collectCoverageFrom=\"src/engine/**/*.js\"",
+    "test:engsis": "jest \"src/.*\\.engsis.test.js\"",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy",    
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",

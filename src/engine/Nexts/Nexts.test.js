@@ -66,14 +66,30 @@ describe('engine - Nexts', () => {
       to: 5,
     }];
     const expected = [
-      { combination: [node3], distance: 0, totalWeight: 2 },
-      { combination: [node3, node4], distance: 1, totalWeight: 4 },
-      { combination: [node4], distance: 1, totalWeight: 2 },
+      {
+        combination: [node3],
+        distance: 0,
+        totalWeight: 2,
+        slots: [5, 6],
+      },
+      {
+        combination: [node3, node4],
+        distance: 1,
+        totalWeight: 4,
+        slots: [1, 2, 5, 6],
+      },
+      {
+        combination: [node4],
+        distance: 1,
+        totalWeight: 2,
+        slots: [1, 2],
+      },
     ];
-    expect(Nexts(
+    const received = Nexts(
       [node1, node2, node3, node4, node5],
       edges,
-      { minWeight: 2, maxWeight: 4 },
-    )).toStrictEqual(expected);
+      { minWeight: 2, maxWeight: 4, maxDistance: 10 },
+    );
+    expect(received).toStrictEqual(expected);
   });
 });

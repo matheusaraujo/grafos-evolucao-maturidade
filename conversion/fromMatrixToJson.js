@@ -59,6 +59,9 @@ function getNodes(matrix, groups) {
 
     if (line.length > 9) {
       node.slots = line[9].trim().split(',');
+      for (let j = 0; j < node.slots.length; j += 1) {
+        node.slots[j] = parseInt(node.slots[j], 10);
+      }
     }
     if (line.length > 10) {
       node.status = line[10] === '1';

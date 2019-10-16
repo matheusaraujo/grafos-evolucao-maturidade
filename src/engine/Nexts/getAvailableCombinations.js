@@ -30,6 +30,11 @@ export const filterMaximumWeightCombination = (combinations, maxWeight) => {
   return result;
 };
 
+export const filterMaximumDistanceCombination = (classifiedCombinations, maxDistance) => {
+  const safeMax = maxDistance === null || maxDistance === 0 ? Number.MAX_SAFE_INTEGER : maxDistance;
+  return classifiedCombinations.filter((c) => c.distance <= safeMax);
+};
+
 export const areConflictingNodes = (node1, node2) => {
   const slots1 = node1.slots;
   const slots2 = node2.slots;

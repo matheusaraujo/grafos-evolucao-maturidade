@@ -2,6 +2,7 @@ import {
   getMinimumUndoneLevel,
   getCombinationDistance,
   classifyCombination,
+  getAllSlots,
 } from './classifyCombinations';
 
 describe('engine - Nexts - classifyCombinations', () => {
@@ -137,6 +138,18 @@ describe('engine - Nexts - classifyCombinations', () => {
     expect(getCombinationDistance([node4],
       [node1, node2, node3, node4, node5])).toBe(1);
   });
+  test('getAllSlots', () => {
+    const node1 = {
+      slots: [5, 6],
+    };
+    const node2 = {
+      slots: [1, 2],
+    };
+    const node3 = {
+      slots: [3, 4],
+    };
+    expect(getAllSlots([node1, node2, node3])).toStrictEqual([1, 2, 3, 4, 5, 6]);
+  });
   test('classifyCombination - case 1', () => {
     const node1 = {
       id: 1,
@@ -177,11 +190,11 @@ describe('engine - Nexts - classifyCombinations', () => {
       combination: [node3, node4],
       distance: 1,
       totalWeight: 4,
+      slots: [],
     };
-    expect(
-      classifyCombination([node3, node4],
-        [node1, node2, node3, node4, node5]),
-    ).toStrictEqual(expected);
+    const received = classifyCombination([node3, node4],
+      [node1, node2, node3, node4, node5]);
+    expect(received).toStrictEqual(expected);
   });
   test('classifyCombination - case 2', () => {
     const node1 = {
@@ -223,6 +236,7 @@ describe('engine - Nexts - classifyCombinations', () => {
       combination: [node3],
       distance: 0,
       totalWeight: 2,
+      slots: [],
     };
     expect(
       classifyCombination([node3],
@@ -269,6 +283,7 @@ describe('engine - Nexts - classifyCombinations', () => {
       combination: [node4],
       distance: 1,
       totalWeight: 2,
+      slots: [],
     };
     expect(
       classifyCombination([node4],
