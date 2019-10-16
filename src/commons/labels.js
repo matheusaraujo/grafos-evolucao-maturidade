@@ -29,13 +29,13 @@ export const systemEngineerSubtitle = {
 };
 
 export const systemEngineer2 = {
-  pt: 'Engenharia de Sistemas v2',
-  en: 'System Engineer v2',
+  pt: 'Engenharia de Sistemas 20182',
+  en: 'System Engineer 20182',
 };
 
 export const systemEngineerSubtitle2 = {
-  pt: 'Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG concluídas por um estudantes.',
-  en: 'Grid of subjects from the undergraduate degree in Systems Engineering at UFMG completed by a student.',
+  pt: 'Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG versão 20182.',
+  en: 'Grid of subjects from the undergraduate degree in Systems Engineering at UFMG 20182 version.',
 };
 
 export const code = {

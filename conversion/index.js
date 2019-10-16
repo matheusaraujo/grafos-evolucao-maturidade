@@ -3,10 +3,22 @@ import fromMatrixToJson from './fromMatrixToJson';
 
 const fs = require('fs');
 
-const contents = fs.readFileSync('engsis.tsv', 'utf8');
-const rows = contents.split('\r\n');
-const matrix = rows.map((r) => r.split('\t'));
+const run = () => {
+  const inputFile = process.argv.length > 2 && process.argv[2];
 
-const json = fromMatrixToJson(matrix);
-const jsonString = JSON.stringify(json, null, ' ');
-fs.writeFileSync('engsis.json', jsonString);
+  if (!inputFile) {
+    console.log('file not provided');
+    return;
+  }
+
+  const outputFile = inputFile.replace('tsv', 'json');
+  const contents = fs.readFileSync(inputFile, 'utf8');
+  const rows = contents.split('\r\n');
+  const matrix = rows.map((r) => r.split('\t'));
+
+  const json = fromMatrixToJson(matrix);
+  const jsonString = JSON.stringify(json, null, ' ');
+  fs.writeFileSync(outputFile, jsonString);
+};
+
+run();

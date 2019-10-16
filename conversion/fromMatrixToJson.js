@@ -46,7 +46,7 @@ function getNodes(matrix, groups) {
       subGroup = group.subGroups.find((sc) => sc.label === detailCycle);
     }
 
-    nodes.push({
+    const node = {
       id: i,
       label: line[0].trim(),
       title: line[1],
@@ -55,7 +55,16 @@ function getNodes(matrix, groups) {
       weight: parseInt(line[3], 10),
       groupId: group && group.id,
       subGroupId: subGroup && subGroup.id,
-    });
+    };
+
+    if (line.length > 9) {
+      node.slots = line[9].trim().split(',');
+    }
+    if (line.length > 10) {
+      node.status = line[10] === '1';
+    }
+
+    nodes.push(node);
   });
 
   return nodes;
@@ -72,9 +81,7 @@ function getEdges(matrix, nodes) {
       const toNode = nodes.find((n) => n.label === code);
       if (toNode && toNode.id && preCodes) {
         preCodes.forEach((p) => {
-          let p1 = p.trim();
-          if (p1 === 'MAT015') p1 = 'MAT040';
-          if (p1 === 'ELE084') p1 = 'ELEXXG';
+          const p1 = p.trim();
           const fromNode = nodes.find((n) => n.label === p1);
           if (fromNode) {
             edges.push({
@@ -84,7 +91,7 @@ function getEdges(matrix, nodes) {
               label: `${fromNode.label} -> ${toNode.label}`,
             });
           } else {
-            console.error('ERROR: ' + p);
+            console.error(`ERROR NOT FOUND: ${p}`);
           }
         });
       }

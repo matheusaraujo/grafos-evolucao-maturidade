@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
-import systemEngineerGraph2 from '../../examples/systemEngineerGraph2';
+import systemEngineerGraph20182 from '../../examples/systemEngineerGraph.20182';
 import * as labels from '../../commons/labels';
 
 const InitialPage = ({
@@ -60,7 +60,7 @@ const InitialPage = ({
   const buttonSystemEngineer2 = button(labels.systemEngineer2[lang],
     labels.systemEngineerSubtitle2[lang],
     'btn-system-engineer-2',
-    systemEngineerGraph2);
+    systemEngineerGraph20182);
 
   return (
     <section className="section">

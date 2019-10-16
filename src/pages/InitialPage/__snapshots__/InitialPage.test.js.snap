@@ -89,13 +89,13 @@ exports[`InitialPage should match snapshot 1`] = `
               onClick={[Function]}
               type="button"
             >
-              Engenharia de Sistemas v2
+              Engenharia de Sistemas 20182
             </button>
           </div>
           <div
             className="media-content"
           >
-            Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG concluídas por um estudantes.
+            Grade de disciplinas do curso de graduação em Engenharia de Sistemas da UFMG versão 20182.
           </div>
         </article>
       </div>
