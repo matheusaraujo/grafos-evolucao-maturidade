@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const colors = ['#AC92EB', '#4FC1E8', '#A0D568', '#FFCE54', '#ED5564'];
 
-function getGroups(matrix) {
+export const getGroups = (matrix) => {
   const groups = [];
 
   matrix.forEach((line, i) => {
@@ -30,9 +30,9 @@ function getGroups(matrix) {
   });
 
   return groups;
-}
+};
 
-function getNodes(matrix, groups) {
+export const getNodes = (matrix, groups) => {
   const nodes = [];
 
   matrix.forEach((line, i) => {
@@ -71,9 +71,9 @@ function getNodes(matrix, groups) {
   });
 
   return nodes;
-}
+};
 
-function getEdges(matrix, nodes) {
+export const getEdges = (matrix, nodes) => {
   const edges = [];
   matrix.forEach((line, i) => {
     if (i === 0) return;
@@ -101,9 +101,9 @@ function getEdges(matrix, nodes) {
     }
   });
   return edges;
-}
+};
 
-export default function (matrix) {
+export const fromMatrixToJson = (matrix) => {
   const groups = getGroups(matrix);
   const nodes = getNodes(matrix, groups);
   const edges = getEdges(matrix, nodes);
@@ -112,4 +112,4 @@ export default function (matrix) {
     nodes,
     edges,
   };
-}
+};

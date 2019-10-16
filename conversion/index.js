@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import fromMatrixToJson from './fromMatrixToJson';
+import { fromMatrixToJson } from './fromMatrixToJson';
 
 const fs = require('fs');
 
