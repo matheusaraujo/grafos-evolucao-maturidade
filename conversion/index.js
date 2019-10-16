@@ -4,7 +4,7 @@ import fromMatrixToJson from './fromMatrixToJson';
 const fs = require('fs');
 
 const run = () => {
-  const inputFile = process.argv.length > 2 && process.argv[2];
+  const inputFile = process && process.argv && process.argv.length > 2 && process.argv[2];
 
   if (!inputFile) {
     console.log('file not provided');

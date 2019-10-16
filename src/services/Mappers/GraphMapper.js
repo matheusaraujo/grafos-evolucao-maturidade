@@ -42,5 +42,3 @@ export const graphMapper = (graph, nodeGroups) => ({
     },
   })),
 });
-
-export default graphMapper;
