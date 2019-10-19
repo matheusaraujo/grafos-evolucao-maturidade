@@ -2,14 +2,102 @@
  "groups": [
   {
    "id": 1,
-   "label": "OB",
+   "label": "BC-Bas Cie",
    "subGroups": [
     {
      "id": 1,
-     "label": "OB"
+     "label": "BC-Alg&Prog"
+    },
+    {
+     "id": 2,
+     "label": "BC-Mat"
+    },
+    {
+     "id": 3,
+     "label": "BC-Fis"
+    },
+    {
+     "id": 4,
+     "label": "BC-Est"
     }
    ],
    "color": "#AC92EB"
+  },
+  {
+   "id": 2,
+   "label": "PES-Prof Eng Sist",
+   "subGroups": [
+    {
+     "id": 1,
+     "label": "PES-Fund ES"
+    },
+    {
+     "id": 2,
+     "label": "PES-ES Aplicada"
+    }
+   ],
+   "color": "#4FC1E8"
+  },
+  {
+   "id": 3,
+   "label": "PE-Prof Eng",
+   "subGroups": [
+    {
+     "id": 1,
+     "label": "PE-Eletr Anal&Dig"
+    },
+    {
+     "id": 2,
+     "label": "PE-Inform"
+    },
+    {
+     "id": 3,
+     "label": "PE-Int Comp"
+    },
+    {
+     "id": 4,
+     "label": "PE-Anal&Contr"
+    },
+    {
+     "id": 5,
+     "label": "PE-Otimiz"
+    }
+   ],
+   "color": "#A0D568"
+  },
+  {
+   "id": 4,
+   "label": "BE-Bas Eng",
+   "subGroups": [
+    {
+     "id": 1,
+     "label": "BE-Eletri/on Aplic"
+    },
+    {
+     "id": 2,
+     "label": "BE-Alg&Prog"
+    }
+   ],
+   "color": "#FFCE54"
+  },
+  {
+   "id": 5,
+   "label": "INT-Integrador",
+   "subGroups": [
+    {
+     "id": 1,
+     "label": "INT-Ativ Integ"
+    },
+    {
+     "id": 2,
+     "label": "INT-TCC"
+    },
+    {
+     "id": 3,
+     "label": "INT-Estágio"
+    }
+   ],
+   "color": "#ED5564"
   }
  ],
  "nodes": [
@@ -36,7 +124,7 @@
    "level": 1,
    "weight": 90,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     1,
     6,
@@ -52,7 +140,7 @@
    "level": 1,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     3,
     8
@@ -66,7 +154,7 @@
    "details": "Ementa",
    "level": 1,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 2,
    "subGroupId": 1,
    "slots": [
     5
@@ -95,7 +183,7 @@
    "details": "Ementa",
    "level": 2,
    "weight": 60,
-   "groupId": 1,
+   "groupId": 3,
    "subGroupId": 1,
    "slots": [
     9,
@@ -111,7 +199,7 @@
    "level": 2,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     2,
     5
@@ -126,7 +214,7 @@
    "level": 2,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     1,
     6
@@ -155,7 +243,7 @@
    "details": "Ementa",
    "level": 3,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 4,
    "subGroupId": 1,
    "slots": [
     9
@@ -170,7 +258,7 @@
    "level": 3,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     2,
     5
@@ -185,7 +273,7 @@
    "level": 3,
    "weight": 30,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     9
    ],
@@ -199,7 +287,7 @@
    "level": 3,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     1,
     6
@@ -214,7 +302,7 @@
    "level": 3,
    "weight": 30,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     3,
     8
@@ -228,8 +316,8 @@
    "details": "Ementa",
    "level": 3,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 4,
+   "subGroupId": 2,
    "slots": [
     7,
     10
@@ -258,7 +346,7 @@
    "details": "Ementa",
    "level": 4,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 3,
    "subGroupId": 1,
    "slots": [
     10
@@ -273,7 +361,7 @@
    "level": 4,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     2,
     5
@@ -287,7 +375,7 @@
    "details": "Ementa",
    "level": 4,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 4,
    "subGroupId": 1,
    "slots": [
     9
@@ -302,7 +390,7 @@
    "level": 4,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 4,
    "slots": [
     3,
     8
@@ -317,7 +405,7 @@
    "level": 4,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 2,
    "slots": [
     1,
     6
@@ -331,8 +419,8 @@
    "details": "Ementa",
    "level": 5,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 2,
    "slots": [
     1,
     6
@@ -346,8 +434,8 @@
    "details": "Ementa",
    "level": 5,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 3,
    "slots": [
     10
    ],
@@ -360,8 +448,8 @@
    "details": "Ementa",
    "level": 5,
    "weight": 90,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 4,
    "slots": [
     4,
     7
@@ -376,7 +464,7 @@
    "level": 5,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     2,
     5
@@ -390,8 +478,8 @@
    "details": "Ementa",
    "level": 5,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 2,
+   "subGroupId": 2,
    "slots": [
     9
    ],
@@ -405,7 +493,7 @@
    "level": 5,
    "weight": 60,
    "groupId": 1,
-   "subGroupId": 1,
+   "subGroupId": 3,
    "slots": [
     3,
     8
@@ -419,7 +507,7 @@
    "details": "Ementa",
    "level": 6,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 4,
    "subGroupId": 1,
    "slots": [
     3
@@ -433,8 +521,8 @@
    "details": "Ementa",
    "level": 6,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 2,
+   "subGroupId": 2,
    "slots": [
     1,
     2
@@ -448,8 +536,8 @@
    "details": "Ementa",
    "level": 6,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 5,
    "slots": [
     5,
     6
@@ -463,8 +551,8 @@
    "details": "Ementa",
    "level": 6,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 2,
    "slots": [
     8,
     9
@@ -478,8 +566,8 @@
    "details": "Ementa",
    "level": 6,
    "weight": 90,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 4,
    "slots": [
     4,
     7
@@ -493,8 +581,8 @@
    "details": "Ementa",
    "level": 7,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 2,
    "slots": [
     1,
     6
@@ -508,8 +596,8 @@
    "details": "Ementa",
    "level": 7,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 5,
    "slots": [
     9
    ],
@@ -522,8 +610,8 @@
    "details": "Ementa",
    "level": 7,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 2,
+   "subGroupId": 2,
    "slots": [
     3,
     4
@@ -537,8 +625,8 @@
    "details": "Ementa",
    "level": 7,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 3,
    "slots": [
     7,
     8
@@ -552,8 +640,8 @@
    "details": "Ementa",
    "level": 7,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 2,
    "slots": [
     2,
     5
@@ -567,8 +655,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 3,
    "slots": [
     6
    ],
@@ -581,8 +669,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 5,
    "slots": [
     9
    ],
@@ -595,8 +683,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 3,
    "slots": [
     1,
     2
@@ -610,8 +698,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 3,
    "slots": [
     5
    ],
@@ -624,8 +712,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 2,
+   "subGroupId": 2,
    "slots": [
     7,
     8
@@ -639,8 +727,8 @@
    "details": "Ementa",
    "level": 8,
    "weight": 30,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 3,
+   "subGroupId": 4,
    "slots": [
     3
    ],
@@ -653,7 +741,7 @@
    "details": "Ementa",
    "level": 8,
    "weight": 30,
-   "groupId": 1,
+   "groupId": 3,
    "subGroupId": 1,
    "slots": [
     4
@@ -667,7 +755,7 @@
    "details": "Ementa",
    "level": 9,
    "weight": 60,
-   "groupId": 1,
+   "groupId": 5,
    "subGroupId": 1,
    "slots": [
     7,
@@ -682,8 +770,8 @@
    "details": "Ementa",
    "level": 9,
    "weight": 60,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 2,
+   "subGroupId": 2,
    "slots": [
     3,
     4
@@ -697,8 +785,8 @@
    "details": "Ementa",
    "level": 10,
    "weight": 90,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 5,
+   "subGroupId": 2,
    "slots": [
     101
    ],
@@ -711,8 +799,8 @@
    "details": "Ementa",
    "level": 11,
    "weight": 90,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 5,
+   "subGroupId": 2,
    "slots": [
     102
    ],
@@ -725,8 +813,8 @@
    "details": "Ementa",
    "level": 12,
    "weight": 165,
-   "groupId": 1,
-   "subGroupId": 1,
+   "groupId": 5,
+   "subGroupId": 3,
    "slots": [
     103
    ],

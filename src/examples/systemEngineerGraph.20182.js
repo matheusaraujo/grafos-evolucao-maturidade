@@ -2,14 +2,102 @@ const systemEngineerGraph = {
   groups: [
     {
       id: 1,
-      label: 'OB',
+      label: 'BC-Bas Cie',
       subGroups: [
         {
           id: 1,
-          label: 'OB',
+          label: 'BC-Alg&Prog',
+        },
+        {
+          id: 2,
+          label: 'BC-Mat',
+        },
+        {
+          id: 3,
+          label: 'BC-Fis',
+        },
+        {
+          id: 4,
+          label: 'BC-Est',
         },
       ],
       color: '#AC92EB',
+    },
+    {
+      id: 2,
+      label: 'PES-Prof Eng Sist',
+      subGroups: [
+        {
+          id: 1,
+          label: 'PES-Fund ES',
+        },
+        {
+          id: 2,
+          label: 'PES-ES Aplicada',
+        },
+      ],
+      color: '#4FC1E8',
+    },
+    {
+      id: 3,
+      label: 'PE-Prof Eng',
+      subGroups: [
+        {
+          id: 1,
+          label: 'PE-Eletr Anal&Dig',
+        },
+        {
+          id: 2,
+          label: 'PE-Inform',
+        },
+        {
+          id: 3,
+          label: 'PE-Int Comp',
+        },
+        {
+          id: 4,
+          label: 'PE-Anal&Contr',
+        },
+        {
+          id: 5,
+          label: 'PE-Otimiz',
+        },
+      ],
+      color: '#A0D568',
+    },
+    {
+      id: 4,
+      label: 'BE-Bas Eng',
+      subGroups: [
+        {
+          id: 1,
+          label: 'BE-Eletri/on Aplic',
+        },
+        {
+          id: 2,
+          label: 'BE-Alg&Prog',
+        },
+      ],
+      color: '#FFCE54',
+    },
+    {
+      id: 5,
+      label: 'INT-Integrador',
+      subGroups: [
+        {
+          id: 1,
+          label: 'INT-Ativ Integ',
+        },
+        {
+          id: 2,
+          label: 'INT-TCC',
+        },
+        {
+          id: 3,
+          label: 'INT-Estágio',
+        },
+      ],
+      color: '#ED5564',
     },
   ],
   nodes: [
@@ -26,7 +114,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 2,
@@ -36,13 +124,13 @@ const systemEngineerGraph = {
       level: 1,
       weight: 90,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         1,
         6,
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 3,
@@ -52,12 +140,12 @@ const systemEngineerGraph = {
       level: 1,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         3,
         8,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 4,
@@ -66,12 +154,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 1,
       weight: 30,
-      groupId: 1,
+      groupId: 2,
       subGroupId: 1,
       slots: [
         5,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 5,
@@ -86,7 +174,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 6,
@@ -95,13 +183,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 2,
       weight: 60,
-      groupId: 1,
+      groupId: 3,
       subGroupId: 1,
       slots: [
         9,
         10,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 7,
@@ -111,12 +199,12 @@ const systemEngineerGraph = {
       level: 2,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         2,
         5,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 8,
@@ -126,12 +214,12 @@ const systemEngineerGraph = {
       level: 2,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         1,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 9,
@@ -146,7 +234,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 10,
@@ -155,12 +243,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 3,
       weight: 30,
-      groupId: 1,
+      groupId: 4,
       subGroupId: 1,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 11,
@@ -170,12 +258,12 @@ const systemEngineerGraph = {
       level: 3,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         2,
         5,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 12,
@@ -185,11 +273,11 @@ const systemEngineerGraph = {
       level: 3,
       weight: 30,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 13,
@@ -199,12 +287,12 @@ const systemEngineerGraph = {
       level: 3,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         1,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 14,
@@ -214,12 +302,12 @@ const systemEngineerGraph = {
       level: 3,
       weight: 30,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         3,
         8,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 15,
@@ -228,13 +316,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 3,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 4,
+      subGroupId: 2,
       slots: [
         7,
         10,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 16,
@@ -249,7 +337,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 17,
@@ -258,12 +346,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 4,
       weight: 30,
-      groupId: 1,
+      groupId: 3,
       subGroupId: 1,
       slots: [
         10,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 18,
@@ -273,12 +361,12 @@ const systemEngineerGraph = {
       level: 4,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         2,
         5,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 19,
@@ -287,12 +375,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 4,
       weight: 30,
-      groupId: 1,
+      groupId: 4,
       subGroupId: 1,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 20,
@@ -302,12 +390,12 @@ const systemEngineerGraph = {
       level: 4,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 4,
       slots: [
         3,
         8,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 21,
@@ -317,12 +405,12 @@ const systemEngineerGraph = {
       level: 4,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 2,
       slots: [
         1,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 22,
@@ -331,13 +419,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 5,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 2,
       slots: [
         1,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 23,
@@ -346,12 +434,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 5,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 3,
       slots: [
         10,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 24,
@@ -360,13 +448,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 5,
       weight: 90,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 4,
       slots: [
         4,
         7,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 25,
@@ -376,12 +464,12 @@ const systemEngineerGraph = {
       level: 5,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         2,
         5,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 26,
@@ -390,12 +478,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 5,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 2,
+      subGroupId: 2,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 27,
@@ -405,12 +493,12 @@ const systemEngineerGraph = {
       level: 5,
       weight: 60,
       groupId: 1,
-      subGroupId: 1,
+      subGroupId: 3,
       slots: [
         3,
         8,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 28,
@@ -419,12 +507,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 6,
       weight: 30,
-      groupId: 1,
+      groupId: 4,
       subGroupId: 1,
       slots: [
         3,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 29,
@@ -433,13 +521,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 6,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 2,
+      subGroupId: 2,
       slots: [
         1,
         2,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 30,
@@ -448,13 +536,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 6,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 5,
       slots: [
         5,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 31,
@@ -463,13 +551,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 6,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 2,
       slots: [
         8,
         9,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 32,
@@ -478,13 +566,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 6,
       weight: 90,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 4,
       slots: [
         4,
         7,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 33,
@@ -493,13 +581,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 7,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 2,
       slots: [
         1,
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 34,
@@ -508,12 +596,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 7,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 5,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 35,
@@ -522,13 +610,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 7,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 2,
+      subGroupId: 2,
       slots: [
         3,
         4,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 36,
@@ -537,13 +625,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 7,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 3,
       slots: [
         7,
         8,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 37,
@@ -552,13 +640,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 7,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 2,
       slots: [
         2,
         5,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 38,
@@ -567,12 +655,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 3,
       slots: [
         6,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 39,
@@ -581,12 +669,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 5,
       slots: [
         9,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 40,
@@ -595,13 +683,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 3,
       slots: [
         1,
         2,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 41,
@@ -610,12 +698,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 3,
       slots: [
         5,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 42,
@@ -624,13 +712,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 2,
+      subGroupId: 2,
       slots: [
         7,
         8,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 43,
@@ -639,12 +727,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 30,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 3,
+      subGroupId: 4,
       slots: [
         3,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 44,
@@ -653,12 +741,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 8,
       weight: 30,
-      groupId: 1,
+      groupId: 3,
       subGroupId: 1,
       slots: [
         4,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 45,
@@ -667,13 +755,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 9,
       weight: 60,
-      groupId: 1,
+      groupId: 5,
       subGroupId: 1,
       slots: [
         7,
         8,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 46,
@@ -682,13 +770,13 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 9,
       weight: 60,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 2,
+      subGroupId: 2,
       slots: [
         3,
         4,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 47,
@@ -697,12 +785,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 10,
       weight: 90,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 5,
+      subGroupId: 2,
       slots: [
-        '101',
+        101,
       ],
-      status: 1,
+      status: true,
     },
     {
       id: 48,
@@ -711,12 +799,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 11,
       weight: 90,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 5,
+      subGroupId: 2,
       slots: [
-        '102',
+        102,
       ],
-      status: 0,
+      status: false,
     },
     {
       id: 49,
@@ -725,12 +813,12 @@ const systemEngineerGraph = {
       details: 'Ementa',
       level: 12,
       weight: 165,
-      groupId: 1,
-      subGroupId: 1,
+      groupId: 5,
+      subGroupId: 3,
       slots: [
-        '103',
+        103,
       ],
-      status: 0,
+      status: false,
     },
   ],
   edges: [
