@@ -127,3 +127,8 @@ export const level = {
   pt: 'level',
   en: 'level',
 };
+
+export const nexts = {
+  pt: 'Próximas',
+  en: 'Nexts',
+};

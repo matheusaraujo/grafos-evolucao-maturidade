@@ -48,3 +48,10 @@ export const nodeGroupType = shape({
   color: string,
   subGroups: arrayOf(nodeSubGroupType),
 });
+
+export const nextsOptionsType = shape({
+  nodes: arrayOf(nodeType),
+  distance: number.isRequired,
+  slots: arrayOf(number).isRequired,
+  totalWeight: number,
+});

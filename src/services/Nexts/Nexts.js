@@ -25,11 +25,11 @@ const Nexts = (nodes, edges, { minWeight, maxWeight, maxDistance }) => {
   combinations = filterMaximumWeightCombination(combinations, maxWeight);
   combinations = filterConflictingCombinations(combinations);
 
-  let classifiedCombinations = classifyCombinations(combinations, nodes);
-  classifiedCombinations = filterMaximumDistanceCombination(classifiedCombinations, maxDistance);
+  let nextsOptions = classifyCombinations(combinations, nodes);
+  nextsOptions = filterMaximumDistanceCombination(nextsOptions, maxDistance);
 
-  classifiedCombinations = sortCombinations(classifiedCombinations);
-  return classifiedCombinations;
+  nextsOptions = sortCombinations(nextsOptions);
+  return nextsOptions;
 };
 
 export default Nexts;

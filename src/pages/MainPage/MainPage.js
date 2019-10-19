@@ -6,6 +6,7 @@ import { faEye, faEdit } from '@fortawesome/free-solid-svg-icons';
 import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
+import Calcs from '../../components/Calcs/index';
 import * as labels from '../../commons/labels';
 import './MainPage.scss';
 
@@ -52,6 +53,9 @@ const MainPage = ({
         <div className="page-mode">
           {buttonView}
           {buttonEdit}
+        </div>
+        <div className="calcs">
+          <Calcs />
         </div>
       </h1>
       {pageMode === 'viewing' && <GraphViewer />}
