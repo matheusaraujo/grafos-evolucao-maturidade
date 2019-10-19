@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as labels from '../../commons/labels';
-import { graphType, nextsOptionsType } from '../../commons/types';
+import { graphType, nextsType } from '../../commons/types';
+import NextsOptions from './NextsOptions/index';
 
 const Calcs = ({
   lang,
@@ -19,10 +20,13 @@ const Calcs = ({
     </button>
   );
 
+  if (nexts.calculated) {
+    return (<NextsOptions />);
+  }
+
   return (
     <div>
       {buttonNexts}
-      {nexts.calculated ? 'c' : ''}
     </div>
   );
 };
@@ -31,11 +35,7 @@ Calcs.propTypes = {
   lang: PropTypes.string.isRequired,
   graph: graphType.isRequired,
   beginCalcNexts: PropTypes.func.isRequired,
-  nexts: PropTypes.shape({
-    calculated: PropTypes.bool,
-    calculating: PropTypes.bool,
-    options: PropTypes.arrayOf(nextsOptionsType),
-  }).isRequired,
+  nexts: nextsType.isRequired,
 };
 
 export default Calcs;

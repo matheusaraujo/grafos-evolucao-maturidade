@@ -9,4 +9,8 @@ describe('actions nexts', () => {
     expect(actions.endCalcNexts({ a: 'a' }))
       .toEqual({ type: 'END_CALC_NEXTS', options: { a: 'a' } });
   });
+  test('hideNexts should create HIDE_NEXTS action', () => {
+    expect(actions.hideNexts())
+      .toEqual({ type: 'HIDE_NEXTS' });
+  });
 });

@@ -54,17 +54,17 @@ const MainPage = ({
           {buttonView}
           {buttonEdit}
         </div>
-        <div className="calcs">
-          <Calcs />
-        </div>
       </h1>
+      <div className="calcs">
+        <Calcs />
+      </div>
       {pageMode === 'viewing' && <GraphViewer />}
       {pageMode !== 'viewing' && (
         <div className="columns">
-          <div className="column is-four-fifths">
+          <div className="column is-half">
             <GraphEditor />
           </div>
-          <div className="column is-one-fifths">
+          <div className="column is-half">
             <GraphViewer />
           </div>
         </div>

@@ -73,16 +73,16 @@ describe('engine - Nexts', () => {
         slots: [5, 6],
       },
       {
-        combination: [node3, node4],
-        distance: 1,
-        totalWeight: 4,
-        slots: [1, 2, 5, 6],
-      },
-      {
         combination: [node4],
         distance: 1,
         totalWeight: 2,
         slots: [1, 2],
+      },
+      {
+        combination: [node3, node4],
+        distance: 1,
+        totalWeight: 4,
+        slots: [1, 2, 5, 6],
       },
     ];
     const received = Nexts(

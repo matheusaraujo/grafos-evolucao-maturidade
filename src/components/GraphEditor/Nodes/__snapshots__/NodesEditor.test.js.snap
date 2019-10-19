@@ -5,16 +5,7 @@ exports[`NodesEditor should match snapshot 1`] = `
   className="columns"
 >
   <div
-    className="column is-half"
-  >
-    <NodesCrud
-      lang="pt"
-      nodes={Array []}
-      update={[Function]}
-    />
-  </div>
-  <div
-    className="column is-half"
+    className="column"
   >
     <NodesAce
       lang="pt"

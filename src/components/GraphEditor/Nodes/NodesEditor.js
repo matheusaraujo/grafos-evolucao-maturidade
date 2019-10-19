@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { nodeType } from '../../../commons/types';
 import NodesAce from './NodesAce';
-import NodesCrud from './NodesCrud';
 
 const NodesEditor = ({ lang, nodes, updateNodes }) => {
   const update = (data) => {
@@ -10,10 +9,7 @@ const NodesEditor = ({ lang, nodes, updateNodes }) => {
   };
   return (
     <div className="columns">
-      <div className="column is-half">
-        <NodesCrud lang={lang} nodes={nodes} update={update} />
-      </div>
-      <div className="column is-half">
+      <div className="column">
         <NodesAce lang={lang} nodes={nodes} update={update} />
       </div>
     </div>

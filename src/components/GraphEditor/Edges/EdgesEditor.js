@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import { edgeType } from '../../../commons/types';
 import EdgesAce from './EdgesAce';
 
@@ -11,13 +9,7 @@ const EdgesEditor = ({ lang, edges, updateEdges }) => {
   };
   return (
     <div className="columns">
-      <div className="column is-half">
-        <div style={{ textAlign: 'center', paddingTop: '8px' }}>
-          <FontAwesomeIcon icon={faWrench} size="5x" />
-          <em>Em construção</em>
-        </div>
-      </div>
-      <div className="column is-half">
+      <div className="column">
         <EdgesAce lang={lang} edges={edges} update={update} />
       </div>
     </div>

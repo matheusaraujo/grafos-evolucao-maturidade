@@ -55,3 +55,9 @@ export const nextsOptionsType = shape({
   slots: arrayOf(number).isRequired,
   totalWeight: number,
 });
+
+export const nextsType = shape({
+  calculated: bool,
+  calculating: bool,
+  options: arrayOf(nextsOptionsType),
+});

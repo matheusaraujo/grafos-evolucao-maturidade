@@ -18,6 +18,8 @@ const nexts = (state = initialState, action = { type: 'default' }) => {
         calculated: true,
         options: action.options,
       };
+    case 'HIDE_NEXTS':
+      return initialState;
     default:
       return state;
   }
