@@ -64,7 +64,7 @@ export const getNodes = (matrix, groups) => {
       }
     }
     if (line.length > 10) {
-      node.status = line[10] === '1';
+      node.status = line[10] === '1' ? 1 : 0;
     }
 
     nodes.push(node);

@@ -114,7 +114,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 2,
@@ -130,7 +130,7 @@ const systemEngineerGraph = {
         6,
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 3,
@@ -145,7 +145,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 4,
@@ -159,7 +159,7 @@ const systemEngineerGraph = {
       slots: [
         5,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 5,
@@ -174,7 +174,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 6,
@@ -189,7 +189,7 @@ const systemEngineerGraph = {
         9,
         10,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 7,
@@ -204,7 +204,7 @@ const systemEngineerGraph = {
         2,
         5,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 8,
@@ -219,7 +219,7 @@ const systemEngineerGraph = {
         1,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 9,
@@ -234,7 +234,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 10,
@@ -248,7 +248,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 11,
@@ -263,7 +263,7 @@ const systemEngineerGraph = {
         2,
         5,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 12,
@@ -277,7 +277,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 13,
@@ -292,7 +292,7 @@ const systemEngineerGraph = {
         1,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 14,
@@ -307,7 +307,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 15,
@@ -322,7 +322,7 @@ const systemEngineerGraph = {
         7,
         10,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 16,
@@ -337,7 +337,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 17,
@@ -351,7 +351,7 @@ const systemEngineerGraph = {
       slots: [
         10,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 18,
@@ -366,7 +366,7 @@ const systemEngineerGraph = {
         2,
         5,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 19,
@@ -380,7 +380,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 20,
@@ -395,7 +395,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 21,
@@ -410,7 +410,7 @@ const systemEngineerGraph = {
         1,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 22,
@@ -425,7 +425,7 @@ const systemEngineerGraph = {
         1,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 23,
@@ -439,7 +439,7 @@ const systemEngineerGraph = {
       slots: [
         10,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 24,
@@ -454,7 +454,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 25,
@@ -469,7 +469,7 @@ const systemEngineerGraph = {
         2,
         5,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 26,
@@ -483,7 +483,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 27,
@@ -498,7 +498,7 @@ const systemEngineerGraph = {
         3,
         8,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 28,
@@ -512,7 +512,7 @@ const systemEngineerGraph = {
       slots: [
         3,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 29,
@@ -527,7 +527,7 @@ const systemEngineerGraph = {
         1,
         2,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 30,
@@ -542,7 +542,7 @@ const systemEngineerGraph = {
         5,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 31,
@@ -557,7 +557,7 @@ const systemEngineerGraph = {
         8,
         9,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 32,
@@ -572,7 +572,7 @@ const systemEngineerGraph = {
         4,
         7,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 33,
@@ -587,7 +587,7 @@ const systemEngineerGraph = {
         1,
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 34,
@@ -601,7 +601,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 35,
@@ -616,7 +616,7 @@ const systemEngineerGraph = {
         3,
         4,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 36,
@@ -631,7 +631,7 @@ const systemEngineerGraph = {
         7,
         8,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 37,
@@ -646,7 +646,7 @@ const systemEngineerGraph = {
         2,
         5,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 38,
@@ -660,7 +660,7 @@ const systemEngineerGraph = {
       slots: [
         6,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 39,
@@ -674,7 +674,7 @@ const systemEngineerGraph = {
       slots: [
         9,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 40,
@@ -689,7 +689,7 @@ const systemEngineerGraph = {
         1,
         2,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 41,
@@ -703,7 +703,7 @@ const systemEngineerGraph = {
       slots: [
         5,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 42,
@@ -718,7 +718,7 @@ const systemEngineerGraph = {
         7,
         8,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 43,
@@ -732,7 +732,7 @@ const systemEngineerGraph = {
       slots: [
         3,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 44,
@@ -746,7 +746,7 @@ const systemEngineerGraph = {
       slots: [
         4,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 45,
@@ -761,7 +761,7 @@ const systemEngineerGraph = {
         7,
         8,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 46,
@@ -776,7 +776,7 @@ const systemEngineerGraph = {
         3,
         4,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 47,
@@ -790,7 +790,7 @@ const systemEngineerGraph = {
       slots: [
         101,
       ],
-      status: true,
+      status: 1,
     },
     {
       id: 48,
@@ -804,7 +804,7 @@ const systemEngineerGraph = {
       slots: [
         102,
       ],
-      status: false,
+      status: 0,
     },
     {
       id: 49,
@@ -818,7 +818,7 @@ const systemEngineerGraph = {
       slots: [
         103,
       ],
-      status: false,
+      status: 0,
     },
   ],
   edges: [
