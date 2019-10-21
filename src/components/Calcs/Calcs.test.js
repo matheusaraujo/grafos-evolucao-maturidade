@@ -18,7 +18,7 @@ describe('Calcs', () => {
       <Calcs
         lang="pt"
         graph={basicGraph}
-        beginCalcNexts={() => { }}
+        showNexts={() => { }}
         nexts={nexts}
       />,
     );

@@ -8,19 +8,19 @@ const Calcs = ({
   lang,
   graph,
   nexts,
-  beginCalcNexts,
+  showNexts,
 }) => {
   const buttonNexts = (
     <button
-      className="button is-primary is-light is-small"
+      className="button is-primary is-light"
       type="button"
-      onClick={() => { beginCalcNexts(graph); }}
+      onClick={() => { showNexts(graph); }}
     >
       {labels.nexts[lang]}
     </button>
   );
 
-  if (nexts.calculated) {
+  if (nexts.visible) {
     return (<NextsOptions />);
   }
 
@@ -34,7 +34,7 @@ const Calcs = ({
 Calcs.propTypes = {
   lang: PropTypes.string.isRequired,
   graph: graphType.isRequired,
-  beginCalcNexts: PropTypes.func.isRequired,
+  showNexts: PropTypes.func.isRequired,
   nexts: nextsType.isRequired,
 };
 

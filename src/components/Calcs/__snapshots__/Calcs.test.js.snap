@@ -3,7 +3,7 @@
 exports[`Calcs should match snapshot 1`] = `
 <div>
   <button
-    className="button is-primary is-light is-small"
+    className="button is-primary is-light"
     onClick={[Function]}
     type="button"
   >
