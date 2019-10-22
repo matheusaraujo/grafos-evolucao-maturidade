@@ -3,6 +3,9 @@ import {
   getNodeBorder,
   getEdgeColor,
   getNodeColor,
+  adjustEdges,
+  calcNodeDegree,
+  getNodeToFakeEdge,
 } from './GraphMapper';
 
 describe('GraphMapper', () => {
@@ -112,6 +115,86 @@ describe('GraphMapper', () => {
       ],
     };
     const received = graphMapper(graph, nodeGroups);
+    expect(received).toStrictEqual(expected);
+  });
+  test('calcNodeDegree, 0 indegree, 0 outdegree', () => {
+    const node = { id: 2 };
+    const edges = [{ id: 1, from: 1, to: 3 }];
+    const expected = { id: 2, indegree: 0, outdegree: 0 };
+    const received = calcNodeDegree(node, edges);
+    expect(received).toStrictEqual(expected);
+  });
+  test('calcNodeDegree, 1 indegree, 0 outdegree', () => {
+    const node = { id: 3 };
+    const edges = [{ id: 1, from: 1, to: 3 }];
+    const expected = { id: 3, indegree: 1, outdegree: 0 };
+    const received = calcNodeDegree(node, edges);
+    expect(received).toStrictEqual(expected);
+  });
+  test('calcNodeDegree, 0 indegree, 1 outdegree', () => {
+    const node = { id: 1 };
+    const edges = [{ id: 1, from: 1, to: 3 }];
+    const expected = { id: 1, indegree: 0, outdegree: 1 };
+    const received = calcNodeDegree(node, edges);
+    expect(received).toStrictEqual(expected);
+  });
+  test('getNodeToFakeEdge', () => {
+    const nodes = [
+      {
+        id: 1, indegree: 1, outdegree: 1, level: 1,
+      },
+      {
+        id: 2, indegree: 2, outdegree: 2, level: 1,
+      },
+    ];
+    const expected = {
+      id: 2, indegree: 2, outdegree: 2, level: 1,
+    };
+    const received = getNodeToFakeEdge(nodes, 1);
+    expect(received).toStrictEqual(expected);
+  });
+  test('adjustEdges - case 1', () => {
+    const graph = {
+      nodes: [
+        { id: 1, level: 1 },
+        { id: 2, level: 1 },
+        { id: 3, level: 2 },
+        { id: 4, level: 2 },
+      ],
+      edges: [
+        { id: 1, from: 1, to: 3 },
+        { id: 2, from: 2, to: 3 },
+      ],
+    };
+
+    const expected = {
+      nodes: [
+        {
+          id: 1, level: 1, indegree: 0, outdegree: 1,
+        },
+        {
+          id: 2, level: 1, indegree: 0, outdegree: 1,
+        },
+        {
+          id: 3, level: 2, indegree: 2, outdegree: 0,
+        },
+        {
+          id: 4, level: 2, indegree: 0, outdegree: 0,
+        },
+      ],
+      edges: [
+        {
+          id: 1, from: 1, to: 3,
+        },
+        {
+          id: 2, from: 2, to: 3,
+        },
+        {
+          from: 1, to: 4, hidden: true,
+        },
+      ],
+    };
+    const received = adjustEdges(graph);
     expect(received).toStrictEqual(expected);
   });
 });

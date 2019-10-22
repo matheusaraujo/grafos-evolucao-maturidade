@@ -4,7 +4,7 @@ import { fillModal, showModal } from '../../actions/index';
 import { graphMapper } from '../../services/Mappers/GraphMapper';
 
 const mapStateToProps = (state) => ({
-  mappedGraph: graphMapper(state.graph, state.nodeGroups),
+  mappedGraph: graphMapper(state.graph, state.nodeGroups, state.options.layout.hierarchical),
   graph: state.graph,
   nodeGroups: state.nodeGroups,
   options: state.options,
