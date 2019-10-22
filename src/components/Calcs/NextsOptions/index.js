@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
       minWeight: params.minWeight || 195,
       maxWeight: params.maxWeight || 375,
       maxDistance: params.maxDistance || 3,
+      forceMinimumLevel: params.forceMinimumLevel || false,
     });
     dispatch(endCalcNexts(options));
   },

@@ -8,13 +8,16 @@ import {
   filterMaximumWeightCombination,
   filterConflictingCombinations,
   filterMaximumDistanceCombination,
+  filterMinimumLevel,
 } from './getAvailableCombinations';
 import {
   sortCombinations,
   classifyCombinations,
 } from './classifyCombinations';
 
-const Nexts = (nodes, edges, { minWeight, maxWeight, maxDistance }) => {
+const Nexts = (nodes, edges, {
+  minWeight, maxWeight, maxDistance, forceMinimumLevel,
+}) => {
   if (!nodes || nodes.length === 0) return [];
 
   let availableNodes = filterPending(nodes);
@@ -26,6 +29,9 @@ const Nexts = (nodes, edges, { minWeight, maxWeight, maxDistance }) => {
   combinations = filterConflictingCombinations(combinations);
 
   let nextsOptions = classifyCombinations(combinations, nodes);
+  if (forceMinimumLevel === true) {
+    nextsOptions = filterMinimumLevel(nextsOptions);
+  }
   nextsOptions = filterMaximumDistanceCombination(nextsOptions, maxDistance);
 
   nextsOptions = sortCombinations(nextsOptions);

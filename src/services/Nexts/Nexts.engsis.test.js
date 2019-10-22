@@ -2,7 +2,7 @@
 import systemEngineerGraph from '../../examples/systemEngineerGraph.20182';
 import Nexts from './Nexts';
 
-describe('engine - Nexts - engis', () => {
+describe('services - Nexts - engis', () => {
   test('Nexts - engsis 20182', () => {
     const { nodes, edges } = systemEngineerGraph;
     const combinations = Nexts(nodes, edges, { minWeight: 195, maxWeight: 375, maxDistance: 3 });

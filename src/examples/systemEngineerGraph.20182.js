@@ -557,7 +557,7 @@ const systemEngineerGraph = {
         8,
         9,
       ],
-      status: 0,
+      status: 1,
     },
     {
       id: 32,
@@ -616,7 +616,7 @@ const systemEngineerGraph = {
         3,
         4,
       ],
-      status: 0,
+      status: 1,
     },
     {
       id: 36,
@@ -804,7 +804,7 @@ const systemEngineerGraph = {
       slots: [
         102,
       ],
-      status: 0,
+      status: 2,
     },
     {
       id: 49,
@@ -818,7 +818,7 @@ const systemEngineerGraph = {
       slots: [
         103,
       ],
-      status: 0,
+      status: 2,
     },
   ],
   edges: [

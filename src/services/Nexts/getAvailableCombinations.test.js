@@ -4,9 +4,12 @@ import {
   areConflictingNodes,
   isConflictingCombination,
   filterConflictingCombinations,
+  containsMinimumLevel,
+  filterMaximumDistanceCombination,
+  filterMinimumLevel,
 } from './getAvailableCombinations';
 
-describe('engine - Nexts - getAvailableCombinations', () => {
+describe('services - Nexts - getAvailableCombinations', () => {
   test('filterMinimumWeightCombination - accepted', () => {
     const node3 = {
       id: 3,
@@ -168,5 +171,44 @@ describe('engine - Nexts - getAvailableCombinations', () => {
     };
     expect(filterConflictingCombinations([[node3, node4]]))
       .toStrictEqual([]);
+  });
+  test('filterMaximumDistanceCombination - defined', () => {
+    const options = [
+      { distance: 1 },
+      { distance: 2 },
+      { distance: 3 },
+    ];
+    const expected = [{ distance: 1 }, { distance: 2 }];
+    const received = filterMaximumDistanceCombination(options, 2);
+    expect(received).toStrictEqual(expected);
+  });
+  test('filterMaximumDistanceCombination - undefined', () => {
+    const options = [
+      { distance: 1 },
+      { distance: 2 },
+      { distance: 3 },
+    ];
+    const expected = [{ distance: 1 }, { distance: 2 }, { distance: 3 }];
+    const received = filterMaximumDistanceCombination(options);
+    expect(received).toStrictEqual(expected);
+  });
+  test('containsMinimumLevel - true', () => {
+    expect(containsMinimumLevel([{ id: 1, level: 1 }], 1)).toBeTruthy();
+  });
+  test('containsMinimumLevel - false', () => {
+    expect(containsMinimumLevel([{ id: 1, level: 2 }], 1)).toBeFalsy();
+  });
+  test('filterMinimumLevel', () => {
+    const options = [
+      { combination: [{ level: 1 }, { level: 2 }], minimumLevel: 1 },
+      { combination: [{ level: 2 }, { level: 2 }], minimumLevel: 1 },
+    ];
+
+    const expected = [
+      { combination: [{ level: 1 }, { level: 2 }], minimumLevel: 1 },
+    ];
+
+    const received = filterMinimumLevel(options);
+    expect(received).toStrictEqual(expected);
   });
 });

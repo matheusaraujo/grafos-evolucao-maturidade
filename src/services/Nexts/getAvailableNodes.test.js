@@ -4,7 +4,7 @@ import {
   filterAllPrecedentsDone,
 } from './getAvailableNodes';
 
-describe('engine - Nexts - getAvailableNodes', () => {
+describe('services - Nexts - getAvailableNodes', () => {
   test('filterPending should return empty', () => {
     expect(filterPending()).toStrictEqual([]);
   });

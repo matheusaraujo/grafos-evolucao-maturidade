@@ -11,6 +11,7 @@ const NextsOptions = ({
   const [_minWeight, setMinWeight] = useState(195);
   const [_maxWeight, setMaxWeight] = useState(375);
   const [_maxDistance, setMaxistance] = useState(3);
+  const [_forceMinimumLevel, setForceMinimumLevel] = useState(false);
 
   if (nexts.calculated) {
     content = (
@@ -89,6 +90,19 @@ const NextsOptions = ({
               />
             </div>
           </div>
+          <div className="field column is-half">
+            <label className="label">&nbsp;</label>
+            <label className="checkbox">
+              <input
+                type="checkbox"
+                id="forcMinimumLevel"
+                placeholder="3"
+                checked={_forceMinimumLevel}
+                onChange={(e) => { setForceMinimumLevel(e.target.checked); }}
+              />
+              &nbsp;Forçar nível mínimo
+            </label>
+          </div>
         </div>
         <div className="columns is-paddingless is-marginless">
           <div className="field column is-full">
@@ -100,6 +114,7 @@ const NextsOptions = ({
                   minWeight: _minWeight,
                   maxWeight: _maxWeight,
                   maxDistance: _maxDistance,
+                  forceMinimumLevel: _forceMinimumLevel,
                 });
               }}
             >

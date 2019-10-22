@@ -3,7 +3,7 @@ import {
   getAllCombinations,
 } from './utils';
 
-describe('engine - Nexts - util', () => {
+describe('services - Nexts - util', () => {
   test('getCombinationTotalWeight - filled', () => {
     const node3 = {
       id: 3,

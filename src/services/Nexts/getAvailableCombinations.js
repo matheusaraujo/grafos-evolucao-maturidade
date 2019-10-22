@@ -30,8 +30,27 @@ export const filterMaximumWeightCombination = (combinations, maxWeight) => {
   return result;
 };
 
+export const containsMinimumLevel = (nodes, minimumLevel) => {
+  for (let i = 0; i < nodes.length; i += 1) {
+    if (nodes[i].level === minimumLevel) return true;
+  }
+  return false;
+};
+
+export const filterMinimumLevel = (classifiedCombinations) => {
+  const result = [];
+  for (let i = 0; i < classifiedCombinations.length; i += 1) {
+    const c = classifiedCombinations[i];
+    if (containsMinimumLevel(c.combination, c.minimumLevel)) {
+      result.push(classifiedCombinations[i]);
+    }
+  }
+  return result;
+};
+
 export const filterMaximumDistanceCombination = (classifiedCombinations, maxDistance) => {
-  const safeMax = maxDistance === null || maxDistance === 0 ? Number.MAX_SAFE_INTEGER : maxDistance;
+  const safeMax = maxDistance === null || maxDistance === undefined || maxDistance === 0
+    ? Number.MAX_SAFE_INTEGER : maxDistance;
   return classifiedCombinations.filter((c) => c.distance <= safeMax);
 };
 

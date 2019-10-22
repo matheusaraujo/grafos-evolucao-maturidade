@@ -10,8 +10,7 @@ export const getMinimumUndoneLevel = (nodes) => {
   return minimumLevel === Number.MAX_SAFE_INTEGER ? -1 : minimumLevel;
 };
 
-export const getCombinationDistance = (combination, nodes) => {
-  const minimumLevel = getMinimumUndoneLevel(nodes);
+export const getCombinationDistance = (combination, minimumLevel) => {
   let distance = 0;
   for (let i = 0; i < combination.length; i += 1) {
     distance = Math.max(distance, combination[i].level - minimumLevel);
@@ -34,12 +33,17 @@ export const getAllSlots = (combination) => {
   return slots;
 };
 
-export const classifyCombination = (combination, nodes) => (combination && {
-  distance: getCombinationDistance(combination, nodes),
-  totalWeight: getCombinationTotalWeight(combination),
-  combination,
-  slots: getAllSlots(combination),
-});
+export const classifyCombination = (combination, nodes) => {
+  if (!combination) return null;
+  const minimumLevel = getMinimumUndoneLevel(nodes);
+  return {
+    distance: getCombinationDistance(combination, minimumLevel),
+    totalWeight: getCombinationTotalWeight(combination),
+    combination,
+    slots: getAllSlots(combination),
+    minimumLevel,
+  };
+};
 
 export const classifyCombinations = (combinations, nodes) => combinations.map((c) => {
   if (!c) return null;
