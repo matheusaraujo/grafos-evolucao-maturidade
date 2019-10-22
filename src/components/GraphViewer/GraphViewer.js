@@ -24,7 +24,15 @@ const GraphViewer = ({
         && group.subGroups.find((g1) => g1.id === node.subGroupId);
       if (subGroup) sg = subGroup.label ? `**Ciclo Detalhado:** ${subGroup.label}  \n` : '';
     }
-    return `${node.details}  \n---  \n${w + l + g + sg}`;
+    let s = '';
+    if (node.slots) {
+      s = `**Horários**: ${node.slots.join(', ')}  \n`;
+    }
+    let st = ';';
+    if (node.status !== undefined && node.status !== undefined) {
+      st = `**Status**: ${node.status === 1 ? 'Concluído' : 'Não concluído'}  \n`;
+    }
+    return `${node.details}  \n---  \n${w + l + g + sg + s + st}`;
   };
 
   const events = {

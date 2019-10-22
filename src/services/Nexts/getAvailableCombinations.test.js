@@ -7,6 +7,7 @@ import {
   containsMinimumLevel,
   filterMaximumDistanceCombination,
   filterMinimumLevel,
+  filterMustIncludeNodes,
 } from './getAvailableCombinations';
 
 describe('services - Nexts - getAvailableCombinations', () => {
@@ -209,6 +210,19 @@ describe('services - Nexts - getAvailableCombinations', () => {
     ];
 
     const received = filterMinimumLevel(options);
+    expect(received).toStrictEqual(expected);
+  });
+  test('filterMustIncludeNodes', () => {
+    const combinations = [
+      [{ id: 1 }, { id: 2 }],
+      [{ id: 1 }],
+      [{ id: 2 }],
+    ];
+    const expected = [
+      [{ id: 1 }, { id: 2 }],
+      [{ id: 1 }],
+    ];
+    const received = filterMustIncludeNodes(combinations, [1]);
     expect(received).toStrictEqual(expected);
   });
 });

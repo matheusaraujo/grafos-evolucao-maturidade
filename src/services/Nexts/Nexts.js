@@ -9,14 +9,20 @@ import {
   filterConflictingCombinations,
   filterMaximumDistanceCombination,
   filterMinimumLevel,
+  filterMustIncludeNodes,
 } from './getAvailableCombinations';
 import {
   sortCombinations,
   classifyCombinations,
 } from './classifyCombinations';
+import { isFilledArray } from '../../commons/arrays';
 
 const Nexts = (nodes, edges, {
-  minWeight, maxWeight, maxDistance, forceMinimumLevel,
+  minWeight,
+  maxWeight,
+  maxDistance,
+  forceMinimumLevel,
+  mustIncludeNodes,
 }) => {
   if (!nodes || nodes.length === 0) return [];
 
@@ -24,6 +30,9 @@ const Nexts = (nodes, edges, {
   availableNodes = filterAllPrecedentsDone(availableNodes, nodes, edges);
 
   let combinations = getAllCombinations(availableNodes);
+  if (isFilledArray(mustIncludeNodes)) {
+    combinations = filterMustIncludeNodes(combinations, mustIncludeNodes);
+  }
   combinations = filterMinimumWeightCombination(combinations, minWeight);
   combinations = filterMaximumWeightCombination(combinations, maxWeight);
   combinations = filterConflictingCombinations(combinations);

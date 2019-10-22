@@ -80,3 +80,16 @@ export const filterConflictingCombinations = (combinations) => {
   }
   return result;
 };
+
+export const filterMustIncludeNodes = (combinations, mustIncludeNodes) => {
+  const result = [];
+  for (let i = 0; i < combinations.length; i += 1) {
+    for (let j = 0; j < mustIncludeNodes.length; j += 1) {
+      const contains = combinations[i].some(
+        (c) => c.id === mustIncludeNodes[j] || c.label === mustIncludeNodes[j],
+      );
+      if (contains) result.push(combinations[i]);
+    }
+  }
+  return result;
+};
