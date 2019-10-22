@@ -11,7 +11,7 @@ const NextsOptions = ({
   const [_minWeight, setMinWeight] = useState(195);
   const [_maxWeight, setMaxWeight] = useState(375);
   const [_maxDistance, setMaxistance] = useState(3);
-  const [_forceMinimumLevel, setForceMinimumLevel] = useState(false);
+  const [_forceMinimumLevel, setForceMinimumLevel] = useState(true);
 
   if (nexts.calculated) {
     content = (
