@@ -5,7 +5,7 @@ import {
   getNodeColor,
   adjustEdges,
   calcNodeDegree,
-  getNodeToFakeEdge,
+  getNodesToFakeEdge,
 } from './GraphMapper';
 
 describe('GraphMapper', () => {
@@ -138,7 +138,22 @@ describe('GraphMapper', () => {
     const received = calcNodeDegree(node, edges);
     expect(received).toStrictEqual(expected);
   });
-  test('getNodeToFakeEdge', () => {
+  test('getNodesToFakeEdge - one node', () => {
+    const nodes = [
+      {
+        id: 1, indegree: 1, outdegree: 1, level: 1,
+      },
+      {
+        id: 2, indegree: 2, outdegree: 2, level: 2,
+      },
+    ];
+    const expected = [{
+      id: 2, indegree: 2, outdegree: 2, level: 2,
+    }];
+    const received = getNodesToFakeEdge(nodes, 2);
+    expect(received).toStrictEqual(expected);
+  });
+  test('getNodesToFakeEdge - two nodes', () => {
     const nodes = [
       {
         id: 1, indegree: 1, outdegree: 1, level: 1,
@@ -147,10 +162,15 @@ describe('GraphMapper', () => {
         id: 2, indegree: 2, outdegree: 2, level: 1,
       },
     ];
-    const expected = {
-      id: 2, indegree: 2, outdegree: 2, level: 1,
-    };
-    const received = getNodeToFakeEdge(nodes, 1);
+    const expected = [
+      {
+        id: 1, indegree: 1, outdegree: 1, level: 1,
+      },
+      {
+        id: 2, indegree: 2, outdegree: 2, level: 1,
+      },
+    ];
+    const received = getNodesToFakeEdge(nodes, 1);
     expect(received).toStrictEqual(expected);
   });
   test('adjustEdges - case 1', () => {
@@ -191,6 +211,68 @@ describe('GraphMapper', () => {
         },
         {
           from: 1, to: 4, hidden: true,
+        },
+        {
+          from: 2, to: 4, hidden: true,
+        },
+      ],
+    };
+    const received = adjustEdges(graph);
+    expect(received).toStrictEqual(expected);
+  });
+  test('adjustEdges - case 2', () => {
+    const graph = {
+      nodes: [
+        { id: 1, level: 1 },
+        { id: 5, level: 1 },
+        { id: 2, level: 2 },
+        { id: 3, level: 2 },
+        { id: 4, level: 3 },
+      ],
+      edges: [
+        { id: 1, from: 2, to: 4 },
+        { id: 2, from: 3, to: 4 },
+        { id: 3, from: 5, to: 2 },
+        { id: 4, from: 5, to: 3 },
+      ],
+    };
+
+    const expected = {
+      nodes: [
+        {
+          id: 1, level: 1, indegree: 0, outdegree: 0,
+        },
+        {
+          id: 5, level: 1, indegree: 0, outdegree: 2,
+        },
+        {
+          id: 2, level: 2, indegree: 1, outdegree: 1,
+        },
+        {
+          id: 3, level: 2, indegree: 1, outdegree: 1,
+        },
+        {
+          id: 4, level: 3, indegree: 2, outdegree: 0,
+        },
+      ],
+      edges: [
+        {
+          id: 1, from: 2, to: 4,
+        },
+        {
+          id: 2, from: 3, to: 4,
+        },
+        {
+          id: 3, from: 5, to: 2,
+        },
+        {
+          id: 4, from: 5, to: 3,
+        },
+        {
+          from: 1, to: 2, hidden: true,
+        },
+        {
+          from: 1, to: 3, hidden: true,
         },
       ],
     };

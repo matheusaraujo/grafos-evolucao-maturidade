@@ -25,10 +25,13 @@ export const calcNodeDegree = (node, edges) => {
   return { ...node, indegree: edgeIn, outdegree: edgeOut };
 };
 
-export const getNodeToFakeEdge = (nodes, level) => {
+export const getNodesToFakeEdge = (nodes, level) => {
   const candidates = nodes.filter((n) => n.level === level);
-  candidates.sort((a, b) => (b.indegree + b.outdegree) - (a.indegree + a.outdegree));
-  return candidates[0];
+  const result = [candidates[0]];
+  if (candidates[candidates.length - 1] !== candidates[0]) {
+    result.push(candidates[candidates.length - 1]);
+  }
+  return result;
 };
 
 export const adjustEdges = (_graph) => {
@@ -36,22 +39,36 @@ export const adjustEdges = (_graph) => {
   graph.nodes = graph.nodes.map((n) => calcNodeDegree(n, graph.edges));
   graph.nodes.forEach((node) => {
     if (node.level === 1 && node.outdegree === 0) {
-      const nextNode = getNodeToFakeEdge(graph.nodes, 2);
-      if (nextNode) {
+      const nodesAfter = getNodesToFakeEdge(graph.nodes, 2);
+      if (nodesAfter && nodesAfter.length > 0) {
         graph.edges.push({
           from: node.id,
-          to: nextNode.id,
+          to: nodesAfter[0].id,
           hidden: true,
         });
+        if (nodesAfter.length > 1) {
+          graph.edges.push({
+            from: node.id,
+            to: nodesAfter[1].id,
+            hidden: true,
+          });
+        }
       }
     } else if (node.level > 1 && node.indegree === 0) {
-      const lastNode = getNodeToFakeEdge(graph.nodes, node.level - 1);
-      if (lastNode) {
+      const nodesBefore = getNodesToFakeEdge(graph.nodes, node.level - 1);
+      if (nodesBefore && nodesBefore.length > 0) {
         graph.edges.push({
-          from: lastNode.id,
+          from: nodesBefore[0].id,
           to: node.id,
           hidden: true,
         });
+        if (nodesBefore.length > 1) {
+          graph.edges.push({
+            from: nodesBefore[1].id,
+            to: node.id,
+            hidden: true,
+          });
+        }
       }
     }
   });
