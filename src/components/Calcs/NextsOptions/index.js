@@ -1,8 +1,12 @@
 import { connect } from 'react-redux';
 import NextsOptions from './NextsOptions';
 import {
-  showNexts, hideNexts, beginCalcNexts, endCalcNexts,
+  showNexts,
+  hideNexts,
+  beginCalcNexts,
+  endCalcNexts,
 } from '../../../actions/nexts';
+import { updateNodeStatus } from '../../../actions/graph';
 import Nexts from '../../../services/Nexts/Nexts';
 
 const mapStateToProps = (state) => ({
@@ -23,6 +27,10 @@ const mapDispatchToProps = (dispatch) => ({
     });
     dispatch(endCalcNexts(options));
     callback(options);
+  },
+  changeNodesStatus: (ids) => {
+    ids.forEach((id) => dispatch(updateNodeStatus(id, 1, true)));
+    dispatch(hideNexts());
   },
 });
 

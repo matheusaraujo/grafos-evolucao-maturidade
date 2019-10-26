@@ -6,7 +6,12 @@ import { nextsType, graphType } from '../../../commons/types';
 import './NextsOptions.scss';
 
 const NextsOptions = ({
-  graph, nexts, showNexts, hideNexts, beginCalcNexts,
+  graph,
+  nexts,
+  showNexts,
+  hideNexts,
+  beginCalcNexts,
+  changeNodesStatus,
 }) => {
   let content = null;
   const [_minWeight, setMinWeight] = useState(195);
@@ -36,10 +41,20 @@ const NextsOptions = ({
                   <ul className="inner-ul">
                     {o.combination.map((c) => (
                       <li key={Math.random()}>
-                        {c.label} {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
+                        {c.label} - {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
                       </li>
                     ))}
                   </ul>
+                  <div className="is-divider" />
+                  <div className="select-button-container">
+                    <button
+                      type="button"
+                      className="button is-primary"
+                      onClick={() => { changeNodesStatus(o.combination.map((c) => c.id)); }}
+                    >
+                      Selecionar
+                    </button>
+                  </div>
                 </div>
               )}
           </div>
@@ -167,6 +182,7 @@ NextsOptions.propTypes = {
   showNexts: PropTypes.func.isRequired,
   hideNexts: PropTypes.func.isRequired,
   beginCalcNexts: PropTypes.func.isRequired,
+  changeNodesStatus: PropTypes.func.isRequired,
 };
 
 export default NextsOptions;

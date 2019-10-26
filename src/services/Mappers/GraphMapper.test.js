@@ -6,6 +6,8 @@ import {
   adjustEdges,
   calcNodeDegree,
   getNodesToFakeEdge,
+  getNodeShapeProperties,
+  getNodeBorderWidth,
 } from './GraphMapper';
 
 describe('GraphMapper', () => {
@@ -49,6 +51,20 @@ describe('GraphMapper', () => {
     const groups = [{ id: 1, color: '#123456' }];
     expect(getNodeColor(node, groups)).toEqual(undefined);
   });
+  test('getNodeShapeProperties', () => {
+    const noDashes = { borderDashes: false };
+    const dashes = { borderDashes: [15, 15, 15] };
+    expect(getNodeShapeProperties(null)).toStrictEqual(noDashes);
+    expect(getNodeShapeProperties({})).toStrictEqual(noDashes);
+    expect(getNodeShapeProperties({ temp: false })).toStrictEqual(noDashes);
+    expect(getNodeShapeProperties({ temp: true })).toStrictEqual(dashes);
+  });
+  test('getNodeBorderWidth', () => {
+    expect(getNodeBorderWidth(null)).toEqual(1);
+    expect(getNodeBorderWidth({})).toEqual(1);
+    expect(getNodeBorderWidth({ temp: false })).toEqual(1);
+    expect(getNodeBorderWidth({ temp: true })).toEqual(3);
+  });
   test('mapGraph', () => {
     const graph = {
       nodes: [{
@@ -64,6 +80,7 @@ describe('GraphMapper', () => {
         title: 't2',
         level: 2,
         groupId: 1,
+        temp: true,
       }],
       edges: [{
         id: 1,
@@ -91,6 +108,7 @@ describe('GraphMapper', () => {
       ],
       nodes: [
         {
+          borderWidth: 1,
           color: {
             background: '#123456ff',
             border: '#00000055',
@@ -100,8 +118,12 @@ describe('GraphMapper', () => {
           level: 1,
           shape: 'circle',
           title: 't1',
+          shapeProperties: {
+            borderDashes: false,
+          },
         },
         {
+          borderWidth: 3,
           color: {
             background: '#123456ff',
             border: '#00000055',
@@ -111,6 +133,9 @@ describe('GraphMapper', () => {
           level: 2,
           shape: 'circle',
           title: 't2',
+          shapeProperties: {
+            borderDashes: [15, 15, 15],
+          },
         },
       ],
     };

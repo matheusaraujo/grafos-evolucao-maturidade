@@ -19,6 +19,11 @@ export const getNodeColor = (node, nodeGroups) => {
   return g.color + opacity;
 };
 
+export const getNodeShapeProperties = (node) => (node && node.temp === true
+  ? { borderDashes: [15, 15, 15] } : { borderDashes: false });
+
+export const getNodeBorderWidth = (node) => (node && node.temp ? 3 : 1);
+
 export const calcNodeDegree = (node, edges) => {
   const edgeIn = edges.filter((e) => e.to === node.id).length;
   const edgeOut = edges.filter((e) => e.from === node.id).length;
@@ -75,9 +80,9 @@ export const adjustEdges = (_graph) => {
   return graph;
 };
 
-export const mapGraph = (_graph, nodeGroups, hierarchical) => {
-  let graph = {
-    nodes: _graph.nodes.map((n) => ({
+export const mapGraph = (graph, nodeGroups, hierarchical) => {
+  let result = {
+    nodes: graph.nodes.map((n) => ({
       id: n.id,
       label: n.label,
       title: n.title,
@@ -87,18 +92,20 @@ export const mapGraph = (_graph, nodeGroups, hierarchical) => {
         border: getNodeBorder(n),
       },
       level: n.level,
+      shapeProperties: getNodeShapeProperties(n),
+      borderWidth: getNodeBorderWidth(n),
     })),
-    edges: _graph.edges.map((e) => ({
+    edges: graph.edges.map((e) => ({
       id: e.id,
       from: e.from,
       to: e.to,
       title: e.label,
       arrows: 'to',
       color: {
-        color: getEdgeColor(_graph, e),
+        color: getEdgeColor(graph, e),
       },
     })),
   };
-  if (hierarchical) graph = adjustEdges(graph);
-  return graph;
+  if (hierarchical) result = adjustEdges(result);
+  return result;
 };

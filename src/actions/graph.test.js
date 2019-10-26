@@ -13,4 +13,8 @@ describe('actions graph', () => {
     expect(actions.updateEdges([]))
       .toEqual({ type: 'UPDATE_EDGES', edges: [] });
   });
+  test('updateNodeStatus should create UPDATE_NODE_STATUS action', () => {
+    expect(actions.updateNodeStatus(1, 1))
+      .toEqual({ type: 'UPDATE_NODE_STATUS', id: 1, status: 1 });
+  });
 });

@@ -10,7 +10,6 @@ const GraphViewer = ({
   showModal, fillModal,
 }) => {
   let network = null;
-
   const makeNodeDetails = (node) => {
     // TO-DO Remover constantes e mudar nomes das variáveis
     const w = node.weight ? `**Carga Horária:** ${node.weight}  \n` : '';

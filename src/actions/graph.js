@@ -12,3 +12,10 @@ export const updateEdges = (edges) => ({
   type: 'UPDATE_EDGES',
   edges,
 });
+
+export const updateNodeStatus = (id, status, temp) => ({
+  type: 'UPDATE_NODE_STATUS',
+  id,
+  status,
+  temp,
+});

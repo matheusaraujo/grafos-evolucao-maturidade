@@ -64,3 +64,12 @@
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transform-origin: center center;
 }
+
+.select-button-container {
+  text-align: right;
+}
+
+.is-divider {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
