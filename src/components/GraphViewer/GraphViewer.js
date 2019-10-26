@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
 import { graphType, nodeGroupType, mappedOptionsType } from '../../utils/types';
-import { isDefined } from '../../utils/objects';
+import { mapNodeDetails } from '../../services/Mappers/NodeMapper';
 import './network.scss';
 import './styles.scss';
 
@@ -11,30 +11,6 @@ const GraphViewer = ({
   showModal, fillModal,
 }) => {
   let network = null;
-  const makeNodeDetails = (node) => {
-    // TO-DO Remover constantes e mudar nomes das variáveis
-    const w = node.weight ? `**Carga Horária:** ${node.weight}  \n` : '';
-    const l = node.level ? `**Período:** ${node.level}  \n` : '';
-    const group = nodeGroups.find((ng) => ng.id === node.groupId);
-    let g = '';
-    let sg = '';
-    if (group) {
-      g = group.label ? `**Ciclo Geral**: ${group.label}  \n` : '';
-      const subGroup = group.subGroups
-        && group.subGroups.find((g1) => g1.id === node.subGroupId);
-      if (subGroup) sg = subGroup.label ? `**Ciclo Detalhado:** ${subGroup.label}  \n` : '';
-    }
-    let s = '';
-    if (node.slots) {
-      s = `**Horários**: ${node.slots.join(', ')}  \n`;
-    }
-    let st = ';';
-    if (isDefined(node.status)) {
-      st = `**Status**: ${node.status === 1 ? 'Concluído' : 'Não concluído'}  \n`;
-    }
-    return `${node.details}  \n---  \n${w + l + g + sg + s + st}`;
-  };
-
   const events = {
     selectNode(n) {
       if (n.nodes.length === 1) {
@@ -42,7 +18,7 @@ const GraphViewer = ({
         const node = graph.nodes.find((nd) => nd.id === id);
         if (node.details) {
           setTimeout(() => {
-            fillModal(node.label, node.title, makeNodeDetails(node));
+            fillModal(node.label, node.title, mapNodeDetails(node, nodeGroups));
             showModal();
             if (network) network.unselectAll();
           }, 0);
