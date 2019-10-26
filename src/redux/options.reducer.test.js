@@ -1,4 +1,4 @@
-import options from './options';
+import options from './options.reducer';
 
 import { defaultOptions } from '../commons/consts';
 

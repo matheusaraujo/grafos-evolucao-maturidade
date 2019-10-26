@@ -1,4 +1,4 @@
-import modal from './modal';
+import modal from './modal.reducer';
 
 describe('modal reducer', () => {
   test('modal handle SHOW_MODAL', () => {

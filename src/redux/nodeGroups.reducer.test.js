@@ -1,4 +1,4 @@
-import nodeGroups from './nodeGroups';
+import nodeGroups from './nodeGroups.reducer';
 
 const defaultNodeGroups = [{
   id: 1,
