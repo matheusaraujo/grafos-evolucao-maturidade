@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import GraphEditor from './GraphEditor';
 import {
   editNodes, editNodeGroups, editEdges, editOptions,
-} from '../../actions/page';
+} from '../../redux/page.actions';
 
 const mapStateToProps = (state) => ({
   pageMode: state.page.mode,

@@ -1,6 +1,6 @@
-import * as actions from './page';
+import * as actions from './page.actions';
 
-describe('actions index', () => {
+describe('actions page', () => {
   test('viewGraph should create VIEW_GRAPH action', () => {
     expect(actions.viewGraph())
       .toEqual({ type: 'VIEW_GRAPH' });

@@ -5,7 +5,7 @@ import modal from './modal';
 import nexts from '../redux/nexts.reducer';
 import nodeGroups from './nodeGroups';
 import options from './options';
-import page from './page';
+import page from '../redux/page.reducer';
 
 export default combineReducers({
   graph,

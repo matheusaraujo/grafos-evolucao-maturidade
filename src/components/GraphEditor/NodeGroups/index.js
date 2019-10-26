@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NodeGroupsEditor from './NodeGroupsEditor';
-import { updateNodeGroups } from '../../../actions/index';
+import { updateNodeGroups } from '../../../redux/general.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

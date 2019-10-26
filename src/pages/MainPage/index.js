@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import MainPage from './MainPage';
-import { initApp, viewGraph, editNodes } from '../../actions/page';
+import { initApp, viewGraph, editNodes } from '../../redux/page.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

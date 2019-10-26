@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Modal from './Modal';
-import { hideModal } from '../../actions/index';
+import { hideModal } from '../../redux/general.actions';
 
 const mapStateToProps = (state) => ({
   visible: state.modal.visible,

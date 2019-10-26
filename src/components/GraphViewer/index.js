@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GraphViewer from './GraphViewer';
-import { fillModal, showModal } from '../../actions/index';
+import { fillModal, showModal } from '../../redux/general.actions';
 import { mapGraph } from '../../services/Mappers/GraphMapper';
 import { mapOptions } from '../../services/Mappers/OptionsMapper';
 

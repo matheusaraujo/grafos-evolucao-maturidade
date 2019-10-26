@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import InitialPage from './InitialPage';
 import { updateGraph } from '../../redux/graph.actions';
-import { viewGraph } from '../../actions/page';
-import { updateNodeGroups } from '../../actions/index';
+import { viewGraph } from '../../redux/page.actions';
+import { updateNodeGroups } from '../../redux/general.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

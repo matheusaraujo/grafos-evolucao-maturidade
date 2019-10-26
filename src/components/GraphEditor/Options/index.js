@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import OptionsEditor from './OptionsEditor';
-import { updateOptions } from '../../../actions/index';
+import { updateOptions } from '../../../redux/general.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

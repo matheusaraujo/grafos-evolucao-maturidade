@@ -1,4 +1,4 @@
-import * as actions from './index';
+import * as actions from './general.actions';
 
 describe('actions index', () => {
   test('updateOptions should create UPDATE_OPTIONS action', () => {

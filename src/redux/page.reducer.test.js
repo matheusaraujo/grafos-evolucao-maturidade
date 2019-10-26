@@ -1,4 +1,4 @@
-import page from './page';
+import page from './page.reducer';
 
 describe('page reducer', () => {
   test('should handle default', () => {
