@@ -1,5 +1,5 @@
 export const defaultOptions = {
-  hierarchical: true,
+  hierarchical: false,
   hierarchicalDirection: 'R',
 };
 

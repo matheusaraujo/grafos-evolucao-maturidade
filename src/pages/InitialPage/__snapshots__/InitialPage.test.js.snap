@@ -99,6 +99,54 @@ exports[`InitialPage should match snapshot 1`] = `
           </div>
         </article>
       </div>
+      <div
+        className="box"
+      >
+        <article
+          className="media"
+        >
+          <div
+            className="media-left"
+          >
+            <button
+              className="btn-devops-1 button is-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              devops1
+            </button>
+          </div>
+          <div
+            className="media-content"
+          >
+            devops1
+          </div>
+        </article>
+      </div>
+      <div
+        className="box"
+      >
+        <article
+          className="media"
+        >
+          <div
+            className="media-left"
+          >
+            <button
+              className="btn-devops-2 button is-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              devops2
+            </button>
+          </div>
+          <div
+            className="media-content"
+          >
+            devops2
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
