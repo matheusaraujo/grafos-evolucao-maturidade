@@ -1,4 +1,4 @@
-import * as actions from './nexts';
+import * as actions from './nexts.actions';
 
 describe('actions nexts', () => {
   test('showNexts should create SHOW_NEXTS action', () => {

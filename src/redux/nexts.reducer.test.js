@@ -1,4 +1,4 @@
-import nexts from './nexts';
+import nexts from './nexts.reducer';
 
 describe('nexts reducer', () => {
   test('should handle SHOW_NEXTS', () => {

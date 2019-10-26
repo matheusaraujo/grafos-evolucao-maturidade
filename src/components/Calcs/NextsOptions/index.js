@@ -5,7 +5,7 @@ import {
   hideNexts,
   beginCalcNexts,
   endCalcNexts,
-} from '../../../actions/nexts';
+} from '../../../redux/nexts.actions';
 import { updateNodeStatus } from '../../../redux/graph.actions';
 import Nexts from '../../../services/Nexts/Nexts';
 

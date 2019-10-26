@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Calcs from './Calcs';
-import { showNexts } from '../../actions/nexts';
+import { showNexts } from '../../redux/nexts.actions';
 
 const mapStateToProps = (state) => ({
   graph: state.graph,
