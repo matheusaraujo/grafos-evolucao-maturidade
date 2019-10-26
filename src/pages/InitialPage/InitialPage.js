@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
 import systemEngineerGraph20182 from '../../examples/systemEngineerGraph.20182';
+import devOpsGraphGeneral from '../../examples/devOpsGraph.general';
+import devOpsGraphDetailed from '../../examples/devOpsGraph.detailed';
 import * as labels from '../../utils/labels';
 
 const InitialPage = ({
@@ -62,6 +64,16 @@ const InitialPage = ({
     'btn-system-engineer-2',
     systemEngineerGraph20182);
 
+  const buttondevOps1 = button('devops1',
+    'devops1',
+    'btn-devops-1',
+    devOpsGraphGeneral);
+
+  const buttondevOps2 = button('devops2',
+    'devops2',
+    'btn-devops-2',
+    devOpsGraphDetailed);
+
   return (
     <section className="section">
       <div className="container">
@@ -70,6 +82,8 @@ const InitialPage = ({
           {buttonBasicGraph}
           {buttonSystemEngineer}
           {buttonSystemEngineer2}
+          {buttondevOps1}
+          {buttondevOps2}
         </div>
       </div>
     </section>
