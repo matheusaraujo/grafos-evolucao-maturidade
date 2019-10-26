@@ -1,4 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { nextsType, graphType } from '../../../commons/types';
@@ -12,6 +13,7 @@ const NextsOptions = ({
   const [_maxWeight, setMaxWeight] = useState(375);
   const [_maxDistance, setMaxistance] = useState(3);
   const [_forceMinimumLevel, setForceMinimumLevel] = useState(true);
+  const [_showNextsOptions, setShowNextsOptions] = useState([]);
 
   if (nexts.calculated) {
     content = (
@@ -19,19 +21,27 @@ const NextsOptions = ({
         {nexts.options.length === 0 ? <div>Nenhuma combinação encontrada </div> : null}
         {nexts.options.map((o, i) => (
           <div className="card" key={Math.random()}>
-            <header className="card-header">
-              <p className="card-header-title">Opção {i + 1}:</p>
+            <header
+              className="card-header"
+              onClick={() => setShowNextsOptions(
+                _showNextsOptions.map((v, i1) => (i1 === i ? !v : v)),
+              )}
+            >
+              <p className="card-header-title">Opção {i + 1}</p>
               <p className="card-header-subtitle">Distância: <b>{o.distance}</b>, Peso: <b>{o.totalWeight}</b>, Slots: <b>{o.slots.join(',')}</b></p>
             </header>
-            <div className="card-content">
-              <ul className="inner-ul">
-                {o.combination.map((c) => (
-                  <li key={Math.random()}>
-                    {c.label} {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {_showNextsOptions[i]
+              && (
+                <div className="card-content">
+                  <ul className="inner-ul">
+                    {o.combination.map((c) => (
+                      <li key={Math.random()}>
+                        {c.label} {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
           </div>
         ))}
         <button
@@ -50,52 +60,55 @@ const NextsOptions = ({
       <div className="content">
         <div className="columns is-paddingless is-marginless">
           <div className="field column is-half">
-            <label className="label">Peso mínimo</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                id="minWeight"
-                placeholder="195"
-                value={_minWeight}
-                onChange={(e) => { setMinWeight(e.target.value); }}
-              />
-            </div>
+            <label className="label" htmlFor="minWeight">Peso mínimo
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="minWeight"
+                  placeholder="195"
+                  value={_minWeight}
+                  onChange={(e) => { setMinWeight(e.target.value); }}
+                />
+              </div>
+            </label>
           </div>
           <div className="field column is-half">
-            <label className="label">Peso máximo</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                id="maxWeight"
-                placeholder="375"
-                value={_maxWeight}
-                onChange={(e) => { setMaxWeight(e.target.value); }}
-              />
-            </div>
+            <label className="label" htmlFor="maxWeight">Peso máximo
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="maxWeight"
+                  placeholder="375"
+                  value={_maxWeight}
+                  onChange={(e) => { setMaxWeight(e.target.value); }}
+                />
+              </div>
+            </label>
           </div>
         </div>
         <div className="columns is-paddingless is-marginless">
           <div className="field column is-half">
-            <label className="label">Distância Máxima</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                id="maxDistance"
-                placeholder="3"
-                value={_maxDistance}
-                onChange={(e) => { setMaxistance(e.target.value); }}
-              />
-            </div>
+            <label className="label" htmlFor="maxDistance">Distância Máxima
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="maxDistance"
+                  placeholder="3"
+                  value={_maxDistance}
+                  onChange={(e) => { setMaxistance(e.target.value); }}
+                />
+              </div>
+            </label>
           </div>
           <div className="field column is-half">
-            <label className="label">&nbsp;</label>
-            <label className="checkbox">
+            <p>&nbsp;</p>
+            <label className="checkbox" htmlFor="forceMinimumLevel">
               <input
                 type="checkbox"
-                id="forcMinimumLevel"
+                id="forceMinimumLevel"
                 placeholder="3"
                 checked={_forceMinimumLevel}
                 onChange={(e) => { setForceMinimumLevel(e.target.checked); }}
@@ -115,7 +128,7 @@ const NextsOptions = ({
                   maxWeight: _maxWeight,
                   maxDistance: _maxDistance,
                   forceMinimumLevel: _forceMinimumLevel,
-                });
+                }, (options) => setShowNextsOptions(Array(options.length).fill(false)));
               }}
             >
               Calcular

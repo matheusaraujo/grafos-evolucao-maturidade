@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   showNexts: () => { dispatch(showNexts()); },
   hideNexts: () => { dispatch(hideNexts()); },
-  beginCalcNexts: (graph, params) => {
+  beginCalcNexts: (graph, params, callback) => {
     dispatch(beginCalcNexts());
     const options = Nexts(graph.nodes, graph.edges, {
       minWeight: params.minWeight || 195,
@@ -22,6 +22,7 @@ const mapDispatchToProps = (dispatch) => ({
       forceMinimumLevel: params.forceMinimumLevel || false,
     });
     dispatch(endCalcNexts(options));
+    callback(options);
   },
 });
 
