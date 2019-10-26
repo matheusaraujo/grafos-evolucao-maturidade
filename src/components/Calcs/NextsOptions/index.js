@@ -6,7 +6,7 @@ import {
   beginCalcNexts,
   endCalcNexts,
 } from '../../../actions/nexts';
-import { updateNodeStatus } from '../../../actions/graph';
+import { updateNodeStatus } from '../../../redux/graph.actions';
 import Nexts from '../../../services/Nexts/Nexts';
 
 const mapStateToProps = (state) => ({

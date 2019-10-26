@@ -29,7 +29,7 @@
     "test": "jest --env=jsdom",
     "test:coverage": "yarn run test -- --coverage",
     "test:conversion": "jest --env=jsdom conversion/ --coverage --collectCoverageFrom=\"conversion/*.js\"",
-    "test:redux": "jest --env=jsdom src/actions/ src/reducers/ --coverage --collectCoverageFrom=\"src/(actions|reducers)/*.js\"",
+    "test:redux": "jest --env=jsdom src/actions/ src/reducers/ src/redux/ --coverage --collectCoverageFrom=\"src/(actions|reducers|redux)/*.js\"",
     "test:services": "jest --env=jsdom src/services/ --coverage --collectCoverageFrom=\"src/services/**/*.js\"",
     "test:components": "jest --env=jsdom src/components/ src/pages/ --coverage --collectCoverageFrom=\"src/(components|pages)/**/*.js\"",
     "test:engsis": "jest \"src/.*\\.engsis.test.js\"",

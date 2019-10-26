@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EdgesEditor from './EdgesEditor';
-import { updateEdges } from '../../../actions/graph';
+import { updateEdges } from '../../../redux/graph.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

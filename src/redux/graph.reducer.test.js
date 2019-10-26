@@ -1,4 +1,4 @@
-import graph from './graph';
+import graph from './graph.reducer';
 
 describe('graph reducer', () => {
   test('should handle UPDATE_GRAPH', () => {

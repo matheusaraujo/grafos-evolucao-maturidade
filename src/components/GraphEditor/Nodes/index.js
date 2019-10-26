@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NodesEditor from './NodesEditor';
-import { updateNodes } from '../../../actions/graph';
+import { updateNodes } from '../../../redux/graph.actions';
 
 const mapStateToProps = (state) => ({
   lang: state.page.lang,

@@ -1,4 +1,4 @@
-import * as actions from './graph';
+import * as actions from './graph.actions';
 
 describe('actions graph', () => {
   test('updateGraph should create UPDADE_GRAPH action', () => {

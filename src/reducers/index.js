@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import graph from './graph';
+import graph from '../redux/graph.reducer';
 import modal from './modal';
 import nexts from './nexts';
 import nodeGroups from './nodeGroups';

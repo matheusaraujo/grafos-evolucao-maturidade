@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import InitialPage from './InitialPage';
-import { updateGraph } from '../../actions/graph';
+import { updateGraph } from '../../redux/graph.actions';
 import { viewGraph } from '../../actions/page';
 import { updateNodeGroups } from '../../actions/index';
 
