@@ -55,7 +55,7 @@ exports[`OptionsAce should match snapshot 1`] = `
     tabSize={2}
     theme="textmate"
     value="{
- \\"height\\": \\"500px\\"
+ \\"hierarchical\\": true
 }"
     width="100%"
     wrapEnabled={false}

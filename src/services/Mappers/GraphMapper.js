@@ -75,7 +75,7 @@ export const adjustEdges = (_graph) => {
   return graph;
 };
 
-export const graphMapper = (_graph, nodeGroups, hierarchical) => {
+export const mapGraph = (_graph, nodeGroups, hierarchical) => {
   let graph = {
     nodes: _graph.nodes.map((n) => ({
       id: n.id,

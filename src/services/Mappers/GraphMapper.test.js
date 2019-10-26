@@ -1,5 +1,5 @@
 import {
-  graphMapper,
+  mapGraph,
   getNodeBorder,
   getEdgeColor,
   getNodeColor,
@@ -49,7 +49,7 @@ describe('GraphMapper', () => {
     const groups = [{ id: 1, color: '#123456' }];
     expect(getNodeColor(node, groups)).toEqual(undefined);
   });
-  test('graphMapper', () => {
+  test('mapGraph', () => {
     const graph = {
       nodes: [{
         id: 1,
@@ -114,7 +114,7 @@ describe('GraphMapper', () => {
         },
       ],
     };
-    const received = graphMapper(graph, nodeGroups);
+    const received = mapGraph(graph, nodeGroups);
     expect(received).toStrictEqual(expected);
   });
   test('calcNodeDegree, 0 indegree, 0 outdegree', () => {

@@ -11,7 +11,7 @@ describe('OptionsEditor', () => {
     const component = shallow(
       <OptionsEditor
         lang="pt"
-        options={{ height: '500px' }}
+        options={{ hierarchical: true }}
         updateOptions={() => { }}
       />,
     );

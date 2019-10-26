@@ -11,7 +11,7 @@ describe('OptionsAce', () => {
     const component = shallow(
       <OptionsAce
         lang="pt"
-        options={{ height: '500px' }}
+        options={{ hierarchical: true }}
         update={() => { }}
       />,
     );

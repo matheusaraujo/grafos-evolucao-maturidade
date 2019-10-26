@@ -1,16 +1,6 @@
 const initialState = {
-  layout: {
-    hierarchical: {
-      enabled: true,
-      direction: 'LR',
-    },
-  },
-  height: '500px',
-  interaction: {
-    hover: true,
-    hoverConnectedEdges: true,
-    selectConnectedEdges: false,
-  },
+  hierarchical: true,
+  hierarchicalDirection: 'R',
 };
 
 const options = (state = initialState, action = { type: 'default' }) => {

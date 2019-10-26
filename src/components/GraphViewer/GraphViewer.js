@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
-import { graphType, nodeGroupType, optionsType } from '../../commons/types';
+import { graphType, nodeGroupType, mappedOptionsType } from '../../commons/types';
 import './network.scss';
 import './styles.scss';
 
 const GraphViewer = ({
-  graph, mappedGraph, nodeGroups, options,
+  graph, mappedGraph, nodeGroups, mappedOptions,
   showModal, fillModal,
 }) => {
   let network = null;
@@ -68,7 +68,7 @@ const GraphViewer = ({
     <div className="box">
       <Graph
         graph={mappedGraph}
-        options={options}
+        options={mappedOptions}
         events={events}
         getNetwork={(_network) => {
           network = _network;
@@ -82,7 +82,7 @@ GraphViewer.propTypes = {
   graph: graphType.isRequired,
   mappedGraph: PropTypes.object.isRequired,
   nodeGroups: PropTypes.arrayOf(nodeGroupType).isRequired,
-  options: optionsType.isRequired,
+  mappedOptions: mappedOptionsType.isRequired,
   fillModal: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
 };

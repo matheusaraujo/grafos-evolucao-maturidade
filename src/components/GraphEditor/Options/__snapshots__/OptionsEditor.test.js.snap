@@ -11,7 +11,7 @@ exports[`OptionsEditor should match snapshot 1`] = `
       lang="pt"
       options={
         Object {
-          "height": "500px",
+          "hierarchical": true,
         }
       }
       update={[Function]}

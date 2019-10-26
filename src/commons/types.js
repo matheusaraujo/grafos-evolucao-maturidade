@@ -27,7 +27,7 @@ export const graphType = shape({
   edges: arrayOf(edgeType).isRequired,
 });
 
-export const optionsType = shape({
+export const mappedOptionsType = shape({
   layout: shape({
     hierarchical: shape({
       enabled: bool.isRequired,
@@ -35,6 +35,11 @@ export const optionsType = shape({
     }),
   }),
   height: string.isRequired,
+});
+
+export const optionsType = shape({
+  hierarchical: bool.isRequired,
+  hierarchicalDirection: string,
 });
 
 export const nodeSubGroupType = shape({

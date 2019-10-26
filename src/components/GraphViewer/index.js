@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import GraphViewer from './GraphViewer';
 import { fillModal, showModal } from '../../actions/index';
-import { graphMapper } from '../../services/Mappers/GraphMapper';
+import { mapGraph } from '../../services/Mappers/GraphMapper';
+import { mapOptions } from '../../services/Mappers/OptionsMapper';
 
 const mapStateToProps = (state) => ({
-  mappedGraph: graphMapper(state.graph, state.nodeGroups, state.options.layout.hierarchical),
+  mappedGraph: mapGraph(state.graph, state.nodeGroups, state.options.hierarchical),
   graph: state.graph,
   nodeGroups: state.nodeGroups,
-  options: state.options,
+  mappedOptions: mapOptions(state.options),
 });
 
 const mapDispatchToProps = (dispatch) => ({
