@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { nextsType, graphType } from '../../../commons/types';
+import generateRandom from '../../../commons/random';
 import './NextsOptions.scss';
 
 const NextsOptions = ({
@@ -25,7 +26,7 @@ const NextsOptions = ({
       <div>
         {nexts.options.length === 0 ? <div>Nenhuma combinação encontrada </div> : null}
         {nexts.options.map((o, i) => (
-          <div className="card" key={Math.random()}>
+          <div className="card" key={generateRandom()}>
             <header
               className="card-header"
               onClick={() => setShowNextsOptions(
@@ -40,7 +41,7 @@ const NextsOptions = ({
                 <div className="card-content">
                   <ul className="inner-ul">
                     {o.combination.map((c) => (
-                      <li key={Math.random()}>
+                      <li key={generateRandom()}>
                         {c.label} - {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
                       </li>
                     ))}

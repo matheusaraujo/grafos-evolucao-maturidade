@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
 import { graphType, nodeGroupType, mappedOptionsType } from '../../commons/types';
+import { isDefined } from '../../commons/objects';
 import './network.scss';
 import './styles.scss';
 
@@ -28,7 +29,7 @@ const GraphViewer = ({
       s = `**Horários**: ${node.slots.join(', ')}  \n`;
     }
     let st = ';';
-    if (node.status !== undefined && node.status !== undefined) {
+    if (isDefined(node.status)) {
       st = `**Status**: ${node.status === 1 ? 'Concluído' : 'Não concluído'}  \n`;
     }
     return `${node.details}  \n---  \n${w + l + g + sg + s + st}`;
