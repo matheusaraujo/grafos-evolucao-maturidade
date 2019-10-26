@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { edgeType } from '../../../commons/types';
+import { edgeType } from '../../../utils/types';
 import EdgesAce from './EdgesAce';
 
 const EdgesEditor = ({ lang, edges, updateEdges }) => {

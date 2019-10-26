@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AceEditor from 'react-ace';
-import { nodeType } from '../../../commons/types';
+import { nodeType } from '../../../utils/types';
 import 'brace/mode/json';
 import 'brace/theme/textmate';
-import { isValidJson, fromAceEditor, toAceEditor } from '../../../commons/json';
-import * as labels from '../../../commons/labels';
+import { isValidJson, fromAceEditor, toAceEditor } from '../../../utils/json';
+import * as labels from '../../../utils/labels';
 
 const NodesAce = ({ lang, nodes, update }) => {
   const [tmpNodes, setTmpNodes] = useState(toAceEditor(nodes));

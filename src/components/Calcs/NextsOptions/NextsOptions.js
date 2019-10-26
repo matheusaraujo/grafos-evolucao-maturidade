@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { nextsType, graphType } from '../../../commons/types';
-import generateRandom from '../../../commons/random';
+import { nextsType, graphType } from '../../../utils/types';
+import generateRandom from '../../../utils/random';
 import './NextsOptions.scss';
 
 const NextsOptions = ({

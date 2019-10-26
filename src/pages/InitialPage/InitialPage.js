@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
 import systemEngineerGraph20182 from '../../examples/systemEngineerGraph.20182';
-import * as labels from '../../commons/labels';
+import * as labels from '../../utils/labels';
 
 const InitialPage = ({
   lang, updateNodeGroups, updateGraph, viewGraph,

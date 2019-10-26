@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { nodeType } from '../../../commons/types';
-import * as labels from '../../../commons/labels';
+import { nodeType } from '../../../utils/types';
+import * as labels from '../../../utils/labels';
 import './NodesCrud.scss';
 
 const NodesCrud = ({ lang, nodes, update }) => {

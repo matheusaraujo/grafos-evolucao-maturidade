@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { nodeGroupType } from '../../../commons/types';
+import { nodeGroupType } from '../../../utils/types';
 import NodeGroupsAce from './NodeGroupsAce';
 
 const NodeGroupsEditor = ({ lang, nodeGroups, updateNodeGroups }) => {

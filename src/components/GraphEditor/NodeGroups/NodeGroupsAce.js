@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AceEditor from 'react-ace';
-import { nodeGroupType } from '../../../commons/types';
+import { nodeGroupType } from '../../../utils/types';
 import 'brace/mode/json';
 import 'brace/theme/textmate';
-import { isValidJson, fromAceEditor, toAceEditor } from '../../../commons/json';
-import * as labels from '../../../commons/labels';
+import { isValidJson, fromAceEditor, toAceEditor } from '../../../utils/json';
+import * as labels from '../../../utils/labels';
 
 const NodeGroupsAce = ({ lang, nodeGroups, update }) => {
   const [tmpNodeGroups, setTmpNodeGroups] = useState(toAceEditor(nodeGroups));

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { nodeType } from '../../../commons/types';
+import { nodeType } from '../../../utils/types';
 import NodesAce from './NodesAce';
 
 const NodesEditor = ({ lang, nodes, updateNodes }) => {

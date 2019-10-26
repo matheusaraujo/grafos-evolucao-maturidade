@@ -15,7 +15,7 @@ import {
   sortCombinations,
   classifyCombinations,
 } from './classifyCombinations';
-import { isFilledArray } from '../../commons/arrays';
+import { isFilledArray } from '../../utils/arrays';
 
 const Nexts = (nodes, edges, {
   minWeight,

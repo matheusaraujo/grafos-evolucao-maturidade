@@ -7,7 +7,7 @@ import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
 import Calcs from '../../components/Calcs/index';
-import * as labels from '../../commons/labels';
+import * as labels from '../../utils/labels';
 import './MainPage.scss';
 
 const MainPage = ({

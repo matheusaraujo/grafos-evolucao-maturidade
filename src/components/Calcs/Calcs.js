@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as labels from '../../commons/labels';
-import { graphType, nextsType } from '../../commons/types';
+import * as labels from '../../utils/labels';
+import { graphType, nextsType } from '../../utils/types';
 import NextsOptions from './NextsOptions/index';
 
 const Calcs = ({

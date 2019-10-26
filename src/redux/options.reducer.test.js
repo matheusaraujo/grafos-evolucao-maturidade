@@ -1,6 +1,6 @@
 import options from './options.reducer';
 
-import { defaultOptions } from '../commons/consts';
+import { defaultOptions } from '../utils/consts';
 
 describe('options reducer', () => {
   test('should handle UPDATE_OPTIONS', () => {

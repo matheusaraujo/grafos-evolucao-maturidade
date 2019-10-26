@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Graph from 'react-graph-vis';
-import { graphType, nodeGroupType, mappedOptionsType } from '../../commons/types';
-import { isDefined } from '../../commons/objects';
+import { graphType, nodeGroupType, mappedOptionsType } from '../../utils/types';
+import { isDefined } from '../../utils/objects';
 import './network.scss';
 import './styles.scss';
 

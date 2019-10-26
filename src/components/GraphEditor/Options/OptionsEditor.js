@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { optionsType } from '../../../commons/types';
+import { optionsType } from '../../../utils/types';
 import OptionsAce from './OptionsAce';
 
 const OptionsEditor = ({ lang, options, updateOptions }) => {
