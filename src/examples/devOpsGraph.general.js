@@ -44,6 +44,7 @@ const devOpsGraph = {
   nodes: [
     {
       id: 101,
+      level: 1,
       groupId: 100,
       label: 'QC1',
       title: 'Qualidade do Código - Inicial',
@@ -51,6 +52,7 @@ const devOpsGraph = {
     },
     {
       id: 102,
+      level: 2,
       groupId: 100,
       label: 'QC2',
       title: 'Qualidade do Código - Consciente',
@@ -58,6 +60,7 @@ const devOpsGraph = {
     },
     {
       id: 103,
+      level: 3,
       groupId: 100,
       label: 'QC3',
       title: 'Qualidade do Código - Gerenciado',
@@ -65,6 +68,7 @@ const devOpsGraph = {
     },
     {
       id: 104,
+      level: 4,
       groupId: 100,
       label: 'QC4',
       title: 'Qualidade do Código - Avançado',
@@ -72,6 +76,7 @@ const devOpsGraph = {
     },
     {
       id: 105,
+      level: 5,
       groupId: 100,
       label: 'QC5',
       title: 'Qualidade do Código - Melhoria contínua',
@@ -79,6 +84,7 @@ const devOpsGraph = {
     },
     {
       id: 201,
+      level: 1,
       groupId: 200,
       label: 'CC1',
       title: 'Configuração como Código - Inicial',
@@ -86,6 +92,7 @@ const devOpsGraph = {
     },
     {
       id: 202,
+      level: 2,
       groupId: 200,
       label: 'CC2',
       title: 'Configuração como Código - Consciente',
@@ -93,6 +100,7 @@ const devOpsGraph = {
     },
     {
       id: 203,
+      level: 3,
       groupId: 200,
       label: 'CC3',
       title: 'Configuração como Código - Gerenciado',
@@ -100,6 +108,7 @@ const devOpsGraph = {
     },
     {
       id: 204,
+      level: 4,
       groupId: 200,
       label: 'CC4',
       title: 'Configuração como Código - Avançado',
@@ -107,6 +116,7 @@ const devOpsGraph = {
     },
     {
       id: 205,
+      level: 5,
       groupId: 200,
       label: 'CC5',
       title: 'Configuração como Código - Melhoria Contínua',
@@ -114,6 +124,7 @@ const devOpsGraph = {
     },
     {
       id: 301,
+      level: 1,
       groupId: 300,
       label: 'GB1',
       title: 'Gestão de Builds - Inicial',
@@ -121,6 +132,7 @@ const devOpsGraph = {
     },
     {
       id: 302,
+      level: 2,
       groupId: 300,
       label: 'GB2',
       title: 'Gestão de Builds - Consciente',
@@ -128,6 +140,7 @@ const devOpsGraph = {
     },
     {
       id: 303,
+      level: 3,
       groupId: 300,
       label: 'GB3',
       title: 'Gestão de Builds - Gerenciado',
@@ -135,6 +148,7 @@ const devOpsGraph = {
     },
     {
       id: 304,
+      level: 4,
       groupId: 300,
       label: 'GB4',
       title: 'Gestão de Builds - Avançado',
@@ -142,6 +156,7 @@ const devOpsGraph = {
     },
     {
       id: 305,
+      level: 5,
       groupId: 300,
       label: 'GB5',
       title: 'Gestão de Builds - Melhoria Contínua',
@@ -149,6 +164,7 @@ const devOpsGraph = {
     },
     {
       id: 401,
+      level: 1,
       groupId: 400,
       label: 'GR1',
       title: 'Gestão de Releases - Inicial',
@@ -156,6 +172,7 @@ const devOpsGraph = {
     },
     {
       id: 402,
+      level: 2,
       groupId: 400,
       label: 'GR2',
       title: 'Gestão de Releases - Consciente',
@@ -163,6 +180,7 @@ const devOpsGraph = {
     },
     {
       id: 403,
+      level: 3,
       groupId: 400,
       label: 'GR3',
       title: 'Gestão de Releases - Gerenciado',
@@ -170,6 +188,7 @@ const devOpsGraph = {
     },
     {
       id: 404,
+      level: 4,
       groupId: 400,
       label: 'GR4',
       title: 'Gestão de Releases - Avançado',
@@ -177,6 +196,7 @@ const devOpsGraph = {
     },
     {
       id: 405,
+      level: 5,
       groupId: 400,
       label: 'GR5',
       title: 'Gestão de Releases - Melhoria Contínua',
@@ -184,6 +204,7 @@ const devOpsGraph = {
     },
     {
       id: 501,
+      level: 1,
       groupId: 500,
       label: 'GT1',
       title: 'Gestão de Testes - Inicial',
@@ -191,6 +212,7 @@ const devOpsGraph = {
     },
     {
       id: 502,
+      level: 2,
       groupId: 500,
       label: 'GT2',
       title: 'Gestão de Testes - Consciente',
@@ -198,6 +220,7 @@ const devOpsGraph = {
     },
     {
       id: 503,
+      level: 3,
       groupId: 500,
       label: 'GT3',
       title: 'Gestão de Testes - Gerenciado',
@@ -205,6 +228,7 @@ const devOpsGraph = {
     },
     {
       id: 504,
+      level: 4,
       groupId: 500,
       label: 'GT4',
       title: 'Gestão de Testes - Avançado',
@@ -212,6 +236,7 @@ const devOpsGraph = {
     },
     {
       id: 505,
+      level: 5,
       groupId: 500,
       label: 'GT5',
       title: 'Gestão de Testes - Melhoria Contínua',
@@ -219,6 +244,7 @@ const devOpsGraph = {
     },
     {
       id: 601,
+      level: 1,
       groupId: 600,
       label: 'GCF1',
       title: 'Gestão de Configuração - Inicial',
@@ -226,6 +252,7 @@ const devOpsGraph = {
     },
     {
       id: 602,
+      level: 2,
       groupId: 600,
       label: 'GCF2',
       title: 'Gestão de Configuração - Consciente',
@@ -233,6 +260,7 @@ const devOpsGraph = {
     },
     {
       id: 603,
+      level: 3,
       groupId: 600,
       label: 'GCF3',
       title: 'Gestão de Configuração - Gerenciado',
@@ -240,6 +268,7 @@ const devOpsGraph = {
     },
     {
       id: 604,
+      level: 4,
       groupId: 600,
       label: 'GCF4',
       title: 'Gestão de Configuração - Avançado',
@@ -247,10 +276,51 @@ const devOpsGraph = {
     },
     {
       id: 605,
+      level: 5,
       groupId: 600,
       label: 'GCF5',
       title: 'Gestão de Configuração - Melhoria Contínua',
       details: '- Todos os binários de componentes e bibliotecas fazem parte da gestão de configuração.  \n- Gestão da configuração incorpora ambientes virtualizados e trata a infraestrutura como código (IaC).  \n- Ambientes _self-services_ são estabelecidos.',
+    },
+    {
+      id: 701,
+      level: 1,
+      groupId: 700,
+      label: 'TC1',
+      title: 'Testes de Carga - Inicial',
+      details: '- Testes de carga não são executados pelos times desenvolvimento, qualidade e operações.  \n- Problemas com tempos de resposta e indisponibilidade em produção.',
+    },
+    {
+      id: 702,
+      level: 2,
+      groupId: 700,
+      label: 'TC2',
+      title: 'Testes de Carga - Consciente',
+      details: '- Testes de carga são introduzidos no processo de desenvolvimento.  \n- Automação dos testes de carga começa a ser experimentada.',
+    },
+    {
+      id: 703,
+      level: 3,
+      groupId: 700,
+      label: 'TC3',
+      title: 'Testes de Carga - Gerenciado',
+      details: '- Variações dos testes de carga como testes de performance, estresse e testes de maturidade começam a ser adotadas.  \n- Problemas de indisponibilidade reduzidos em produção.',
+    },
+    {
+      id: 704,
+      level: 4,
+      groupId: 700,
+      label: 'TC4',
+      title: 'Testes de Carga - Avançado',
+      details: '- Testes de carga, estresse e maturidade incorporados aos processos de _builds_ e _releases_.  \n- Planejamento de capacidade fornece diretrizes de provisionamento de ambiente em produção.',
+    },
+    {
+      id: 705,
+      level: 5,
+      groupId: 700,
+      label: 'TC5',
+      title: 'Testes de Carga - Melhoria Contínua',
+      details: '- Testes de carga fornecem políticas automatizadas de infraestrutura de código para responder a picos de utilização em ambientes de produção.  \n- Problemas de indisponibilidade são raros em produção.',
     },
   ],
   edges: [
@@ -294,6 +364,15 @@ const devOpsGraph = {
     { id: 38, from: 304, to: 604 },
     { id: 39, from: 604, to: 605 },
     { id: 40, from: 405, to: 605 },
+    { id: 41, from: 701, to: 702 },
+    { id: 42, from: 202, to: 702 },
+    { id: 43, from: 702, to: 104 },
+    { id: 44, from: 503, to: 702 },
+    { id: 45, from: 702, to: 703 },
+    { id: 46, from: 703, to: 704 },
+    { id: 47, from: 304, to: 704 },
+    { id: 48, from: 704, to: 705 },
+    { id: 49, from: 605, to: 705 },
   ],
 };
 
