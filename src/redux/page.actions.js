@@ -21,3 +21,8 @@ export const editEdges = () => ({
 export const editOptions = () => ({
   type: 'EDIT_OPTIONS',
 });
+
+export const setFeatures = (features) => ({
+  type: 'SET_FEATURES',
+  features,
+});

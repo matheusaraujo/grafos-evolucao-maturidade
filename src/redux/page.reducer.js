@@ -1,6 +1,9 @@
 const initialState = {
   lang: 'pt',
   mode: 'initial',
+  features: {
+    nexts: false,
+  },
 };
 
 const page = (state = initialState, action = { type: 'default' }) => {

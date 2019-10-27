@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faCogs, faLaptopCode, faStickyNote, faFlask } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../components/Menu/index';
 import './InitialPage.scss';
 
@@ -19,7 +19,10 @@ const InitialPage = ({
       <div className="tile is-ancestor">
         <div className="tile is-parent is-8">
           <article className="tile is-child box">
-            <p className="title">Sobre</p>
+            <p className="title">
+              <FontAwesomeIcon icon={faStickyNote} />&nbsp;
+              Sobre
+            </p>
             <p className="subtitle">Uma proposta de representação da evolução do conhecimento por meio de grafos.</p>
             <div className="content">
               Este é um trabalho desenvolvido por <a href="mailto:matheus.saraujo@gmail.com">Matheus Araujo</a>,
@@ -35,7 +38,10 @@ const InitialPage = ({
         <div className="tile is-parent is-4">
           <article className="tile is-child box">
             <div className="content">
-              <p className="title">Grafo simples</p>
+              <p className="title">
+                <FontAwesomeIcon icon={faFlask} />
+                &nbsp;Grafo simples
+              </p>
               <div className="graph-example-container">
                 <button
                   className="button is-small"

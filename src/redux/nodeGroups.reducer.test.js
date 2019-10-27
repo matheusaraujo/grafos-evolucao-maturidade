@@ -15,10 +15,10 @@ const defaultNodeGroups = [{
 describe('nodeGroups reducer', () => {
   test('should handle UPDATE_NODE_GROUPS', () => {
     expect(nodeGroups(undefined, { type: 'UPDATE_NODE_GROUPS', nodeGroups: defaultNodeGroups }))
-      .toEqual(defaultNodeGroups);
+      .toStrictEqual(defaultNodeGroups);
   });
   test('should handle default', () => {
     expect(nodeGroups(undefined, undefined))
-      .toEqual([]);
+      .toStrictEqual([]);
   });
 });

@@ -43,3 +43,6 @@ wercker.yml
 
 # misc
 *.md
+
+!istanbul-reports/lib/html/assets
+!istanbul-api/node_modules/istanbul-reports/lib/html/assets

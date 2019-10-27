@@ -3,45 +3,72 @@ import page from './page.reducer';
 describe('page reducer', () => {
   test('should handle default', () => {
     expect(page(undefined, undefined))
-      .toEqual({
+      .toStrictEqual({
         lang: 'pt',
         mode: 'initial',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle INIT_APP', () => {
     expect(page(undefined, { type: 'INIT_APP' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'initial',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle VIEW_GRAPH', () => {
     expect(page(undefined, { type: 'VIEW_GRAPH' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'viewing',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle EDIT_NODES', () => {
     expect(page(undefined, { type: 'EDIT_NODES' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'editing_nodes',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle EDIT_NODE_GROUPS', () => {
     expect(page(undefined, { type: 'EDIT_NODE_GROUPS' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'editing_node_groups',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle EDIT_EDGES', () => {
     expect(page(undefined, { type: 'EDIT_EDGES' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'editing_edges',
+        features: {
+          nexts: false,
+        },
       });
   });
   test('should handle EDIT_OPTIONS', () => {
     expect(page(undefined, { type: 'EDIT_OPTIONS' }))
-      .toMatchObject({
+      .toStrictEqual({
+        lang: 'pt',
         mode: 'editing_options',
+        features: {
+          nexts: false,
+        },
       });
   });
 });
