@@ -166,7 +166,7 @@ exports[`InitialPage should match snapshot 1`] = `
               Engenharia de Sistemas 20182 v2
             </button>
             <p>
-              Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182. Considerando as disciplians cursadas por Matheus até 20192.
+              Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182. Considerando as disciplinas cursadas por Matheus até 20192.
             </p>
           </div>
         </div>

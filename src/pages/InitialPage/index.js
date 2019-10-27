@@ -12,6 +12,11 @@ const mapDispatchToProps = (dispatch) => ({
   viewGraph: () => { dispatch(viewGraph()); },
 
   openBasicGraph: () => {
+    dispatch(updateOptions({
+      hierarchical: true,
+      hierarchicalDirection: 'R',
+      animation: true,
+    }));
     dispatch(updateNodeGroups(basicGraph.groups));
     dispatch(updateGraph({ nodes: basicGraph.nodes, edges: basicGraph.edges }));
     dispatch(viewGraph());
