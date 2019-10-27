@@ -8,7 +8,7 @@ import './InitialPage.scss';
 
 const InitialPage = ({
   openBasicGraph,
-  openSystemEngineerGraph,
+  openSystemEngineerGraph1,
   openSystemEngineerGraph2,
   openSystemEngineerGraph3,
   openSystemEngineerGraph4,
@@ -64,7 +64,7 @@ const InitialPage = ({
                 <button
                   className="button is-small"
                   type="button"
-                  onClick={openSystemEngineerGraph}
+                  onClick={openSystemEngineerGraph1}
                 >
                   Engenharia de Sistemas
                 </button>
@@ -129,7 +129,7 @@ const InitialPage = ({
 
 InitialPage.propTypes = {
   openBasicGraph: PropTypes.func.isRequired,
-  openSystemEngineerGraph: PropTypes.func.isRequired,
+  openSystemEngineerGraph1: PropTypes.func.isRequired,
   openSystemEngineerGraph2: PropTypes.func.isRequired,
   openSystemEngineerGraph3: PropTypes.func.isRequired,
   openSystemEngineerGraph4: PropTypes.func.isRequired,

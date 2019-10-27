@@ -14,8 +14,8 @@ const NodeGroupsAce = ({ lang, nodeGroups, update }) => {
     <div>
       <button
         type="button"
-        className="button is-primary"
-        style={{ float: 'right' }}
+        className="button is-primary is-small"
+        style={{ marginBottom: '12px' }}
         disabled={!isValidNodeGroups}
         onClick={() => {
           update(fromAceEditor(tmpNodeGroups));
@@ -28,7 +28,6 @@ const NodeGroupsAce = ({ lang, nodeGroups, update }) => {
         mode="json"
         theme="textmate"
         name="NODE_GROUPS_EDITOR"
-        width="100%"
         tabSize={2}
         onChange={(value) => {
           setTmpNodeGroups(value);

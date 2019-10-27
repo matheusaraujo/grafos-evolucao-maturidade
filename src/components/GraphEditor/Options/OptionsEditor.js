@@ -9,7 +9,7 @@ const OptionsEditor = ({ lang, options, updateOptions }) => {
   };
   return (
     <div className="columns">
-      <div className="column is-half">
+      <div className="column">
         <OptionsAce lang={lang} options={options} update={update} />
       </div>
     </div>

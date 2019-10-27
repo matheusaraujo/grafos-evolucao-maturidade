@@ -14,8 +14,8 @@ const NodesAce = ({ lang, nodes, update }) => {
     <div>
       <button
         type="button"
-        className="button is-primary"
-        style={{ float: 'right' }}
+        className="button is-primary is-small"
+        style={{ marginBottom: '12px' }}
         disabled={!isValidNodes}
         onClick={() => {
           update(fromAceEditor(tmpNodes));
@@ -29,7 +29,6 @@ const NodesAce = ({ lang, nodes, update }) => {
         mode="json"
         theme="textmate"
         name="NODES_EDITOR"
-        width="100%"
         tabSize={2}
         onChange={(value) => {
           setTmpNodes(value);

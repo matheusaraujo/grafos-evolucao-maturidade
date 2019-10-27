@@ -14,8 +14,8 @@ const EdgesAce = ({ lang, edges, update }) => {
     <div>
       <button
         type="button"
-        className="button is-primary"
-        style={{ float: 'right' }}
+        className="button is-primary is-small"
+        style={{ marginBottom: '12px' }}
         disabled={!isValidEdges}
         onClick={() => {
           update(fromAceEditor(tmpEdges));
@@ -28,7 +28,6 @@ const EdgesAce = ({ lang, edges, update }) => {
         mode="json"
         theme="textmate"
         name="EDGES_EDITOR"
-        width="100%"
         tabSize={2}
         onChange={(value) => {
           setTmpEdges(value);

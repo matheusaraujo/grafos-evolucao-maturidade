@@ -146,6 +146,7 @@ exports[`InitialPage should match snapshot 1`] = `
           >
             <button
               className="button is-small"
+              onClick={[Function]}
               type="button"
             >
               Engenharia de Sistemas 20182
@@ -159,6 +160,7 @@ exports[`InitialPage should match snapshot 1`] = `
           >
             <button
               className="button is-small"
+              onClick={[Function]}
               type="button"
             >
               Engenharia de Sistemas 20182 - Matheus
@@ -172,6 +174,7 @@ exports[`InitialPage should match snapshot 1`] = `
           >
             <button
               className="button is-small"
+              onClick={[Function]}
               type="button"
             >
               Engenharia de Sistemas 20182 - Calouro

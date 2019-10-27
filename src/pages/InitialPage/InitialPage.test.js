@@ -10,12 +10,18 @@ describe('InitialPage', () => {
   test('should match snapshot', () => {
     const lang = 'pt';
     const openBasicGraph = () => { };
-    const openSystemEngineerGraph = () => { };
+    const openSystemEngineerGraph1 = () => { };
+    const openSystemEngineerGraph2 = () => { };
+    const openSystemEngineerGraph3 = () => { };
+    const openSystemEngineerGraph4 = () => { };
     const component = shallow(
       <InitialPage
         lang={lang}
         openBasicGraph={openBasicGraph}
-        openSystemEngineerGraph={openSystemEngineerGraph}
+        openSystemEngineerGraph1={openSystemEngineerGraph1}
+        openSystemEngineerGraph2={openSystemEngineerGraph2}
+        openSystemEngineerGraph3={openSystemEngineerGraph3}
+        openSystemEngineerGraph4={openSystemEngineerGraph4}
       />,
     );
     expect(toJson(component)).toMatchSnapshot();

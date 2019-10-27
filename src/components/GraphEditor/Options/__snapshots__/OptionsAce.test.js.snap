@@ -3,12 +3,12 @@
 exports[`OptionsAce should match snapshot 1`] = `
 <div>
   <button
-    className="button is-primary"
+    className="button is-primary is-small"
     disabled={false}
     onClick={[Function]}
     style={
       Object {
-        "float": "right",
+        "marginBottom": "12px",
       }
     }
     type="button"
@@ -58,7 +58,7 @@ exports[`OptionsAce should match snapshot 1`] = `
  \\"hierarchical\\": true,
  \\"animation\\": false
 }"
-    width="100%"
+    width="500px"
     wrapEnabled={false}
   />
 </div>

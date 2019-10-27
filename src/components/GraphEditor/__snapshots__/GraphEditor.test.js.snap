@@ -5,7 +5,7 @@ exports[`GraphEditor should match snapshot 1`] = `
   className="box"
 >
   <div
-    className="tabs"
+    className="tabs is-small"
   >
     <ul>
       <li

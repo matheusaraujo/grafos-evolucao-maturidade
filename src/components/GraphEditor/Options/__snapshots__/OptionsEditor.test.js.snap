@@ -5,7 +5,7 @@ exports[`OptionsEditor should match snapshot 1`] = `
   className="columns"
 >
   <div
-    className="column is-half"
+    className="column"
   >
     <OptionsAce
       lang="pt"

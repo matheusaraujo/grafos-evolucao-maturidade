@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(viewGraph());
   },
 
-  openSystemEngineerGraph: () => {
+  openSystemEngineerGraph1: () => {
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',

@@ -14,8 +14,8 @@ const OptionsAce = ({ lang, options, update }) => {
     <div>
       <button
         type="button"
-        className="button is-primary"
-        style={{ float: 'right' }}
+        className="button is-primary is-small"
+        style={{ marginBottom: '12px' }}
         disabled={!isValidOptions}
         onClick={() => {
           update(fromAceEditor(tmpOptions));
@@ -28,7 +28,6 @@ const OptionsAce = ({ lang, options, update }) => {
         mode="json"
         theme="textmate"
         name="OPTIONS_EDITOR"
-        width="100%"
         tabSize={2}
         onChange={(value) => {
           setTmpOptions(value);
