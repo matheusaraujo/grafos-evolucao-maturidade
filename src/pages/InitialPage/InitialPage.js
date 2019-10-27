@@ -14,6 +14,8 @@ const InitialPage = ({
   openSystemEngineerGraph2,
   openSystemEngineerGraph3,
   openSystemEngineerGraph4,
+  openDevOpsGraph1,
+  openDevOpsGraph2,
 }) => {
   return (
     <div>
@@ -127,7 +129,32 @@ const InitialPage = ({
               <FontAwesomeIcon icon={faLaptopCode} />&nbsp;
               DevOps
             </p>
-            <p className="subtitle">Subtitle</p>
+            <div className="content">
+              <div className="graph-example-container">
+                <button
+                  className="button is-small"
+                  type="button"
+                  onClick={openDevOpsGraph1}
+                >
+                  DevOps v1
+                </button>
+                <p>
+                  Modelo de Maturidade DevOps
+                </p>
+              </div>
+              <div className="graph-example-container">
+                <button
+                  className="button is-small"
+                  type="button"
+                  onClick={openDevOpsGraph2}
+                >
+                  DevOps v2
+                </button>
+                <p>
+                  Modelo de Maturidade DevOps com maior nível de granularidade
+                </p>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -141,6 +168,8 @@ InitialPage.propTypes = {
   openSystemEngineerGraph2: PropTypes.func.isRequired,
   openSystemEngineerGraph3: PropTypes.func.isRequired,
   openSystemEngineerGraph4: PropTypes.func.isRequired,
+  openDevOpsGraph1: PropTypes.func.isRequired,
+  openDevOpsGraph2: PropTypes.func.isRequired,
 };
 
 export default InitialPage;

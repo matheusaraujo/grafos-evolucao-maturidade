@@ -6,6 +6,8 @@ import { updateNodeGroups, updateOptions } from '../../redux/general.actions';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
 import systemEngineerGraph20182 from '../../examples/systemEngineerGraph.20182';
+import devOpsGraphGeneral from '../../examples/devOpsGraph.general';
+import devOpsGraphDetailed from '../../examples/devOpsGraph.detailed';
 
 const mapDispatchToProps = (dispatch) => ({
   updateNodeGroups: (nodeGroups) => { dispatch(updateNodeGroups(nodeGroups)); },
@@ -79,6 +81,35 @@ const mapDispatchToProps = (dispatch) => ({
       nodes: systemEngineerGraph20182.nodes.map((n) => (
         { ...n, status: 0 })),
       edges: systemEngineerGraph20182.edges,
+    }));
+    dispatch(viewGraph());
+  },
+
+  openDevOpsGraph1: () => {
+    dispatch(setFeatures({ nexts: false }));
+    dispatch(updateOptions({
+      hierarchical: true,
+      hierarchicalDirection: 'D',
+      animation: true,
+    }));
+    dispatch(updateNodeGroups(devOpsGraphGeneral.groups));
+    dispatch(updateGraph({
+      nodes: devOpsGraphGeneral.nodes,
+      edges: devOpsGraphGeneral.edges,
+    }));
+    dispatch(viewGraph());
+  },
+
+  openDevOpsGraph2: () => {
+    dispatch(setFeatures({ nexts: false }));
+    dispatch(updateOptions({
+      hierarchical: false,
+      animation: true,
+    }));
+    dispatch(updateNodeGroups(devOpsGraphDetailed.groups));
+    dispatch(updateGraph({
+      nodes: devOpsGraphDetailed.nodes,
+      edges: devOpsGraphDetailed.edges,
     }));
     dispatch(viewGraph());
   },

@@ -14,6 +14,8 @@ describe('InitialPage', () => {
     const openSystemEngineerGraph2 = () => { };
     const openSystemEngineerGraph3 = () => { };
     const openSystemEngineerGraph4 = () => { };
+    const openDevOpsGraph1 = () => { };
+    const openDevOpsGraph2 = () => { };
     const component = shallow(
       <InitialPage
         lang={lang}
@@ -22,6 +24,8 @@ describe('InitialPage', () => {
         openSystemEngineerGraph2={openSystemEngineerGraph2}
         openSystemEngineerGraph3={openSystemEngineerGraph3}
         openSystemEngineerGraph4={openSystemEngineerGraph4}
+        openDevOpsGraph1={openDevOpsGraph1}
+        openDevOpsGraph2={openDevOpsGraph2}
       />,
     );
     expect(toJson(component)).toMatchSnapshot();

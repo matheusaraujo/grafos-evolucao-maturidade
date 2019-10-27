@@ -287,11 +287,36 @@ exports[`InitialPage should match snapshot 1`] = `
           />
             DevOps
         </p>
-        <p
-          className="subtitle"
+        <div
+          className="content"
         >
-          Subtitle
-        </p>
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              type="button"
+            >
+              DevOps v1
+            </button>
+            <p>
+              Modelo de Maturidade DevOps
+            </p>
+          </div>
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              type="button"
+            >
+              DevOps v2
+            </button>
+            <p>
+              Modelo de Maturidade DevOps com maior nível de granularidade
+            </p>
+          </div>
+        </div>
       </article>
     </div>
   </div>
