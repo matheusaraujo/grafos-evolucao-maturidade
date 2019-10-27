@@ -12,8 +12,8 @@ const Menu = ({ lang, initApp }) => (
   <nav className="navbar is-fixed-top is-primary">
     <div className="navbar-start">
       <div className="navbar-item">
-        <FontAwesomeIcon icon={faProjectDiagram} />
-        <strong className="navbar-item">
+        <FontAwesomeIcon icon={faProjectDiagram} size="2x" />
+        <strong className="is-size-5 navbar-title">
           {labels.maturityEvolutionGraphsTitle[lang]}
         </strong>
       </div>
