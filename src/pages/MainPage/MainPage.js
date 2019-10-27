@@ -7,25 +7,12 @@ import Menu from '../../components/Menu/index';
 import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
-import Calcs from '../../components/Calcs/index';
-import * as labels from '../../utils/labels';
 import './MainPage.scss';
 
 const MainPage = ({
-  lang, pageMode,
-  initApp, editNodes, viewGraph,
+  pageMode,
+  editNodes, viewGraph,
 }) => {
-  const buttonBack = (
-    <button
-      type="button"
-      className="button is-danger"
-      style={{ float: 'right' }}
-      onClick={initApp}
-    >
-      {labels.restart[lang]}
-    </button>
-  );
-
   const buttonEdit = (
     <button
       className={pageMode === 'viewing' ? 'unselected' : 'selected'}
@@ -33,6 +20,7 @@ const MainPage = ({
       onClick={editNodes}
     >
       <FontAwesomeIcon icon={faEdit} />
+      Editar&nbsp;&nbsp;&nbsp;
     </button>
   );
 
@@ -43,45 +31,28 @@ const MainPage = ({
       onClick={viewGraph}
     >
       <FontAwesomeIcon icon={faEye} />
+      Visualizar
     </button>
   );
 
   return (
     <div>
       <Menu />
-      <div className="container is-fluid">
-        &nbsp;
-        <h1 className="title">
-          <div className="page-mode">
-            {buttonView}
-            {buttonEdit}
-          </div>
-        </h1>
-        <div className="calcs">
-          <Calcs />
+      <div>
+        <div className="page-mode">
+          {buttonView}
+          {buttonEdit}
         </div>
         {pageMode === 'viewing' && <GraphViewer />}
-        {pageMode !== 'viewing' && (
-          <div className="columns">
-            <div className="column is-half">
-              <GraphEditor />
-            </div>
-            <div className="column is-half">
-              <GraphViewer />
-            </div>
-          </div>
-        )}
+        {pageMode !== 'viewing' && <GraphEditor />}
         <Modal />
-        {buttonBack}
       </div>
     </div>
   );
 };
 
 MainPage.propTypes = {
-  lang: PropTypes.string.isRequired,
   pageMode: PropTypes.string.isRequired,
-  initApp: PropTypes.func.isRequired,
   editNodes: PropTypes.func.isRequired,
   viewGraph: PropTypes.func.isRequired,
 };
