@@ -20,6 +20,7 @@ const NextsOptions = ({
   const [_maxDistance, setMaxistance] = useState(3);
   const [_forceMinimumLevel, setForceMinimumLevel] = useState(true);
   const [_showNextsOptions, setShowNextsOptions] = useState([]);
+  const [_mustIncludeNodes, setMustIncludeNodes] = useState('');
 
   if (nexts.calculated) {
     content = (
@@ -132,6 +133,22 @@ const NextsOptions = ({
           </div>
         </div>
         <div className="columns is-paddingless is-marginless">
+          <div className="field column is-half">
+            <label className="label is-small" htmlFor="maxDistance">Deve conter as disciplinas
+              <div className="control">
+                <input
+                  className="input is-small"
+                  type="text"
+                  id="mustIncludeNodes"
+                  placeholder="AAA001,BBB002"
+                  value={_mustIncludeNodes}
+                  onChange={(e) => { setMustIncludeNodes(e.target.value); }}
+                />
+              </div>
+            </label>
+          </div>
+        </div>
+        <div className="columns is-paddingless is-marginless">
           <div className="field column is-full">
             <button
               className="button is-primary is-small"
@@ -142,6 +159,7 @@ const NextsOptions = ({
                   maxWeight: _maxWeight,
                   maxDistance: _maxDistance,
                   forceMinimumLevel: _forceMinimumLevel,
+                  mustIncludeNodes: _mustIncludeNodes.length !== 0 ? _mustIncludeNodes.split(',') : null,
                 }, (options) => setShowNextsOptions(Array(options.length).fill(false)));
               }}
             >

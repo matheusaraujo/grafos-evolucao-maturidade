@@ -24,6 +24,7 @@ const mapDispatchToProps = (dispatch) => ({
       maxWeight: params.maxWeight || 375,
       maxDistance: params.maxDistance || 3,
       forceMinimumLevel: params.forceMinimumLevel || false,
+      mustIncludeNodes: params.mustIncludeNodes || null,
     });
     dispatch(endCalcNexts(options));
     callback(options);
