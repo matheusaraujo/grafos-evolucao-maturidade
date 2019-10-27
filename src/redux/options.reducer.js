@@ -1,5 +1,5 @@
 const initialState = {
-  hierarchical: false,
+  hierarchical: true,
   hierarchicalDirection: 'R',
 };
 
