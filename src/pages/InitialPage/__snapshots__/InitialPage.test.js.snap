@@ -127,7 +127,48 @@ exports[`InitialPage should match snapshot 1`] = `
         <div
           className="content"
         >
-          O melhor curso que tem.
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              onClick={[Function]}
+              type="button"
+            >
+              Engenharia de Sistemas
+            </button>
+            <p>
+              Grade curricular do curso de Engenharia de Sistemas da UFMG.
+            </p>
+          </div>
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              onClick={[Function]}
+              type="button"
+            >
+              Engenharia de Sistemas 20182
+            </button>
+            <p>
+              Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182. Com informações de horários.
+            </p>
+          </div>
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              onClick={[Function]}
+              type="button"
+            >
+              Engenharia de Sistemas 20182 v2
+            </button>
+            <p>
+              Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182. Considerando as disciplians cursadas por Matheus até 20192.
+            </p>
+          </div>
         </div>
       </article>
     </div>

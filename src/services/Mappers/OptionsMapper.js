@@ -6,6 +6,27 @@ export const getDirection = (d) => {
   return 'LR';
 };
 
+const layout = (options) => ({
+  hierarchical: {
+    enabled: true,
+    direction: getDirection(options.hierarchicalDirection),
+  },
+});
+
+const physics = {
+  stabilization: {
+    enabled: true,
+  },
+  barnesHut: {
+    gravitationalConstant: -23000,
+    centralGravity: 0,
+    springLength: 0,
+    springConstant: 0.5,
+    damping: 1,
+    avoidOverlap: 1,
+  },
+};
+
 export const mapOptions = (options) => {
   const result = {
     height: '500px',
@@ -16,13 +37,13 @@ export const mapOptions = (options) => {
     },
   };
 
-  if (options.hierarchical && options.hierarchical === true) {
-    result.layout = {
-      hierarchical: {
-        enabled: true,
-        direction: getDirection(options.hierarchicalDirection),
-      },
-    };
+  if (options.hierarchical === true) {
+    result.layout = layout(options);
   }
+
+  if (options.animation === false) {
+    result.physics = physics;
+  }
+
   return result;
 };

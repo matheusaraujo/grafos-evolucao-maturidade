@@ -4,6 +4,7 @@
 
 .graph-example-container {
   display: flex;
+  margin-bottom: 12px;
 }
 
 .graph-example-container > button {
@@ -12,6 +13,10 @@
   flex-grow: 0;
   flex-shrink: 0;
   padding-right: 8px;
+  width: 25%;
+  height: auto;
+  text-align: center;
+  white-space: normal;
 }
 
 .graph-example-container > p {
@@ -20,4 +25,5 @@
   flex-grow: 1;
   flex-shrink: 1;
   padding-left: 8px;
+  width: 75%;
 }

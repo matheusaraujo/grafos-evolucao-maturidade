@@ -11,7 +11,7 @@ describe('OptionsAce', () => {
     const component = shallow(
       <OptionsAce
         lang="pt"
-        options={{ hierarchical: true }}
+        options={{ hierarchical: true, animation: false }}
         update={() => { }}
       />,
     );

@@ -9,15 +9,13 @@ describe('InitialPage', () => {
 
   test('should match snapshot', () => {
     const lang = 'pt';
-    const updateNodeGroups = () => { };
-    const updateGraph = () => { };
-    const viewGraph = () => { };
+    const openBasicGraph = () => { };
+    const openSystemEngineerGraph = () => { };
     const component = shallow(
       <InitialPage
         lang={lang}
-        updateNodeGroups={updateNodeGroups}
-        updateGraph={updateGraph}
-        viewGraph={viewGraph}
+        openBasicGraph={openBasicGraph}
+        openSystemEngineerGraph={openSystemEngineerGraph}
       />,
     );
     expect(toJson(component)).toMatchSnapshot();

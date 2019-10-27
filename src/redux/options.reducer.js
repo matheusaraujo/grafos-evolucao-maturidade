@@ -1,6 +1,7 @@
 const initialState = {
   hierarchical: true,
   hierarchicalDirection: 'R',
+  animation: false,
 };
 
 const options = (state = initialState, action = { type: 'default' }) => {

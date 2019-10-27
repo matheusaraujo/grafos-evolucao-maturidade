@@ -40,6 +40,7 @@ export const mappedOptionsType = shape({
 export const optionsType = shape({
   hierarchical: bool.isRequired,
   hierarchicalDirection: string,
+  animation: bool.isRequired,
 });
 
 export const nodeSubGroupType = shape({
