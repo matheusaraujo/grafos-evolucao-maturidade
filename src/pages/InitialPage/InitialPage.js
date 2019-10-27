@@ -9,6 +9,9 @@ import './InitialPage.scss';
 const InitialPage = ({
   openBasicGraph,
   openSystemEngineerGraph,
+  openSystemEngineerGraph2,
+  openSystemEngineerGraph3,
+  openSystemEngineerGraph4,
 }) => {
   return (
     <div>
@@ -37,7 +40,7 @@ const InitialPage = ({
                 <button
                   className="button is-small"
                   type="button"
-                  onClick={() => openBasicGraph()}
+                  onClick={openBasicGraph}
                 >
                   Grafo simples
                 </button>
@@ -61,7 +64,7 @@ const InitialPage = ({
                 <button
                   className="button is-small"
                   type="button"
-                  onClick={() => openSystemEngineerGraph()}
+                  onClick={openSystemEngineerGraph}
                 >
                   Engenharia de Sistemas
                 </button>
@@ -73,28 +76,38 @@ const InitialPage = ({
                 <button
                   className="button is-small"
                   type="button"
-                  // eslint-disable-next-line no-alert
-                  onClick={() => alert('to-do')}
+                  onClick={openSystemEngineerGraph2}
                 >
                   Engenharia de Sistemas 20182
                 </button>
                 <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
-                  Com informações de horários.
                 </p>
               </div>
               <div className="graph-example-container">
                 <button
                   className="button is-small"
                   type="button"
-                  // eslint-disable-next-line no-alert
-                  onClick={() => alert('to-do')}
+                  onClick={openSystemEngineerGraph3}
                 >
-                  Engenharia de Sistemas 20182 v2
+                  Engenharia de Sistemas 20182 - Matheus
                 </button>
                 <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
                   Considerando as disciplinas cursadas por Matheus até 20192.
+                </p>
+              </div>
+              <div className="graph-example-container">
+                <button
+                  className="button is-small"
+                  type="button"
+                  onClick={openSystemEngineerGraph4}
+                >
+                  Engenharia de Sistemas 20182 - Calouro
+                </button>
+                <p>
+                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
+                  Considerando um aluno calouro.
                 </p>
               </div>
             </div>
@@ -117,6 +130,9 @@ const InitialPage = ({
 InitialPage.propTypes = {
   openBasicGraph: PropTypes.func.isRequired,
   openSystemEngineerGraph: PropTypes.func.isRequired,
+  openSystemEngineerGraph2: PropTypes.func.isRequired,
+  openSystemEngineerGraph3: PropTypes.func.isRequired,
+  openSystemEngineerGraph4: PropTypes.func.isRequired,
 };
 
 export default InitialPage;
