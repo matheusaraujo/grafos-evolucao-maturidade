@@ -10,6 +10,7 @@ import {
   filterMaximumDistanceCombination,
   filterMinimumLevel,
   filterMustIncludeNodes,
+  filterMustNotIncludeSlots,
 } from './getAvailableCombinations';
 import {
   sortCombinations,
@@ -23,6 +24,7 @@ const Nexts = (nodes, edges, {
   maxDistance,
   forceMinimumLevel,
   mustIncludeNodes,
+  mustNotIncludeSlots,
 }) => {
   if (!nodes || nodes.length === 0) return [];
 
@@ -41,6 +43,10 @@ const Nexts = (nodes, edges, {
   if (forceMinimumLevel === true) {
     nextsOptions = filterMinimumLevel(nextsOptions);
   }
+  if (isFilledArray(mustNotIncludeSlots)) {
+    nextsOptions = filterMustNotIncludeSlots(nextsOptions, mustNotIncludeSlots);
+  }
+
   nextsOptions = filterMaximumDistanceCombination(nextsOptions, maxDistance);
 
   nextsOptions = sortCombinations(nextsOptions);

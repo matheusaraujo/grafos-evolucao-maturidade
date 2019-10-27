@@ -25,6 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
       maxDistance: params.maxDistance || 3,
       forceMinimumLevel: params.forceMinimumLevel || false,
       mustIncludeNodes: params.mustIncludeNodes || null,
+      mustNotIncludeSlots: params.mustNotIncludeSlots || null,
     });
     dispatch(endCalcNexts(options));
     callback(options);

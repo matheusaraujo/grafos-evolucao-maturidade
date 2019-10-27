@@ -93,3 +93,15 @@ export const filterMustIncludeNodes = (combinations, mustIncludeNodes) => {
   }
   return result;
 };
+
+export const filterMustNotIncludeSlots = (combinations, mustNotIncludeSlots) => {
+  const result = [];
+  for (let i = 0; i < combinations.length; i += 1) {
+    for (let j = 0; j < mustNotIncludeSlots.length; j += 1) {
+      const { slots } = combinations[i];
+      const contains = slots.some((s) => mustNotIncludeSlots.indexOf(s) > -1);
+      if (!contains) result.push(combinations[i]);
+    }
+  }
+  return result;
+};

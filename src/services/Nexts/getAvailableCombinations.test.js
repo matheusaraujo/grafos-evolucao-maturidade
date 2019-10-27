@@ -8,6 +8,7 @@ import {
   filterMaximumDistanceCombination,
   filterMinimumLevel,
   filterMustIncludeNodes,
+  filterMustNotIncludeSlots,
 } from './getAvailableCombinations';
 
 describe('services - Nexts - getAvailableCombinations', () => {
@@ -223,6 +224,29 @@ describe('services - Nexts - getAvailableCombinations', () => {
       [{ id: 1 }],
     ];
     const received = filterMustIncludeNodes(combinations, [1]);
+    expect(received).toStrictEqual(expected);
+  });
+  test('filterMustNotIncludeSlots', () => {
+    const combinations = [
+      { combination: [{ id: 1 }, { id: 2 }], slots: [1, 2, 3, 4] },
+      { combination: [{ id: 1 }], slots: [1, 2] },
+      { combination: [{ id: 2 }], slots: [3, 4] },
+    ];
+    const expected = [
+      { combination: [{ id: 2 }], slots: [3, 4] },
+    ];
+
+    const received = filterMustNotIncludeSlots(combinations, [1]);
+    expect(received).toStrictEqual(expected);
+  });
+  test('filterMustNotIncludeSlots', () => {
+    const combinations = [
+      { combination: [{ id: 1 }, { id: 2 }], slots: [1, 2, 3, 4] },
+      { combination: [{ id: 1 }], slots: [1, 2] },
+      { combination: [{ id: 2 }], slots: [3, 4] },
+    ];
+    const expected = [];
+    const received = filterMustNotIncludeSlots(combinations, [1, 4]);
     expect(received).toStrictEqual(expected);
   });
 });

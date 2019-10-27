@@ -21,6 +21,7 @@ const NextsOptions = ({
   const [_forceMinimumLevel, setForceMinimumLevel] = useState(true);
   const [_showNextsOptions, setShowNextsOptions] = useState([]);
   const [_mustIncludeNodes, setMustIncludeNodes] = useState('');
+  const [_mustNotIncludeSlots, setMustNotIncludeSlots] = useState('');
 
   if (nexts.calculated) {
     content = (
@@ -134,7 +135,7 @@ const NextsOptions = ({
         </div>
         <div className="columns is-paddingless is-marginless">
           <div className="field column is-half">
-            <label className="label is-small" htmlFor="maxDistance">Deve conter as disciplinas
+            <label className="label is-small" htmlFor="mustIncludeNodes">Deve conter os nós
               <div className="control">
                 <input
                   className="input is-small"
@@ -143,6 +144,20 @@ const NextsOptions = ({
                   placeholder="AAA001,BBB002"
                   value={_mustIncludeNodes}
                   onChange={(e) => { setMustIncludeNodes(e.target.value); }}
+                />
+              </div>
+            </label>
+          </div>
+          <div className="field column is-half">
+            <label className="label is-small" htmlFor="mustNotIncludeSlots">Não deve conter os slots
+              <div className="control">
+                <input
+                  className="input is-small"
+                  type="text"
+                  id="mustNotIncludeSlots"
+                  placeholder="1,2,3"
+                  value={_mustNotIncludeSlots}
+                  onChange={(e) => { setMustNotIncludeSlots(e.target.value); }}
                 />
               </div>
             </label>
@@ -160,6 +175,7 @@ const NextsOptions = ({
                   maxDistance: _maxDistance,
                   forceMinimumLevel: _forceMinimumLevel,
                   mustIncludeNodes: _mustIncludeNodes.length !== 0 ? _mustIncludeNodes.split(',') : null,
+                  mustNotIncludeSlots: _mustNotIncludeSlots.length !== 0 ? _mustNotIncludeSlots.split(',').map((o) => parseInt(o, 10)) : null,
                 }, (options) => setShowNextsOptions(Array(options.length).fill(false)));
               }}
             >
@@ -176,7 +192,7 @@ const NextsOptions = ({
       <div className="modal-background" />
       <div className="modal-card">
         <header className="modal-card-head">
-          <h1>Próximas</h1>
+          <h1 className="title no-margin">Próximas</h1>
           <button
             type="button"
             className="delete"
