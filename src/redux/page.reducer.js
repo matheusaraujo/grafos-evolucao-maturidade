@@ -38,6 +38,11 @@ const page = (state = initialState, action = { type: 'default' }) => {
         ...state,
         mode: 'editing_options',
       };
+    case 'SET_FEATURES':
+      return {
+        ...state,
+        features: action.features,
+      };
     default:
       return state;
   }

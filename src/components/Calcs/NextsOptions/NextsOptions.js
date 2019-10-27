@@ -50,7 +50,7 @@ const NextsOptions = ({
                   <div className="select-button-container">
                     <button
                       type="button"
-                      className="button is-primary"
+                      className="button is-primary is-small"
                       onClick={() => { changeNodesStatus(o.combination.map((c) => c.id)); }}
                     >
                       Selecionar
@@ -61,7 +61,7 @@ const NextsOptions = ({
           </div>
         ))}
         <button
-          className="button is-text"
+          className="button is-text is-small"
           type="button"
           onClick={() => { showNexts(); }}
         >
@@ -75,11 +75,11 @@ const NextsOptions = ({
     content = (
       <div className="content">
         <div className="columns is-paddingless is-marginless">
-          <div className="field column is-half">
-            <label className="label" htmlFor="minWeight">Peso mínimo
+          <div className="field column is-one-quarter">
+            <label className="label is-small" htmlFor="minWeight">Peso mínimo
               <div className="control">
                 <input
-                  className="input"
+                  className="input is-small"
                   type="text"
                   id="minWeight"
                   placeholder="195"
@@ -89,11 +89,11 @@ const NextsOptions = ({
               </div>
             </label>
           </div>
-          <div className="field column is-half">
-            <label className="label" htmlFor="maxWeight">Peso máximo
+          <div className="field column is-one-quarter">
+            <label className="label is-small" htmlFor="maxWeight">Peso máximo
               <div className="control">
                 <input
-                  className="input"
+                  className="input is-small"
                   type="text"
                   id="maxWeight"
                   placeholder="375"
@@ -103,13 +103,11 @@ const NextsOptions = ({
               </div>
             </label>
           </div>
-        </div>
-        <div className="columns is-paddingless is-marginless">
-          <div className="field column is-half">
-            <label className="label" htmlFor="maxDistance">Distância Máxima
+          <div className="field column is-one-quarter">
+            <label className="label is-small" htmlFor="maxDistance">Distância Máxima
               <div className="control">
                 <input
-                  className="input"
+                  className="input is-small"
                   type="text"
                   id="maxDistance"
                   placeholder="3"
@@ -119,9 +117,9 @@ const NextsOptions = ({
               </div>
             </label>
           </div>
-          <div className="field column is-half">
+          <div className="field column is-one-quarter">
             <p>&nbsp;</p>
-            <label className="checkbox" htmlFor="forceMinimumLevel">
+            <label className="checkbox is-small" htmlFor="forceMinimumLevel">
               <input
                 type="checkbox"
                 id="forceMinimumLevel"
@@ -136,7 +134,7 @@ const NextsOptions = ({
         <div className="columns is-paddingless is-marginless">
           <div className="field column is-full">
             <button
-              className="button is-primary"
+              className="button is-primary is-small"
               type="button"
               onClick={() => {
                 beginCalcNexts(graph, {
@@ -160,7 +158,7 @@ const NextsOptions = ({
       <div className="modal-background" />
       <div className="modal-card">
         <header className="modal-card-head">
-          Próximas
+          <h1>Próximas</h1>
           <button
             type="button"
             className="delete"

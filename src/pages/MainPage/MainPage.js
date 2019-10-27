@@ -7,11 +7,15 @@ import Menu from '../../components/Menu/index';
 import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
+import Calcs from '../../components/Calcs/index';
 import './MainPage.scss';
 
 const MainPage = ({
   pageMode,
-  editNodes, viewGraph,
+  editNodes,
+  viewGraph,
+  showNexts,
+  featureNexts,
 }) => {
   const buttonEdit = (
     <button
@@ -35,17 +39,37 @@ const MainPage = ({
     </button>
   );
 
+  const buttonNexts = (
+    <button type="button" className="button is-small is-primary" onClick={showNexts}>
+      Próximas
+    </button>
+  );
+
   return (
     <div>
       <Menu />
       <div>
-        <div className="page-mode">
-          {buttonView}
-          {buttonEdit}
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div>
+            <div className="page-mode">
+              {buttonView}
+              {buttonEdit}
+            </div>
+          </div>
+          <div>
+            {featureNexts
+              ? (
+                <div>
+                  {buttonNexts}
+                </div>
+              )
+              : null}
+          </div>
         </div>
         {pageMode === 'viewing' && <GraphViewer />}
         {pageMode !== 'viewing' && <GraphEditor />}
         <Modal />
+        <Calcs />
       </div>
     </div>
   );
@@ -55,6 +79,8 @@ MainPage.propTypes = {
   pageMode: PropTypes.string.isRequired,
   editNodes: PropTypes.func.isRequired,
   viewGraph: PropTypes.func.isRequired,
+  showNexts: PropTypes.func.isRequired,
+  featureNexts: PropTypes.bool.isRequired,
 };
 
 export default MainPage;

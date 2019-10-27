@@ -2,7 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faLaptopCode, faStickyNote, faFlask } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCogs, faLaptopCode, faStickyNote, faFlask,
+} from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../components/Menu/index';
 import './InitialPage.scss';
 

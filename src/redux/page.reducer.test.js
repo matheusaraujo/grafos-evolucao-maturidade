@@ -71,4 +71,14 @@ describe('page reducer', () => {
         },
       });
   });
+  test('should handle SET_FEATURES', () => {
+    expect(page(undefined, { type: 'SET_FEATURES', features: { nexts: true } }))
+      .toStrictEqual({
+        lang: 'pt',
+        mode: 'initial',
+        features: {
+          nexts: true,
+        },
+      });
+  });
 });

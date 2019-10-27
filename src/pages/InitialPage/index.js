@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import InitialPage from './InitialPage';
 import { updateGraph } from '../../redux/graph.actions';
-import { viewGraph } from '../../redux/page.actions';
+import { viewGraph, setFeatures } from '../../redux/page.actions';
 import { updateNodeGroups, updateOptions } from '../../redux/general.actions';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
@@ -13,6 +13,7 @@ const mapDispatchToProps = (dispatch) => ({
   viewGraph: () => { dispatch(viewGraph()); },
 
   openBasicGraph: () => {
+    dispatch(setFeatures({ nexts: false }));
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',
@@ -24,6 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 
   openSystemEngineerGraph1: () => {
+    dispatch(setFeatures({ nexts: false }));
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',
@@ -35,6 +37,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 
   openSystemEngineerGraph2: () => {
+    dispatch(setFeatures({ nexts: false }));
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',
@@ -50,6 +53,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 
   openSystemEngineerGraph3: () => {
+    dispatch(setFeatures({ nexts: true }));
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',
@@ -64,6 +68,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
 
   openSystemEngineerGraph4: () => {
+    dispatch(setFeatures({ nexts: true }));
     dispatch(updateOptions({
       hierarchical: true,
       hierarchicalDirection: 'R',
