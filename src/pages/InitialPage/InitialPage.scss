@@ -1,0 +1,23 @@
+.is-right {
+  float: right;
+}
+
+.graph-example-container {
+  display: flex;
+}
+
+.graph-example-container > button {
+  display: block;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: 8px;
+}
+
+.graph-example-container > p {
+  display: block;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-left: 8px;
+}

@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit } from '@fortawesome/free-solid-svg-icons';
+import Menu from '../../components/Menu/index';
 import GraphEditor from '../../components/GraphEditor/index';
 import GraphViewer from '../../components/GraphViewer/index';
 import Modal from '../../components/Modal/index';
@@ -46,31 +47,33 @@ const MainPage = ({
   );
 
   return (
-    <div className="container is-fluid">
-      &nbsp;
-      <h1 className="title">
-        {labels.maturityEvolutionGraphsTitle[lang]}
-        <div className="page-mode">
-          {buttonView}
-          {buttonEdit}
+    <div>
+      <Menu />
+      <div className="container is-fluid">
+        &nbsp;
+        <h1 className="title">
+          <div className="page-mode">
+            {buttonView}
+            {buttonEdit}
+          </div>
+        </h1>
+        <div className="calcs">
+          <Calcs />
         </div>
-      </h1>
-      <div className="calcs">
-        <Calcs />
+        {pageMode === 'viewing' && <GraphViewer />}
+        {pageMode !== 'viewing' && (
+          <div className="columns">
+            <div className="column is-half">
+              <GraphEditor />
+            </div>
+            <div className="column is-half">
+              <GraphViewer />
+            </div>
+          </div>
+        )}
+        <Modal />
+        {buttonBack}
       </div>
-      {pageMode === 'viewing' && <GraphViewer />}
-      {pageMode !== 'viewing' && (
-        <div className="columns">
-          <div className="column is-half">
-            <GraphEditor />
-          </div>
-          <div className="column is-half">
-            <GraphViewer />
-          </div>
-        </div>
-      )}
-      <Modal />
-      {buttonBack}
     </div>
   );
 };
