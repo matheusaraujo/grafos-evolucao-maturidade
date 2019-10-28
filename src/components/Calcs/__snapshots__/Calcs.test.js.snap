@@ -1,13 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Calcs should match snapshot 1`] = `
-<div>
-  <button
-    className="button is-primary is-light"
-    onClick={[Function]}
-    type="button"
-  >
-    Próximas
-  </button>
-</div>
-`;
+exports[`Calcs should match snapshot 1`] = `""`;
