@@ -37,7 +37,9 @@ const NextsOptions = ({
             >
               <p className="card-header-title">Opção {i + 1}</p>
               <p className="card-header-subtitle">
-                Distância: <b>{o.distance}</b>, Distância total: <b>{o.totalDistance}</b>, Peso total: <b>{o.totalWeight}</b>
+                Distância: <b>{o.distance}</b>,
+                Distância total: <b>{o.totalDistance}</b>,
+                Peso total: <b>{o.totalWeight}</b>
               </p>
             </header>
             {_showNextsOptions[i]
@@ -68,8 +70,7 @@ const NextsOptions = ({
                 </div>
               )}
           </div>
-        ))
-        }
+        ))}
         <button
           className="button is-text is-small"
           type="button"
@@ -77,7 +78,7 @@ const NextsOptions = ({
         >
           Voltar
         </button>
-      </div >
+      </div>
     );
   } else if (nexts.calculating) {
     content = (<div>Calculando ...</div>);
