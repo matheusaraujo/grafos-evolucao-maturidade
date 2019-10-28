@@ -75,20 +75,20 @@ describe('services - Nexts', () => {
         totalDistance: 0,
       },
       {
-        combination: [node4],
-        distance: 1,
-        minimumLevel: 1,
-        totalWeight: 2,
-        totalDistance: 1,
-        slots: [1, 2],
-      },
-      {
         combination: [node3, node4],
         distance: 1,
         minimumLevel: 1,
         totalWeight: 4,
         slots: [1, 2, 5, 6],
         totalDistance: 1,
+      },
+      {
+        combination: [node4],
+        distance: 1,
+        minimumLevel: 1,
+        totalWeight: 2,
+        totalDistance: 1,
+        slots: [1, 2],
       },
     ];
     const received = Nexts(
@@ -252,20 +252,20 @@ describe('services - Nexts', () => {
     }];
     const expected = [
       {
-        combination: [node4],
-        distance: 1,
-        minimumLevel: 1,
-        totalDistance: 1,
-        totalWeight: 2,
-        slots: [1, 2],
-      },
-      {
         combination: [node3, node4],
         distance: 1,
         minimumLevel: 1,
         totalDistance: 1,
         totalWeight: 4,
         slots: [1, 2, 5, 6],
+      },
+      {
+        combination: [node4],
+        distance: 1,
+        minimumLevel: 1,
+        totalDistance: 1,
+        totalWeight: 2,
+        slots: [1, 2],
       },
     ];
     const received = Nexts(
