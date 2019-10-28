@@ -59,8 +59,8 @@ export const sortCombinations = (classifiedCombinations) => classifiedCombinatio
   if (a.distance < b.distance) return -1;
   if (a.totalDistance > b.totalDistance) return 1;
   if (a.totalDistance < b.totalDistance) return -1;
-  if (a.totalWeight > b.totalWeight) return 1;
-  if (a.totalWeight < b.totalWeight) return -1;
+  if (a.totalWeight > b.totalWeight) return -1;
+  if (a.totalWeight < b.totalWeight) return 1;
   if (a.slots.length > b.slots.length) return 1;
   if (a.slots.length < b.slots.length) return -1;
   return 0;

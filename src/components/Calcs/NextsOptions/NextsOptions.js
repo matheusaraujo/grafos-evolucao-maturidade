@@ -37,7 +37,7 @@ const NextsOptions = ({
             >
               <p className="card-header-title">Opção {i + 1}</p>
               <p className="card-header-subtitle">
-                Distância: <b>{o.distance}</b>, Distância total: <b>{o.totalDistance}</b>
+                Distância: <b>{o.distance}</b>, Distância total: <b>{o.totalDistance}</b>, Peso total: <b>{o.totalWeight}</b>
               </p>
             </header>
             {_showNextsOptions[i]
@@ -46,7 +46,12 @@ const NextsOptions = ({
                   <ul className="inner-ul">
                     {o.combination.map((c) => (
                       <li key={generateRandom()}>
-                        {c.label} - {c.title} <b>{c.level}</b> - <b>{c.weight}</b> - <b>{c.slots.join(',')}</b>
+                        {c.label} - {c.title} <br />
+                        <p className="litle-padding-left">
+                          Nível: <b>{c.level}</b>&nbsp;
+                          Peso: <b>{c.weight}</b>&nbsp;
+                          Slots: <b>{c.slots.join(',')}</b>&nbsp;
+                        </p>
                       </li>
                     ))}
                   </ul>
@@ -63,7 +68,8 @@ const NextsOptions = ({
                 </div>
               )}
           </div>
-        ))}
+        ))
+        }
         <button
           className="button is-text is-small"
           type="button"
@@ -71,7 +77,7 @@ const NextsOptions = ({
         >
           Voltar
         </button>
-      </div>
+      </div >
     );
   } else if (nexts.calculating) {
     content = (<div>Calculando ...</div>);
