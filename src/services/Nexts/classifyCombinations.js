@@ -57,6 +57,8 @@ export const classifyCombinations = (combinations, nodes) => combinations.map((c
 export const sortCombinations = (classifiedCombinations) => classifiedCombinations.sort((a, b) => {
   if (a.distance > b.distance) return 1;
   if (a.distance < b.distance) return -1;
+  if (a.totalDistance > b.totalDistance) return 1;
+  if (a.totalDistance < b.totalDistance) return -1;
   if (a.totalWeight > b.totalWeight) return 1;
   if (a.totalWeight < b.totalWeight) return -1;
   if (a.slots.length > b.slots.length) return 1;

@@ -36,7 +36,9 @@ const NextsOptions = ({
               )}
             >
               <p className="card-header-title">Opção {i + 1}</p>
-              <p className="card-header-subtitle">Distância: <b>{o.distance}</b>, Peso: <b>{o.totalWeight}</b>, Slots: <b>{o.slots.join(',')}</b></p>
+              <p className="card-header-subtitle">
+                Distância: <b>{o.distance}</b>, Distância total: <b>{o.totalDistance}</b>
+              </p>
             </header>
             {_showNextsOptions[i]
               && (
