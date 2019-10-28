@@ -49,7 +49,7 @@ describe('services - Nexts - classifyCombinations', () => {
       status: 0,
       level: 2,
     };
-    expect(getCombinationDistance([node3, node4], 1)).toBe(1);
+    expect(getCombinationDistance([node3, node4], 1)).toStrictEqual([1, 1]);
   });
   test('getCombinationDistance - case 2, distance 0', () => {
     const node3 = {
@@ -58,7 +58,7 @@ describe('services - Nexts - classifyCombinations', () => {
       status: 0,
       level: 1,
     };
-    expect(getCombinationDistance([node3], 1)).toBe(0);
+    expect(getCombinationDistance([node3], 1)).toStrictEqual([0, 0]);
   });
   test('getCombinationDistance - case 3, distance 1', () => {
     const node4 = {
@@ -67,7 +67,7 @@ describe('services - Nexts - classifyCombinations', () => {
       status: 0,
       level: 2,
     };
-    expect(getCombinationDistance([node4], 1)).toBe(1);
+    expect(getCombinationDistance([node4], 1)).toStrictEqual([1, 1]);
   });
   test('getAllSlots', () => {
     const node1 = {
@@ -120,6 +120,7 @@ describe('services - Nexts - classifyCombinations', () => {
     const expected = {
       combination: [node3, node4],
       distance: 1,
+      totalDistance: 1,
       minimumLevel: 1,
       totalWeight: 4,
       slots: [],
@@ -167,6 +168,7 @@ describe('services - Nexts - classifyCombinations', () => {
     const expected = {
       combination: [node3],
       distance: 0,
+      totalDistance: 0,
       minimumLevel: 1,
       totalWeight: 2,
       slots: [],
@@ -215,6 +217,7 @@ describe('services - Nexts - classifyCombinations', () => {
     const expected = {
       combination: [node4],
       distance: 1,
+      totalDistance: 1,
       minimumLevel: 1,
       totalWeight: 2,
       slots: [],
