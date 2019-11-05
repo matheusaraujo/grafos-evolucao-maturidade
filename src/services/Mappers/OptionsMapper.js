@@ -47,7 +47,7 @@ export const mapOptions = (options) => {
     result.layout = layoutHierarchical(options);
   }
 
-  if (options.smoothEdge === true) {
+  if (options.smoothEdges === true) {
     result.edges = smoothEdges();
   }
 
