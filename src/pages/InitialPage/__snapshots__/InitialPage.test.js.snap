@@ -318,6 +318,19 @@ exports[`InitialPage should match snapshot 1`] = `
               Modelo de Maturidade DevOps com maior nível de granularidade
             </p>
           </div>
+          <div
+            className="graph-example-container"
+          >
+            <button
+              className="button is-small"
+              type="button"
+            >
+              DevOps v3
+            </button>
+            <p>
+              Modelo de Maturidade DevOps com maior nível de granularidade aplicado a esta aplicação.
+            </p>
+          </div>
         </div>
       </article>
     </div>

@@ -16,6 +16,7 @@ const InitialPage = ({
   openSystemEngineerGraph4,
   openDevOpsGraph1,
   openDevOpsGraph2,
+  openDevOpsGraph3,
 }) => {
   return (
     <div>
@@ -154,6 +155,19 @@ const InitialPage = ({
                   Modelo de Maturidade DevOps com maior nível de granularidade
                 </p>
               </div>
+              <div className="graph-example-container">
+                <button
+                  className="button is-small"
+                  type="button"
+                  onClick={openDevOpsGraph3}
+                >
+                  DevOps v3
+                </button>
+                <p>
+                  Modelo de Maturidade DevOps com maior nível de granularidade
+                  aplicado a esta aplicação.
+                </p>
+              </div>
             </div>
           </article>
         </div>
@@ -170,6 +184,7 @@ InitialPage.propTypes = {
   openSystemEngineerGraph4: PropTypes.func.isRequired,
   openDevOpsGraph1: PropTypes.func.isRequired,
   openDevOpsGraph2: PropTypes.func.isRequired,
+  openDevOpsGraph3: PropTypes.func.isRequired,
 };
 
 export default InitialPage;

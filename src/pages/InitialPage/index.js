@@ -108,6 +108,21 @@ const mapDispatchToProps = (dispatch) => ({
     }));
     dispatch(updateNodeGroups(devOpsGraphDetailed.groups));
     dispatch(updateGraph({
+      nodes: devOpsGraphDetailed.nodes.map((n) => (
+        { ...n, status: undefined })),
+      edges: devOpsGraphDetailed.edges,
+    }));
+    dispatch(viewGraph());
+  },
+
+  openDevOpsGraph3: () => {
+    dispatch(setFeatures({ nexts: false }));
+    dispatch(updateOptions({
+      hierarchical: false,
+      animation: true,
+    }));
+    dispatch(updateNodeGroups(devOpsGraphDetailed.groups));
+    dispatch(updateGraph({
       nodes: devOpsGraphDetailed.nodes,
       edges: devOpsGraphDetailed.edges,
     }));

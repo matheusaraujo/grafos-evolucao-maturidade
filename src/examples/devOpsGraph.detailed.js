@@ -48,6 +48,7 @@ const devOpsGraph = {
       label: 'QC1A',
       title: 'Qualidade do Código - Inicial',
       details: 'Ausência de padrões de codificação.',
+      status: 1,
     },
     {
       id: 1012,
@@ -55,6 +56,7 @@ const devOpsGraph = {
       label: 'QC1B',
       title: 'Qualidade do Código - Inicial',
       details: 'Qualidade depende de cada desenvolvedor.',
+      status: 1,
     },
     {
       id: 1021,
@@ -62,6 +64,7 @@ const devOpsGraph = {
       label: 'QC2A',
       title: 'Qualidade do Código - Consciente',
       details: 'Busca pela redução do tempo de ciclo e retrabalhos.',
+      status: 1,
     },
     {
       id: 1022,
@@ -69,6 +72,7 @@ const devOpsGraph = {
       label: 'QC2B',
       title: 'Qualidade do Código - Consciente',
       details: 'Ações iniciais em projetos pilotos, com ferramentas de automação.',
+      status: 1,
     },
     {
       id: 1023,
@@ -76,6 +80,7 @@ const devOpsGraph = {
       label: 'QC2C',
       title: 'Qualidade do Código - Consciente',
       details: 'Aproximação entre desenvolvimento, qualidade e operações.',
+      status: 1,
     },
     {
       id: 1031,
@@ -83,6 +88,7 @@ const devOpsGraph = {
       label: 'QC3A',
       title: 'Qualidade do Código - Gerenciado',
       details: 'Automação da revisão por pares.',
+      status: 1,
     },
     {
       id: 1032,
@@ -90,6 +96,7 @@ const devOpsGraph = {
       label: 'QC3B',
       title: 'Qualidade do Código - Gerenciado',
       details: 'Verificação da qualidade ocorre em ambientes dedicados de integração.',
+      status: 1,
     },
     {
       id: 1033,
@@ -97,6 +104,7 @@ const devOpsGraph = {
       label: 'QC3C',
       title: 'Qualidade do Código - Gerenciado',
       details: 'Geração de alertas e defeitos realizados por ferramentas.',
+      status: 1,
     },
     {
       id: 1041,
@@ -104,6 +112,7 @@ const devOpsGraph = {
       label: 'QC4A',
       title: 'Qualidade do Código - Avançado',
       details: 'Qualidade incorpora atributos de qualidade tais como performance, segurança e usabilidade.',
+      status: 0,
     },
     {
       id: 1042,
@@ -111,6 +120,7 @@ const devOpsGraph = {
       label: 'QC4B',
       title: 'Qualidade do Código - Avançado',
       details: 'Verificação da qualidade opera consistentemente em base diária por automações.',
+      status: 1,
     },
     {
       id: 1051,
@@ -118,6 +128,7 @@ const devOpsGraph = {
       label: 'QC5A',
       title: 'Qualidade do Código - Melhoria contínua',
       details: 'Verificação da qualidade é disparada no momento dos _commits_.',
+      status: 1,
     },
     {
       id: 1052,
@@ -125,6 +136,7 @@ const devOpsGraph = {
       label: 'QC5B',
       title: 'Qualidade do Código - Melhoria contínua',
       details: 'Defeitos e não conformidades são resolvidos em base diária.',
+      status: 1,
     },
     {
       id: 1053,
@@ -132,6 +144,7 @@ const devOpsGraph = {
       label: 'QC5C',
       title: 'Qualidade do Código - Melhoria contínua',
       details: '_Dashboards_ de qualidade de código compartilhados publicamente.',
+      status: 1,
     },
     {
       id: 2011,
@@ -139,6 +152,7 @@ const devOpsGraph = {
       label: 'CC1A',
       title: 'Configuração como Código - Inicial',
       details: 'Trabalhos de configuração de ambientes, dados de testes, parâmetros e senhas são manuais.',
+      status: 1,
     },
     {
       id: 2012,
@@ -146,6 +160,7 @@ const devOpsGraph = {
       label: 'CC1B',
       title: 'Configuração como Código - Inicial',
       details: 'Cultura de _scripts_ ainda não foi estabelecidada.',
+      status: 1,
     },
     {
       id: 2021,
@@ -153,6 +168,7 @@ const devOpsGraph = {
       label: 'CC2A',
       title: 'Configuração como Código - Consciente',
       details: '_Scripts_ de automação começam a ser criados.',
+      status: 1,
     },
     {
       id: 2022,
@@ -160,6 +176,7 @@ const devOpsGraph = {
       label: 'CC2B',
       title: 'Configuração como Código - Consciente',
       details: 'Compartilhamento de _scripts_ entre times de desenvolvimento, qualidade e operações.',
+      status: 1,
     },
     {
       id: 2031,
@@ -167,6 +184,7 @@ const devOpsGraph = {
       label: 'CC3A',
       title: 'Configuração como Código - Gerenciado',
       details: '- _Scripts_ para a maior parte dos trabalhos repetitivos.',
+      status: 1,
     },
     {
       id: 2032,
@@ -174,6 +192,7 @@ const devOpsGraph = {
       label: 'CC3B',
       title: 'Configuração como Código - Gerenciado',
       details: 'Repositórios de _scripts_ bem estabelecidos.',
+      status: 1,
     },
     {
       id: 2033,
@@ -181,6 +200,7 @@ const devOpsGraph = {
       label: 'CC3C',
       title: 'Configuração como Código - Gerenciado',
       details: 'Intenso compartilhamento de _scripts_ entre times.',
+      status: 1,
     },
     {
       id: 2041,
@@ -188,6 +208,7 @@ const devOpsGraph = {
       label: 'CC4A',
       title: 'Configuração como Código - Avançado',
       details: '_Scripts_ para provisionamento de máquinas virtuais começam a ser desenvolvidos.',
+      status: 0,
     },
     {
       id: 2042,
@@ -195,6 +216,7 @@ const devOpsGraph = {
       label: 'CC4B',
       title: 'Configuração como Código - Avançado',
       details: 'Infraestrutura como código (IaC) aproxima o trabalho dos times de desenvolvimento e operações.',
+      status: 0,
     },
     {
       id: 2051,
@@ -202,6 +224,7 @@ const devOpsGraph = {
       label: 'CC5A',
       title: 'Configuração como Código - Melhoria Contínua',
       details: 'Infraestrutura como código (IaC) é prática comum.',
+      status: 0,
     },
     {
       id: 2052,
@@ -209,6 +232,7 @@ const devOpsGraph = {
       label: 'CC5B',
       title: 'Configuração como Código - Melhoria Contínua',
       details: 'Sem fricção no provisionamento e configuração de ambientes.',
+      status: 0,
     },
     {
       id: 2053,
@@ -216,6 +240,7 @@ const devOpsGraph = {
       label: 'CC5C',
       title: 'Configuração como Código - Melhoria Contínua',
       details: 'Sinergia entre desenvolvimento e operações.',
+      status: 1,
     },
     {
       id: 3011,
@@ -223,6 +248,7 @@ const devOpsGraph = {
       label: 'GB1A',
       title: 'Gestão de Builds - Inicial',
       details: '_Builds_ são montados nas próprias IDEs.',
+      status: 1,
     },
     {
       id: 3012,
@@ -230,6 +256,7 @@ const devOpsGraph = {
       label: 'GB1B',
       title: 'Gestão de Builds - Inicial',
       details: 'Automação de _builds_ ainda é precária.',
+      status: 1,
     },
     {
       id: 3013,
@@ -237,6 +264,7 @@ const devOpsGraph = {
       label: 'GB1C',
       title: 'Gestão de Builds - Inicial',
       details: 'Uso inicial de ferramentas de linhas de comando de _builds_.',
+      status: 1,
     },
     {
       id: 3021,
@@ -244,6 +272,7 @@ const devOpsGraph = {
       label: 'GB2A',
       title: 'Gestão de Builds - Consciente',
       details: '_Builds_ são realizados em ambientes dedicados, com gestão centralizada de dependências e compilação do código fonte.',
+      status: 1,
     },
     {
       id: 3022,
@@ -251,6 +280,7 @@ const devOpsGraph = {
       label: 'GB2B',
       title: 'Gestão de Builds - Consciente',
       details: '_Builds_ ocorrem de forma automatizada em base diária.',
+      status: 1,
     },
     {
       id: 3031,
@@ -258,6 +288,7 @@ const devOpsGraph = {
       label: 'GB3A',
       title: 'Gestão de Builds - Gerenciado',
       details: '_Builds_ incorporam alguns processos tais como automação de testes, configuração de ambientes, qualidade de código, geração de _tags_ e documentação técnica.',
+      status: 1,
     },
     {
       id: 3032,
@@ -265,6 +296,7 @@ const devOpsGraph = {
       label: 'GB3B',
       title: 'Gestão de Builds - Gerenciado',
       details: ' _Builds_ geram defeitos para desenvolvedores e qualidade.',
+      status: 1,
     },
     {
       id: 3041,
@@ -272,6 +304,7 @@ const devOpsGraph = {
       label: 'GB4A',
       title: 'Gestão de Builds - Avançado',
       details: '_Builds_ incorporam obrigatoriamente automação de testes, configuração de ambiente, qualidade de código, geração de _tags_ e documentação técnica, entre outros.',
+      status: 0,
     },
     {
       id: 3042,
@@ -279,6 +312,7 @@ const devOpsGraph = {
       label: 'GB4B',
       title: 'Gestão de Builds - Avançado',
       details: 'Primeiros experimentos de integração contínua (CI) começam.',
+      status: 1,
     },
     {
       id: 3051,
@@ -286,6 +320,7 @@ const devOpsGraph = {
       label: 'GB5A',
       title: 'Gestão de Builds - Melhoria Contínua',
       details: 'Integração contínua (CI) é prática comum.',
+      status: 1,
     },
     {
       id: 3052,
@@ -293,6 +328,7 @@ const devOpsGraph = {
       label: 'GB5B',
       title: 'Gestão de Builds - Melhoria Contínua',
       details: 'Defeitos e não conformidades são expostos em base contínua pelos _builds_ e resolvidos em base diária pelos times de desenvolvimento.',
+      status: 1,
     },
     {
       id: 4011,
@@ -300,6 +336,7 @@ const devOpsGraph = {
       label: 'GR1A',
       title: 'Gestão de Releases - Inicial',
       details: '- _Builds_ são copiados de forma manual entre ambientes de desenvolvimento, homologação e produção.',
+      status: 1,
     },
     {
       id: 4012,
@@ -307,6 +344,7 @@ const devOpsGraph = {
       label: 'GR1B',
       title: 'Gestão de Releases - Inicial',
       details: 'Parâmetros nos ambientes são configurados manualmente.',
+      status: 1,
     },
     {
       id: 4021,
@@ -314,6 +352,7 @@ const devOpsGraph = {
       label: 'GR2A',
       title: 'Gestão de Releases - Consciente',
       details: 'Automação das cópias dos _builds_ entre ambientes.',
+      status: 1,
     },
     {
       id: 4022,
@@ -321,6 +360,7 @@ const devOpsGraph = {
       label: 'GR2B',
       title: 'Gestão de Releases - Consciente',
       details: 'Parâmetros nos ambientes configurados por _scripts_ automatizados.',
+      status: 1,
     },
     {
       id: 4031,
@@ -328,6 +368,7 @@ const devOpsGraph = {
       label: 'GR3A',
       title: 'Gestão de Releases - Gerenciado',
       details: 'Implantação em homologação ocorre sempre que um _build_ é gerando - Implantação Contínua.',
+      status: 1,
     },
     {
       id: 4032,
@@ -335,6 +376,7 @@ const devOpsGraph = {
       label: 'GR3B',
       title: 'Gestão de Releases - Gerenciado',
       details: 'Automação dos fluxos de aprovação entre ambientes de desenvolvimento, homologação e produção.',
+      status: 1,
     },
     {
       id: 4041,
@@ -342,6 +384,7 @@ const devOpsGraph = {
       label: 'GR4A',
       title: 'Gestão de Releases - Avançado',
       details: 'Provisionamento começa a ocorrer com micro-containeres.',
+      status: 0,
     },
     {
       id: 4042,
@@ -349,6 +392,7 @@ const devOpsGraph = {
       label: 'GR4B',
       title: 'Gestão de Releases - Avançado',
       details: 'Implantação automatizada incorpora o provisionamento de ambientes com uso de conteinerização.',
+      status: 0,
     },
     {
       id: 4051,
@@ -356,6 +400,7 @@ const devOpsGraph = {
       label: 'GR5A',
       title: 'Gestão de Releases - Melhoria Contínua',
       details: 'Implantação em produção ocorre sempre que um _build_ é gerado no ambiente de homologação - *Entrega Contínua*.',
+      status: 1,
     },
     {
       id: 4052,
@@ -363,6 +408,7 @@ const devOpsGraph = {
       label: 'GR5B',
       title: 'Gestão de Releases - Melhoria Contínua',
       details: 'Provisionamento completamente virtualizado.',
+      status: 0,
     },
     {
       id: 4053,
@@ -370,6 +416,7 @@ const devOpsGraph = {
       label: 'GR5C',
       title: 'Gestão de Releases - Melhoria Contínua',
       details: 'Automação da implantação incorpora Infraestrutura coom código (IaC).',
+      status: 0,
     },
     {
       id: 5011,
@@ -377,6 +424,7 @@ const devOpsGraph = {
       label: 'GT1A',
       title: 'Gestão de Testes - Inicial',
       details: 'Sem cultura de testes.',
+      status: 1,
     },
     {
       id: 5012,
@@ -384,6 +432,7 @@ const devOpsGraph = {
       label: 'GT1B',
       title: 'Gestão de Testes - Inicial',
       details: 'Testes são executados de forma exploratória.',
+      status: 1,
     },
     {
       id: 5013,
@@ -391,6 +440,7 @@ const devOpsGraph = {
       label: 'GT1C',
       title: 'Gestão de Testes - Inicial',
       details: 'Defeitos se acumulam nas fases finais dos projetos.',
+      status: 1,
     },
     {
       id: 5021,
@@ -398,6 +448,7 @@ const devOpsGraph = {
       label: 'GT2A',
       title: 'Gestão de Testes - Consciente',
       details: 'Testes funcionais bem estabelecidos.',
+      status: 1,
     },
     {
       id: 5022,
@@ -405,6 +456,7 @@ const devOpsGraph = {
       label: 'GT2B',
       title: 'Gestão de Testes - Consciente',
       details: 'Testes de unidade são introduzidos para regras de negócio complexas.',
+      status: 1,
     },
     {
       id: 5023,
@@ -412,6 +464,7 @@ const devOpsGraph = {
       label: 'GT2C',
       title: 'Gestão de Testes - Consciente',
       details: 'Automação de testes começa a ser experimentada em projetos pilotos.',
+      status: 1,
     },
     {
       id: 5031,
@@ -419,6 +472,7 @@ const devOpsGraph = {
       label: 'GT3A',
       title: 'Gestão de Testes - Gerenciado',
       details: 'Automação de testes ocorre para testes funcionais e testes de unidade.',
+      status: 1,
     },
     {
       id: 5032,
@@ -426,6 +480,7 @@ const devOpsGraph = {
       label: 'GT3B',
       title: 'Gestão de Testes - Gerenciado',
       details: 'Cobertura automatizada do código é monitorada.',
+      status: 1,
     },
     {
       id: 5033,
@@ -433,6 +488,7 @@ const devOpsGraph = {
       label: 'GT3C',
       title: 'Gestão de Testes - Gerenciado',
       details: 'Automação de testes é incorporada aos processos de _build_.',
+      status: 1,
     },
     {
       id: 5041,
@@ -440,6 +496,7 @@ const devOpsGraph = {
       label: 'GT4A',
       title: 'Gestão de Testes - Avançado',
       details: 'Automação de testes incorpora aspectos não-funcionais como segurança e usabilidade.',
+      status: 0,
     },
     {
       id: 5042,
@@ -447,6 +504,7 @@ const devOpsGraph = {
       label: 'GT4B',
       title: 'Gestão de Testes - Avançado',
       details: 'Processos de _build_ possuem suítes de automação de testes robustas e com excelente cobertura de código.',
+      status: 1,
     },
     {
       id: 5043,
@@ -454,6 +512,7 @@ const devOpsGraph = {
       label: 'GT4C',
       title: 'Gestão de Testes - Avançado',
       details: 'Exposição e resolução de defeitos ocorre de forma continuada.',
+      status: 1,
     },
     {
       id: 5051,
@@ -461,6 +520,7 @@ const devOpsGraph = {
       label: 'GT5A',
       title: 'Gestão de Testes - Melhoria Contínua',
       details: 'Testes de sanidade ocorrem em ambientes de produção.',
+      status: 0,
     },
     {
       id: 5052,
@@ -468,6 +528,7 @@ const devOpsGraph = {
       label: 'GT5B',
       title: 'Gestão de Testes - Melhoria Contínua',
       details: 'Práticas de injeção de falhas são experimentadas.',
+      status: 0,
     },
     {
       id: 5053,
@@ -475,6 +536,7 @@ const devOpsGraph = {
       label: 'GT5C',
       title: 'Gestão de Testes - Melhoria Contínua',
       details: 'Testes canários são incoporados nas _releases_.',
+      status: 0,
     },
     {
       id: 6011,
@@ -482,6 +544,7 @@ const devOpsGraph = {
       label: 'GCF1A',
       title: 'Gestão de Configuração - Inicial',
       details: 'Ausência de configuração de código e ambiente.',
+      status: 1,
     },
     {
       id: 6012,
@@ -489,6 +552,7 @@ const devOpsGraph = {
       label: 'GCF1B',
       title: 'Gestão de Configuração - Inicial',
       details: 'Códigos fonte e outros artefatos são armazenados em sistemas de arquivos.',
+      status: 1,
     },
     {
       id: 6013,
@@ -496,6 +560,7 @@ const devOpsGraph = {
       label: 'GCF1C',
       title: 'Gestão de Configuração - Inicial',
       details: 'Sem ferramentas de SCM.',
+      status: 1,
     },
     {
       id: 6021,
@@ -503,6 +568,7 @@ const devOpsGraph = {
       label: 'GCF2A',
       title: 'Gestão de Configuração - Consciente',
       details: 'Ferramentas de gestão de configuração de código (SCM) implementadas.',
+      status: 1,
     },
     {
       id: 6022,
@@ -510,6 +576,7 @@ const devOpsGraph = {
       label: 'GCF2B',
       title: 'Gestão de Configuração - Consciente',
       details: 'Controle automatizado de versionamento de código.',
+      status: 1,
     },
     {
       id: 6023,
@@ -517,6 +584,7 @@ const devOpsGraph = {
       label: 'GCF2C',
       title: 'Gestão de Configuração - Consciente',
       details: '_Labels_ começam a ser usados para marcar versões.',
+      status: 0,
     },
     {
       id: 6031,
@@ -524,6 +592,7 @@ const devOpsGraph = {
       label: 'GCF3A',
       title: 'Gestão de Configuração - Gerenciado',
       details: 'Gestão da configuração começa a incorporar binários e _scripts_ de automação de tarefas.',
+      status: 1,
     },
     {
       id: 6032,
@@ -531,6 +600,7 @@ const devOpsGraph = {
       label: 'GCF3B',
       title: 'Gestão de Configuração - Gerenciado',
       details: 'Políticas de SCM estabelecidas.',
+      status: 1,
     },
     {
       id: 6033,
@@ -538,6 +608,7 @@ const devOpsGraph = {
       label: 'GCF3C',
       title: 'Gestão de Configuração - Gerenciado',
       details: 'Automação das políticas de SCM começam a ser experimentadas.',
+      status: 1,
     },
     {
       id: 6041,
@@ -545,6 +616,7 @@ const devOpsGraph = {
       label: 'GCF4A',
       title: 'Gestão de Configuração - Avançado',
       details: 'Maior parte dos binários de componentes e bibliotecas fazem parte da gestão de configuração.',
+      status: 1,
     },
     {
       id: 6042,
@@ -552,6 +624,7 @@ const devOpsGraph = {
       label: 'GCF4B',
       title: 'Gestão de Configuração - Avançado',
       details: 'Políticas de SCM incorporam barreiras sólidas de qualidade.',
+      status: 1,
     },
     {
       id: 6043,
@@ -559,6 +632,7 @@ const devOpsGraph = {
       label: 'GCF4C',
       title: 'Gestão de Configuração - Avançado',
       details: 'Políticas de SCM plenamente automatizadas.',
+      status: 0,
     },
     {
       id: 6051,
@@ -566,6 +640,7 @@ const devOpsGraph = {
       label: 'GCF5A',
       title: 'Gestão de Configuração - Melhoria Contínua',
       details: 'Todos os binários de componentes e bibliotecas fazem parte da gestão de configuração.',
+      status: 1,
     },
     {
       id: 6052,
@@ -573,6 +648,7 @@ const devOpsGraph = {
       label: 'GCF5B',
       title: 'Gestão de Configuração - Melhoria Contínua',
       details: 'Gestão da configuração incorpora ambientes virtualizados e trata a infraestrutura como código (IaC).',
+      status: 0,
     },
     {
       id: 6053,
@@ -580,6 +656,7 @@ const devOpsGraph = {
       label: 'GCF5C',
       title: 'Gestão de Configuração - Melhoria Contínua',
       details: 'Ambientes _self-services_ são estabelecidos.',
+      status: 0,
     },
     {
       id: 7011,
@@ -587,6 +664,7 @@ const devOpsGraph = {
       label: 'TC1A',
       title: 'Testes de Carga - Inicial',
       details: 'Testes de carga não são executados pelos times desenvolvimento, qualidade e operações.',
+      status: 1,
     },
     {
       id: 7012,
@@ -594,6 +672,7 @@ const devOpsGraph = {
       label: 'TC1B',
       title: 'Testes de Carga - Inicial',
       details: 'Problemas com tempos de resposta e indisponibilidade em produção.',
+      status: 1,
     },
     {
       id: 7021,
@@ -601,6 +680,7 @@ const devOpsGraph = {
       label: 'TC2A',
       title: 'Testes de Carga - Consciente',
       details: 'Testes de carga são introduzidos no processo de desenvolvimento.',
+      status: 0,
     },
     {
       id: 7022,
@@ -608,6 +688,7 @@ const devOpsGraph = {
       label: 'TC2B',
       title: 'Testes de Carga - Consciente',
       details: 'Automação dos testes de carga começa a ser experimentada.',
+      status: 0,
     },
     {
       id: 7031,
@@ -615,6 +696,7 @@ const devOpsGraph = {
       label: 'TC3A',
       title: 'Testes de Carga - Gerenciado',
       details: 'Variações dos testes de carga como testes de performance, estresse e testes de maturidade começam a ser adotadas.',
+      status: 0,
     },
     {
       id: 7032,
@@ -622,6 +704,7 @@ const devOpsGraph = {
       label: 'TC3B',
       title: 'Testes de Carga - Gerenciado',
       details: 'Problemas de indisponibilidade reduzidos em produção.',
+      status: 0,
     },
     {
       id: 7041,
@@ -629,6 +712,7 @@ const devOpsGraph = {
       label: 'TC4A',
       title: 'Testes de Carga - Avançado',
       details: 'Testes de carga, estresse e maturidade incorporados aos processos de _builds_ e _releases_.',
+      status: 0,
     },
     {
       id: 7042,
@@ -636,6 +720,7 @@ const devOpsGraph = {
       label: 'TC4B',
       title: 'Testes de Carga - Avançado',
       details: 'Planejamento de capacidade fornece diretrizes de provisionamento de ambiente em produção.',
+      status: 0,
     },
     {
       id: 7051,
@@ -643,6 +728,7 @@ const devOpsGraph = {
       label: 'TC5A',
       title: 'Testes de Carga - Melhoria Contínua',
       details: 'Testes de carga fornecem políticas automatizadas de infraestrutura de código para responder a picos de utilização em ambientes de produção.',
+      status: 0,
     },
     {
       id: 7052,
@@ -650,6 +736,7 @@ const devOpsGraph = {
       label: 'TC5B',
       title: 'Testes de Carga - Melhoria Contínua',
       details: 'Problemas de indisponibilidade são raros em produção.',
+      status: 0,
     },
     {
       id: 8011,
@@ -657,6 +744,7 @@ const devOpsGraph = {
       label: 'MA1A',
       title: 'Monitoração de Aplicações - Inicial',
       details: 'Aplicações rodam sem supervisão no ambiente de produção.',
+      status: 1,
     },
     {
       id: 8021,
@@ -664,6 +752,7 @@ const devOpsGraph = {
       label: 'MA2A',
       title: 'Monitoração de Aplicações - Consciente',
       details: 'Times de operação começam a incorporar ferramentas de monitoração de aplicações.',
+      status: 0,
     },
     {
       id: 8022,
@@ -671,6 +760,7 @@ const devOpsGraph = {
       label: 'MA2B',
       title: 'Monitoração de Aplicações - Consciente',
       details: 'Aplicações monitoradas não geram _feedbacks_ acionáveis para times de desenvolvimento.',
+      status: 1,
     },
     {
       id: 8031,
@@ -678,6 +768,7 @@ const devOpsGraph = {
       label: 'MA3A',
       title: 'Monitoração de Aplicações - Gerenciado',
       details: 'A monitoração de aplicações em produção opera de forma continuada.',
+      status: 0,
     },
     {
       id: 8032,
@@ -685,6 +776,7 @@ const devOpsGraph = {
       label: 'MA3B',
       title: 'Monitoração de Aplicações - Gerenciado',
       details: 'Dados de disponibilidade, carga e performance são regularmente repassados para os times de desenvolvimento.',
+      status: 0,
     },
     {
       id: 8041,
@@ -692,6 +784,7 @@ const devOpsGraph = {
       label: 'MA4A',
       title: 'Monitoração de Aplicações - Avançado',
       details: 'A monitoração de aplicações incorpora práticas de telemetria.',
+      status: 0,
     },
     {
       id: 8042,
@@ -699,6 +792,7 @@ const devOpsGraph = {
       label: 'MA4B',
       title: 'Monitoração de Aplicações - Avançado',
       details: 'Experimentos com telemetria coletam dados de uso para gerar aprendizados de negócio para os times de desenvolvimento.',
+      status: 0,
     },
     {
       id: 8051,
@@ -706,6 +800,7 @@ const devOpsGraph = {
       label: 'MA5A',
       title: 'Monitoração de Aplicações - Melhoria Contínua',
       details: 'Monitoração de uso integra o trabalho dos times de desenvolvimento, qualidade e operações.',
+      status: 0,
     },
     {
       id: 8052,
@@ -713,6 +808,7 @@ const devOpsGraph = {
       label: 'MA5',
       title: 'Monitoração de Aplicações - Melhoria Contínua',
       details: 'Novos requisitos de negócio são guiados pelo uso da aplicação em produção.',
+      status: 0,
     },
     {
       id: 8053,
@@ -720,6 +816,7 @@ const devOpsGraph = {
       label: 'MA5C',
       title: 'Monitoração de Aplicações - Melhoria Contínua',
       details: '_Feedbacks_ de monitoração plenamente acionáveis para os times',
+      status: 0,
     },
   ],
   edges: [
@@ -836,7 +933,7 @@ const devOpsGraph = {
     { id: 112, from: 7032, to: 7052 },
     { id: 113, from: 6052, to: 7051 },
     { id: 114, from: 8011, to: 8021 },
-    { id: 115, from: 8021, to: 8022 },
+    { id: 115, from: 8022, to: 8021 },
     { id: 116, from: 8022, to: 8031 },
     { id: 117, from: 8031, to: 8032 },
     { id: 118, from: 2022, to: 8032 },
@@ -846,6 +943,7 @@ const devOpsGraph = {
     { id: 122, from: 8032, to: 8051 },
     { id: 123, from: 8042, to: 8052 },
     { id: 124, from: 8042, to: 8053 },
+    { id: 125, from: 8021, to: 8031 },
   ],
 };
 
