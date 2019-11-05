@@ -2,6 +2,7 @@ const initialState = {
   hierarchical: true,
   hierarchicalDirection: 'R',
   animation: false,
+  smoothEdges: true,
 };
 
 const options = (state = initialState, action = { type: 'default' }) => {

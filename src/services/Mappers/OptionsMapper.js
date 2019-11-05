@@ -6,10 +6,16 @@ export const getDirection = (d) => {
   return 'LR';
 };
 
-const layout = (options) => ({
+const layoutHierarchical = (options) => ({
   hierarchical: {
     enabled: true,
     direction: getDirection(options.hierarchicalDirection),
+  },
+});
+
+const smoothEdges = () => ({
+  smooth: {
+    enabled: true,
   },
 });
 
@@ -38,7 +44,11 @@ export const mapOptions = (options) => {
   };
 
   if (options.hierarchical === true) {
-    result.layout = layout(options);
+    result.layout = layoutHierarchical(options);
+  }
+
+  if (options.smoothEdge === true) {
+    result.edges = smoothEdges();
   }
 
   if (options.animation === false) {
