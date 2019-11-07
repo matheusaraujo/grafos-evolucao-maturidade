@@ -49,4 +49,55 @@ describe('optionsMapper', () => {
     const received = mapOptions(input);
     expect(received).toStrictEqual(expected);
   });
+  test('mapOptions - smoothEdges', () => {
+    const input = {
+      smoothEdges: true,
+    };
+
+    const expected = {
+      height: '500px',
+      interaction: {
+        hover: true,
+        hoverConnectedEdges: true,
+        selectConnectedEdges: false,
+      },
+      edges: {
+        smooth: {
+          enabled: true,
+        },
+      },
+    };
+
+    const received = mapOptions(input);
+    expect(received).toStrictEqual(expected);
+  });
+  test('mapOptions - smoothEdges', () => {
+    const input = {
+      animation: false,
+    };
+
+    const expected = {
+      height: '500px',
+      interaction: {
+        hover: true,
+        hoverConnectedEdges: true,
+        selectConnectedEdges: false,
+      },
+      physics: {
+        stabilization: {
+          enabled: true,
+        },
+        barnesHut: {
+          gravitationalConstant: -23000,
+          centralGravity: 0,
+          springLength: 0,
+          springConstant: 0.5,
+          damping: 1,
+          avoidOverlap: 1,
+        },
+      },
+    };
+    const received = mapOptions(input);
+    expect(received).toStrictEqual(expected);
+  });
 });

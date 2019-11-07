@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NextsOptions should match snapshot 1`] = `
+<div
+  className="modal is-active"
+>
+  <div
+    className="modal-background"
+  />
+  <div
+    className="modal-card"
+  >
+    <header
+      className="modal-card-head"
+    >
+      <h1
+        className="title no-margin"
+      >
+        Próximas
+      </h1>
+      <button
+        aria-label="close"
+        className="delete"
+        onClick={[Function]}
+        type="button"
+      />
+    </header>
+    <section
+      className="modal-card-body"
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="columns is-paddingless is-marginless"
+        >
+          <div
+            className="field column is-one-quarter"
+          >
+            <label
+              className="label is-small"
+              htmlFor="minWeight"
+            >
+              Peso mínimo
+              <div
+                className="control"
+              >
+                <input
+                  className="input is-small"
+                  id="minWeight"
+                  onChange={[Function]}
+                  placeholder="195"
+                  type="text"
+                  value={195}
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="field column is-one-quarter"
+          >
+            <label
+              className="label is-small"
+              htmlFor="maxWeight"
+            >
+              Peso máximo
+              <div
+                className="control"
+              >
+                <input
+                  className="input is-small"
+                  id="maxWeight"
+                  onChange={[Function]}
+                  placeholder="375"
+                  type="text"
+                  value={375}
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="field column is-one-quarter"
+          >
+            <label
+              className="label is-small"
+              htmlFor="maxDistance"
+            >
+              Distância Máxima
+              <div
+                className="control"
+              >
+                <input
+                  className="input is-small"
+                  id="maxDistance"
+                  onChange={[Function]}
+                  placeholder="3"
+                  type="text"
+                  value={3}
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="field column is-one-quarter"
+          >
+            <p>
+               
+            </p>
+            <label
+              className="checkbox is-small"
+              htmlFor="forceMinimumLevel"
+            >
+              <input
+                checked={true}
+                id="forceMinimumLevel"
+                onChange={[Function]}
+                placeholder="3"
+                type="checkbox"
+              />
+               Forçar nível mínimo
+            </label>
+          </div>
+        </div>
+        <div
+          className="columns is-paddingless is-marginless"
+        >
+          <div
+            className="field column is-half"
+          >
+            <label
+              className="label is-small"
+              htmlFor="mustIncludeNodes"
+            >
+              Deve conter os nós
+              <div
+                className="control"
+              >
+                <input
+                  className="input is-small"
+                  id="mustIncludeNodes"
+                  onChange={[Function]}
+                  placeholder="AAA001,BBB002"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+          <div
+            className="field column is-half"
+          >
+            <label
+              className="label is-small"
+              htmlFor="mustNotIncludeSlots"
+            >
+              Não deve conter os slots
+              <div
+                className="control"
+              >
+                <input
+                  className="input is-small"
+                  id="mustNotIncludeSlots"
+                  onChange={[Function]}
+                  placeholder="1,2,3"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+        </div>
+        <div
+          className="columns is-paddingless is-marginless"
+        >
+          <div
+            className="field column is-full"
+          >
+            <button
+              className="button is-primary is-small"
+              onClick={[Function]}
+              type="button"
+            >
+              Calcular
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      className="modal-card-foot"
+    />
+  </div>
+</div>
+`;

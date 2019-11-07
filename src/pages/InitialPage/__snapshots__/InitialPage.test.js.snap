@@ -323,6 +323,7 @@ exports[`InitialPage should match snapshot 1`] = `
           >
             <button
               className="button is-small"
+              onClick={[Function]}
               type="button"
             >
               DevOps v3

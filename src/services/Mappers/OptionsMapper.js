@@ -13,11 +13,11 @@ const layoutHierarchical = (options) => ({
   },
 });
 
-const smoothEdges = () => ({
+const smoothEdges = {
   smooth: {
     enabled: true,
   },
-});
+};
 
 const physics = {
   stabilization: {
@@ -48,7 +48,7 @@ export const mapOptions = (options) => {
   }
 
   if (options.smoothEdges === true) {
-    result.edges = smoothEdges();
+    result.edges = smoothEdges;
   }
 
   if (options.animation === false) {

@@ -4,7 +4,7 @@ export const getGroup = (node, group) => {
   let g = '';
   let sg = '';
   if (group) {
-    g = group.label ? `**Grupo**: ${group.label}  \n` : '';
+    g = group.label ? `**Grupo:** ${group.label}  \n` : '';
     const subGroup = group.subGroups
       && group.subGroups.find((g1) => g1.id === node.subGroupId);
     if (subGroup) sg = subGroup.label ? `**Subgrupo:** ${subGroup.label}  \n` : '';
@@ -21,11 +21,11 @@ export const mapNodeDetails = (node, nodeGroups) => {
   const sg = gg[1];
   let s = '';
   if (node.slots) {
-    s = `**Slots**: ${node.slots.join(', ')}  \n`;
+    s = `**Slots:** ${node.slots.join(', ')}  \n`;
   }
   let st = '';
   if (isDefined(node.status)) {
-    st = `**Status**: ${node.status === 1 ? 'Concluído' : 'Não concluído'}  \n`;
+    st = `**Status:** ${node.status === 1 ? 'Concluído' : 'Não concluído'}  \n`;
   }
   return `${node.details}  \n---  \n${w + l + g + sg + s + st}`;
 };
