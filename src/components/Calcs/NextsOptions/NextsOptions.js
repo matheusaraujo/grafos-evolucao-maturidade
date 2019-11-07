@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { nextsType, graphType } from '../../../utils/types';
-import generateRandom from '../../../utils/random';
+import { generateRandom } from '../../../utils/random';
 import './NextsOptions.scss';
 
 const NextsOptions = ({
