@@ -1,13 +1,14 @@
 import { getCombinationTotalWeight } from './utils';
+import { getNumber } from '../../utils/number';
 
 const isMinimumWeight = (combination, minWeight) => {
   const totalWeight = getCombinationTotalWeight(combination);
-  return totalWeight >= minWeight;
+  return totalWeight >= getNumber(minWeight);
 };
 
 const isMaximumWeight = (combination, maxWeight) => {
   const totalWeight = getCombinationTotalWeight(combination);
-  return totalWeight <= maxWeight;
+  return totalWeight <= getNumber(maxWeight);
 };
 
 export const filterMinimumWeightCombination = (combinations, minWeight) => {
