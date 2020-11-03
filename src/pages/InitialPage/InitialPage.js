@@ -14,6 +14,7 @@ const InitialPage = ({
   openSystemEngineerGraph2,
   openSystemEngineerGraph3,
   openSystemEngineerGraph4,
+  openSystemEngineerGraph5,
   openDevOpsGraph1,
   openDevOpsGraph2,
   openDevOpsGraph3,
@@ -75,52 +76,64 @@ const InitialPage = ({
                 <button
                   className="button is-small"
                   type="button"
-                  onClick={openSystemEngineerGraph1}
+                  onClick={openSystemEngineerGraph5}
                 >
+                  Engenharia de Sistemas - 20201
+                </button>
+                <p>
+                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20201.
+                </p>
+              </div>
+            </div>
+            <div className="graph-example-container">
+              <button
+                className="button is-small"
+                type="button"
+                onClick={openSystemEngineerGraph1}
+              >
                   Engenharia de Sistemas
-                </button>
-                <p>
+              </button>
+              <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG.
-                </p>
-              </div>
-              <div className="graph-example-container">
-                <button
-                  className="button is-small"
-                  type="button"
-                  onClick={openSystemEngineerGraph2}
-                >
+              </p>
+            </div>
+            <div className="graph-example-container">
+              <button
+                className="button is-small"
+                type="button"
+                onClick={openSystemEngineerGraph2}
+              >
                   Engenharia de Sistemas 20182
-                </button>
-                <p>
+              </button>
+              <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
-                </p>
-              </div>
-              <div className="graph-example-container">
-                <button
-                  className="button is-small"
-                  type="button"
-                  onClick={openSystemEngineerGraph3}
-                >
+              </p>
+            </div>
+            <div className="graph-example-container">
+              <button
+                className="button is-small"
+                type="button"
+                onClick={openSystemEngineerGraph3}
+              >
                   Engenharia de Sistemas 20182 - Matheus
-                </button>
-                <p>
+              </button>
+              <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
                   Considerando as disciplinas cursadas por Matheus até 20192.
-                </p>
-              </div>
-              <div className="graph-example-container">
-                <button
-                  className="button is-small"
-                  type="button"
-                  onClick={openSystemEngineerGraph4}
-                >
+              </p>
+            </div>
+            <div className="graph-example-container">
+              <button
+                className="button is-small"
+                type="button"
+                onClick={openSystemEngineerGraph4}
+              >
                   Engenharia de Sistemas 20182 - Calouro
-                </button>
-                <p>
+              </button>
+              <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
                   Considerando um aluno calouro.
-                </p>
-              </div>
+              </p>
             </div>
           </article>
         </div>
@@ -182,6 +195,7 @@ InitialPage.propTypes = {
   openSystemEngineerGraph2: PropTypes.func.isRequired,
   openSystemEngineerGraph3: PropTypes.func.isRequired,
   openSystemEngineerGraph4: PropTypes.func.isRequired,
+  openSystemEngineerGraph5: PropTypes.func.isRequired,
   openDevOpsGraph1: PropTypes.func.isRequired,
   openDevOpsGraph2: PropTypes.func.isRequired,
   openDevOpsGraph3: PropTypes.func.isRequired,

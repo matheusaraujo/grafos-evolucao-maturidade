@@ -14,6 +14,7 @@ describe('InitialPage', () => {
     const openSystemEngineerGraph2 = () => { };
     const openSystemEngineerGraph3 = () => { };
     const openSystemEngineerGraph4 = () => { };
+    const openSystemEngineerGraph5 = () => { };
     const openDevOpsGraph1 = () => { };
     const openDevOpsGraph2 = () => { };
     const openDevOpsGraph3 = () => { };
@@ -25,6 +26,7 @@ describe('InitialPage', () => {
         openSystemEngineerGraph2={openSystemEngineerGraph2}
         openSystemEngineerGraph3={openSystemEngineerGraph3}
         openSystemEngineerGraph4={openSystemEngineerGraph4}
+        openSystemEngineerGraph5={openSystemEngineerGraph5}
         openDevOpsGraph1={openDevOpsGraph1}
         openDevOpsGraph2={openDevOpsGraph2}
         openDevOpsGraph3={openDevOpsGraph3}

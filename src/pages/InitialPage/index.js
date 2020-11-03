@@ -6,6 +6,7 @@ import { updateNodeGroups, updateOptions } from '../../redux/general.actions';
 import basicGraph from '../../examples/basicGraph';
 import systemEngineerGraph from '../../examples/systemEngineerGraph';
 import systemEngineerGraph20182 from '../../examples/systemEngineerGraph.20182';
+import systemEngineerGraph20201 from '../../examples/systemEngineerGraph.20201';
 import devOpsGraphGeneral from '../../examples/devOpsGraph.general';
 import devOpsGraphDetailed from '../../examples/devOpsGraph.detailed';
 
@@ -81,6 +82,22 @@ const mapDispatchToProps = (dispatch) => ({
       nodes: systemEngineerGraph20182.nodes.map((n) => (
         { ...n, status: 0 })),
       edges: systemEngineerGraph20182.edges,
+    }));
+    dispatch(viewGraph());
+  },
+
+  openSystemEngineerGraph5: () => {
+    dispatch(setFeatures({ nexts: true }));
+    dispatch(updateOptions({
+      hierarchical: true,
+      hierarchicalDirection: 'R',
+      animation: false,
+    }));
+    dispatch(updateNodeGroups(systemEngineerGraph20201.groups));
+    dispatch(updateGraph({
+      nodes: systemEngineerGraph20201.nodes.map((n) => (
+        { ...n, status: 2 })),
+      edges: systemEngineerGraph20201.edges,
     }));
     dispatch(viewGraph());
   },
