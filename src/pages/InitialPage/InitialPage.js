@@ -119,7 +119,7 @@ const InitialPage = ({
               </button>
               <p>
                   Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
-                  Considerando as disciplinas cursadas por Matheus até 20192.
+                  Considerando as disciplinas cursadas por Matheus até 20201.
               </p>
             </div>
             <div className="graph-example-container">
