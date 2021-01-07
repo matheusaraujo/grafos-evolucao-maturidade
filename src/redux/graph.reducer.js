@@ -1,6 +1,7 @@
 const initialState = {
   nodes: [],
   edges: [],
+  epoch: 0,
 };
 
 const graph = (state = initialState, action = { type: 'default' }) => {
@@ -8,6 +9,7 @@ const graph = (state = initialState, action = { type: 'default' }) => {
     case 'UPDATE_GRAPH':
       return {
         ...state,
+        epoch: 1,
         ...action.graph,
       };
     case 'UPDATE_NODES':
@@ -24,8 +26,18 @@ const graph = (state = initialState, action = { type: 'default' }) => {
       return {
         ...state,
         nodes: state.nodes.map((n) => (
-          n.id !== action.id ? n : { ...n, status: action.status, temp: action.temp })),
+          n.id !== action.id ? n : {
+            ...n,
+            status: action.status,
+            temp: action.temp,
+            epoch: action.epoch
+          })),
       };
+    case 'INCREMENT_EPOCH':
+      return {
+        ...state,
+        epoch: state.epoch + 1
+      }
     default:
       return state;
   }

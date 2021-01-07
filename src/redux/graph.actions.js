@@ -13,9 +13,14 @@ export const updateEdges = (edges) => ({
   edges,
 });
 
-export const updateNodeStatus = (id, status, temp) => ({
+export const updateNodeStatus = (id, status, temp, epoch) => ({
   type: 'UPDATE_NODE_STATUS',
   id,
   status,
   temp,
+  epoch,
+});
+
+export const incrementEpoch = () => ({
+  type: 'INCREMENT_EPOCH',
 });

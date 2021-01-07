@@ -3,7 +3,7 @@ import graph from './graph.reducer';
 describe('graph reducer', () => {
   test('should handle UPDATE_GRAPH', () => {
     expect(graph(undefined, { type: 'UPDATE_GRAPH', graph: { edges: [], nodes: [] } }))
-      .toStrictEqual({ edges: [], nodes: [] });
+      .toStrictEqual({ edges: [], nodes: [], epoch: 1 });
   });
   test('should handle UPDATE_NODES', () => {
     expect(graph(undefined, { type: 'UPDATE_NODES', nodes: [{ id: 1 }] }))

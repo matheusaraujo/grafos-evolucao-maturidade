@@ -4,9 +4,9 @@ import {
   showNexts,
   hideNexts,
   beginCalcNexts,
-  endCalcNexts,
+  endCalcNexts,  
 } from '../../../redux/nexts.actions';
-import { updateNodeStatus } from '../../../redux/graph.actions';
+import { updateNodeStatus, incrementEpoch } from '../../../redux/graph.actions';
 import Nexts from '../../../services/Nexts/Nexts';
 
 const mapStateToProps = (state) => ({
@@ -30,8 +30,9 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(endCalcNexts(options));
     callback(options);
   },
-  changeNodesStatus: (ids) => {
-    ids.forEach((id) => dispatch(updateNodeStatus(id, 1, true)));
+  changeNodesStatus: (ids, epoch) => {    
+    ids.forEach((id) => dispatch(updateNodeStatus(id, 1, true, epoch)));
+    dispatch(incrementEpoch());
     dispatch(hideNexts());
   },
 });
