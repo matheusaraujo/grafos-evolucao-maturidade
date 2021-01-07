@@ -62,7 +62,12 @@ const NextsOptions = ({
                     <button
                       type="button"
                       className="button is-primary is-small"
-                      onClick={() => { changeNodesStatus(o.combination.map((c) => c.id), graph.epoch); }}
+                      onClick={() => {
+                        changeNodesStatus(
+                          o.combination.map((c) => c.id),
+                          graph.epoch,
+                        );
+                      }}
                     >
                       Selecionar
                     </button>

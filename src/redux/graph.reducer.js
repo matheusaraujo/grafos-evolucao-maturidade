@@ -30,14 +30,14 @@ const graph = (state = initialState, action = { type: 'default' }) => {
             ...n,
             status: action.status,
             temp: action.temp,
-            epoch: action.epoch
+            epoch: action.epoch,
           })),
       };
     case 'INCREMENT_EPOCH':
       return {
         ...state,
-        epoch: state.epoch + 1
-      }
+        epoch: state.epoch + 1,
+      };
     default:
       return state;
   }
