@@ -3,6 +3,7 @@
   "author": "Matheus Araujo",
   "license": "MIT",
   "version": "0.1.0",
+  "homepage": "https://matheusaraujo.github.io/grafos-evolucao-maturidade",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.24",
@@ -12,7 +13,6 @@
     "bulma": "^0.7.5",
     "bulma-extensions": "^6.2.7",
     "eslint-config-airbnb": "^18.0.1",
-    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-ace": "^7.0.4",
@@ -24,6 +24,8 @@
     "redux": "^4.0.4"
   },
   "scripts": {
+    "predeploy": "yarn && react-scripts build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "yarn && react-scripts build",
     "test": "jest --env=jsdom",
@@ -34,7 +36,6 @@
     "test:components": "jest --env=jsdom src/components/ src/pages/ --coverage --collectCoverageFrom=\"src/(components|pages)/**/*.js\"",
     "test:engsis": "jest \"src/.*\\.engsis.test.js\"",
     "eject": "react-scripts eject",
-    "deploy": "firebase deploy",
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
     "lint": "eslint src --fix"
   },
@@ -70,11 +71,13 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
+    "gh-pages": "^4.0.0",
     "husky": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "24.8.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0",
+    "sass": "^1.56.1",
     "sinon": "^7.4.1"
   }
 }
