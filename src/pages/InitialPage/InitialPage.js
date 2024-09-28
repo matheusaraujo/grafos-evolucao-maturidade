@@ -6,7 +6,7 @@ import {
   faCogs,
   faLaptopCode,
   faStickyNote,
-  faFlask
+  faFlask,
 } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../components/Menu/index';
 import './InitialPage.scss';
@@ -20,7 +20,7 @@ const InitialPage = ({
   openSystemEngineerGraph5,
   openDevOpsGraph1,
   openDevOpsGraph2,
-  openDevOpsGraph3
+  openDevOpsGraph3,
 }) => {
   return (
     <div>
@@ -211,7 +211,7 @@ InitialPage.propTypes = {
   openSystemEngineerGraph5: PropTypes.func.isRequired,
   openDevOpsGraph1: PropTypes.func.isRequired,
   openDevOpsGraph2: PropTypes.func.isRequired,
-  openDevOpsGraph3: PropTypes.func.isRequired
+  openDevOpsGraph3: PropTypes.func.isRequired,
 };
 
 export default InitialPage;
