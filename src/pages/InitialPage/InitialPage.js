@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCogs, faLaptopCode, faStickyNote, faFlask,
+  faCogs,
+  faLaptopCode,
+  faStickyNote,
+  faFlask
 } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../components/Menu/index';
 import './InitialPage.scss';
@@ -17,7 +20,7 @@ const InitialPage = ({
   openSystemEngineerGraph5,
   openDevOpsGraph1,
   openDevOpsGraph2,
-  openDevOpsGraph3,
+  openDevOpsGraph3
 }) => {
   return (
     <div>
@@ -26,18 +29,29 @@ const InitialPage = ({
         <div className="tile is-parent is-8">
           <article className="tile is-child box">
             <p className="title">
-              <FontAwesomeIcon icon={faStickyNote} />&nbsp;
-              Sobre
+              <FontAwesomeIcon icon={faStickyNote} />
+              &nbsp; Sobre
             </p>
-            <p className="subtitle">Uma proposta de representação da evolução do conhecimento por meio de grafos.</p>
+            <p className="subtitle">
+              Uma proposta de representação da evolução do conhecimento por meio
+              de grafos.
+            </p>
             <div className="content">
-              Este é um trabalho desenvolvido por <a href="mailto:matheus.saraujo@gmail.com">Matheus Araujo</a>,
-              como Trabalho de Conclusão de Curso da Graduação em Engenharia de Sistemas
-              na Universidade Federal de Minas Gerais. <br />
-              Sua proposta consiste em representar
-              modelos de avanço de maturidade utilizando grafos. <br />
-              Este site é uma implementação online da ferramenta proposta no trabalho. <br />
-              Seu código fonte e maiores informações podem ser encontrados <a href="http://github.com/matheusaraujo/grafos-evolucao-maturidade" target="blank">aqui</a>.
+              Este é um trabalho desenvolvido por Matheus Araujo, como Trabalho
+              de Conclusão de Curso da Graduação em Engenharia de Sistemas na
+              Universidade Federal de Minas Gerais. <br />
+              Sua proposta consiste em representar modelos de avanço de
+              maturidade utilizando grafos. <br />
+              Este site é uma implementação online da ferramenta proposta no
+              trabalho. <br />
+              Seu código fonte e maiores informações podem ser encontrados{' '}
+              <a
+                href="http://github.com/matheusaraujo/grafos-evolucao-maturidade"
+                target="blank"
+              >
+                aqui
+              </a>
+              .
             </div>
           </article>
         </div>
@@ -56,9 +70,7 @@ const InitialPage = ({
                 >
                   Grafo simples
                 </button>
-                <p>
-                  Um pequeno grafo apenas como demonstração da ferramenta.
-                </p>
+                <p>Um pequeno grafo apenas como demonstração da ferramenta.</p>
               </div>
             </div>
           </article>
@@ -68,8 +80,8 @@ const InitialPage = ({
         <div className="tile is-parent is-6">
           <article className="tile is-child box">
             <p className="title">
-              <FontAwesomeIcon icon={faCogs} />&nbsp;
-                  Engenharia de Sistemas
+              <FontAwesomeIcon icon={faCogs} />
+              &nbsp; Engenharia de Sistemas
             </p>
             <div className="content">
               <div className="graph-example-container">
@@ -81,7 +93,8 @@ const InitialPage = ({
                   Engenharia de Sistemas - 20201
                 </button>
                 <p>
-                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20201.
+                  Grade curricular do curso de Engenharia de Sistemas da UFMG,
+                  versão 20201.
                 </p>
               </div>
             </div>
@@ -91,10 +104,10 @@ const InitialPage = ({
                 type="button"
                 onClick={openSystemEngineerGraph1}
               >
-                  Engenharia de Sistemas
+                Engenharia de Sistemas
               </button>
               <p>
-                  Grade curricular do curso de Engenharia de Sistemas da UFMG.
+                Grade curricular do curso de Engenharia de Sistemas da UFMG.
               </p>
             </div>
             <div className="graph-example-container">
@@ -103,10 +116,11 @@ const InitialPage = ({
                 type="button"
                 onClick={openSystemEngineerGraph2}
               >
-                  Engenharia de Sistemas 20182
+                Engenharia de Sistemas 20182
               </button>
               <p>
-                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
+                Grade curricular do curso de Engenharia de Sistemas da UFMG,
+                versão 20182.
               </p>
             </div>
             <div className="graph-example-container">
@@ -115,11 +129,12 @@ const InitialPage = ({
                 type="button"
                 onClick={openSystemEngineerGraph3}
               >
-                  Engenharia de Sistemas 20182 - Matheus
+                Engenharia de Sistemas 20182 - Matheus
               </button>
               <p>
-                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
-                  Considerando as disciplinas cursadas por Matheus até 20201.
+                Grade curricular do curso de Engenharia de Sistemas da UFMG,
+                versão 20182. Considerando as disciplinas cursadas por Matheus
+                até 20201.
               </p>
             </div>
             <div className="graph-example-container">
@@ -128,11 +143,11 @@ const InitialPage = ({
                 type="button"
                 onClick={openSystemEngineerGraph4}
               >
-                  Engenharia de Sistemas 20182 - Calouro
+                Engenharia de Sistemas 20182 - Calouro
               </button>
               <p>
-                  Grade curricular do curso de Engenharia de Sistemas da UFMG, versão 20182.
-                  Considerando um aluno calouro.
+                Grade curricular do curso de Engenharia de Sistemas da UFMG,
+                versão 20182. Considerando um aluno calouro.
               </p>
             </div>
           </article>
@@ -140,8 +155,8 @@ const InitialPage = ({
         <div className="tile is-parent is-6">
           <article className="tile is-child box">
             <p className="title">
-              <FontAwesomeIcon icon={faLaptopCode} />&nbsp;
-              DevOps
+              <FontAwesomeIcon icon={faLaptopCode} />
+              &nbsp; DevOps
             </p>
             <div className="content">
               <div className="graph-example-container">
@@ -152,9 +167,7 @@ const InitialPage = ({
                 >
                   DevOps v1
                 </button>
-                <p>
-                  Modelo de Maturidade DevOps
-                </p>
+                <p>Modelo de Maturidade DevOps</p>
               </div>
               <div className="graph-example-container">
                 <button
@@ -198,7 +211,7 @@ InitialPage.propTypes = {
   openSystemEngineerGraph5: PropTypes.func.isRequired,
   openDevOpsGraph1: PropTypes.func.isRequired,
   openDevOpsGraph2: PropTypes.func.isRequired,
-  openDevOpsGraph3: PropTypes.func.isRequired,
+  openDevOpsGraph3: PropTypes.func.isRequired
 };
 
 export default InitialPage;

@@ -56,19 +56,14 @@ exports[`InitialPage should match snapshot 1`] = `
         <div
           className="content"
         >
-          Este é um trabalho desenvolvido por 
-          <a
-            href="mailto:matheus.saraujo@gmail.com"
-          >
-            Matheus Araujo
-          </a>
-          , como Trabalho de Conclusão de Curso da Graduação em Engenharia de Sistemas na Universidade Federal de Minas Gerais. 
+          Este é um trabalho desenvolvido por Matheus Araujo, como Trabalho de Conclusão de Curso da Graduação em Engenharia de Sistemas na Universidade Federal de Minas Gerais. 
           <br />
           Sua proposta consiste em representar modelos de avanço de maturidade utilizando grafos. 
           <br />
           Este site é uma implementação online da ferramenta proposta no trabalho. 
           <br />
-          Seu código fonte e maiores informações podem ser encontrados 
+          Seu código fonte e maiores informações podem ser encontrados
+           
           <a
             href="http://github.com/matheusaraujo/grafos-evolucao-maturidade"
             target="blank"
