@@ -1,0 +1,21 @@
+name: pull-request
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn
+      - run: yarn lint
+      - run: yarn test
