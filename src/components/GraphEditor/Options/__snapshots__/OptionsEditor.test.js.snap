@@ -10,7 +10,7 @@ exports[`OptionsEditor should match snapshot 1`] = `
     <OptionsAce
       lang="pt"
       options={
-        Object {
+        {
           "animation": false,
           "hierarchical": true,
         }
