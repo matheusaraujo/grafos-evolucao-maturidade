@@ -29,7 +29,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "test": "jest --env=jsdom",
     "test:coverage": "yarn run test --coverage",
     "test:conversion": "jest --env=jsdom conversion/ --coverage --collectCoverageFrom=\"conversion/*.js\"",
     "test:redux": "jest --env=jsdom src/redux/ --coverage --collectCoverageFrom=\"src/redux/*.js\"",
@@ -39,13 +39,8 @@
     "eject": "react-scripts eject",
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn test"
-    }
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -70,7 +65,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.8",
     "enzyme-to-json": "^3.6.2",
-    "eslint": "^9.11.1",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.30.0",
