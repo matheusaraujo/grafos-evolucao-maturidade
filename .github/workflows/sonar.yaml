@@ -21,7 +21,6 @@ jobs:
         working-directory: ./coverage
         run: |
           sed -i 's/\/home\/runner\/work\/grafos-evolucao-maturidade\/grafos-evolucao-maturidade\//\/github\/workspace\//g' lcov.info
-          sed -i 's/\/home\/runner\/work\/grafos-evolucao-maturidade\/grafos-evolucao-maturidade\//\/github\/workspace\//g' sonar-cloud-reporter.xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
