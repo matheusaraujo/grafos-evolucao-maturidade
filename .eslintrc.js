@@ -4,27 +4,27 @@ module.exports = {
     react: {
       createClass: 'createReactClass',
       pragma: 'React',
-      version: '16.4',
+      version: '16.4'
     },
     'import/resolver': {
       node: {
-        moduleDirectory: ['node_modules', 'src/'],
-      },
-    },
+        moduleDirectory: ['node_modules', 'src/']
+      }
+    }
   },
   env: {
     browser: true,
     jest: true,
     es6: true,
-    node: true,
+    node: true
   },
   extends: ['airbnb'],
   plugins: ['react', 'jsx-a11y', 'import'],
   parserOptions: {
-    'sourceType': 'module',
+    sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   rules: {
     'linebreak-style': 'off',
@@ -37,17 +37,17 @@ module.exports = {
         tabWidth: 2,
         ignoreUrls: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-      },
+        ignoreTemplateLiterals: true
+      }
     ],
     'react/jsx-filename-extension': [
       'error',
       {
-        extensions: ['.js', 'jsx'],
-      },
+        extensions: ['.js', 'jsx']
+      }
     ],
     'global-require': 'off',
     'react/forbid-prop-types': ['error', { forbid: ['any'] }],
-    'import/no-dynamic-require': 'off',
+    'import/no-dynamic-require': 'off'
   }
 };
