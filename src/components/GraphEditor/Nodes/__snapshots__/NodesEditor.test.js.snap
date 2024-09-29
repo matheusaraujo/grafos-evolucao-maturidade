@@ -9,7 +9,7 @@ exports[`NodesEditor should match snapshot 1`] = `
   >
     <NodesAce
       lang="pt"
-      nodes={[]}
+      nodes={Array []}
       update={[Function]}
     />
   </div>

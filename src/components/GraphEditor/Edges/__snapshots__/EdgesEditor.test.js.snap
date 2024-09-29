@@ -8,7 +8,7 @@ exports[`EdgesEditor should match snapshot 1`] = `
     className="column"
   >
     <EdgesAce
-      edges={[]}
+      edges={Array []}
       lang="pt"
       update={[Function]}
     />

@@ -7,7 +7,7 @@ exports[`OptionsAce should match snapshot 1`] = `
     disabled={false}
     onClick={[Function]}
     style={
-      {
+      Object {
         "marginBottom": "12px",
       }
     }
@@ -18,7 +18,7 @@ exports[`OptionsAce should match snapshot 1`] = `
   <ReactAce
     cursorStart={1}
     editorProps={
-      {
+      Object {
         "$blockScrolling": Infinity,
       }
     }
@@ -41,22 +41,22 @@ exports[`OptionsAce should match snapshot 1`] = `
     placeholder={null}
     readOnly={false}
     scrollMargin={
-      [
+      Array [
         0,
         0,
         0,
         0,
       ]
     }
-    setOptions={{}}
+    setOptions={Object {}}
     showGutter={true}
     showPrintMargin={true}
-    style={{}}
+    style={Object {}}
     tabSize={2}
     theme="textmate"
     value="{
- "hierarchical": true,
- "animation": false
+ \\"hierarchical\\": true,
+ \\"animation\\": false
 }"
     width="500px"
     wrapEnabled={false}

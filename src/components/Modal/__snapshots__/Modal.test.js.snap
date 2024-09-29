@@ -34,12 +34,12 @@ exports[`Modal should match snapshot 1`] = `
         className="mark-down-content"
       >
         <ReactMarkdown
-          astPlugins={[]}
+          astPlugins={Array []}
           escapeHtml={true}
-          parserOptions={{}}
-          plugins={[]}
+          parserOptions={Object {}}
+          plugins={Array []}
           rawSourcePos={false}
-          renderers={{}}
+          renderers={Object {}}
           skipHtml={false}
           source="content"
           sourcePos={false}

@@ -7,7 +7,7 @@ exports[`NodeGroupsAce should match snapshot 1`] = `
     disabled={false}
     onClick={[Function]}
     style={
-      {
+      Object {
         "marginBottom": "12px",
       }
     }
@@ -18,7 +18,7 @@ exports[`NodeGroupsAce should match snapshot 1`] = `
   <ReactAce
     cursorStart={1}
     editorProps={
-      {
+      Object {
         "$blockScrolling": Infinity,
       }
     }
@@ -41,17 +41,17 @@ exports[`NodeGroupsAce should match snapshot 1`] = `
     placeholder={null}
     readOnly={false}
     scrollMargin={
-      [
+      Array [
         0,
         0,
         0,
         0,
       ]
     }
-    setOptions={{}}
+    setOptions={Object {}}
     showGutter={true}
     showPrintMargin={true}
-    style={{}}
+    style={Object {}}
     tabSize={2}
     theme="textmate"
     value="[]"
