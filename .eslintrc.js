@@ -1,5 +1,5 @@
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   settings: {
     react: {
       createClass: 'createReactClass',
@@ -21,6 +21,7 @@ module.exports = {
   extends: ['airbnb'],
   plugins: ['react', 'jsx-a11y', 'import'],
   parserOptions: {
+    requireConfigFile: false,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
