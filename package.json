@@ -37,7 +37,8 @@
     "test:engsis": "jest \"src/.*\\.engsis.test.js\"",
     "eject": "react-scripts eject",
     "sonar": "yarn && yarn run test:coverage && sonar-scanner",
-    "lint": "eslint src --fix"
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "husky": {
     "hooks": {

@@ -1,4 +1,4 @@
-name: deploy to gh-pages
+name: on-push-to-main
 
 on:
   push:
@@ -6,6 +6,19 @@ on:
       - 'main'
 
 jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn lint
+      - run: yarn test
+
   deploy-gh-pages:
     name: Deploy to GH Pages
     runs-on: ubuntu-latest
