@@ -24,8 +24,6 @@
     "redux": "^4.0.4"
   },
   "scripts": {
-    "predeploy": "yarn && react-scripts build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "yarn && react-scripts build",
     "test": "jest --env=jsdom",
@@ -73,7 +71,6 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
-    "gh-pages": "^4.0.0",
     "husky": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "24.8.0",
